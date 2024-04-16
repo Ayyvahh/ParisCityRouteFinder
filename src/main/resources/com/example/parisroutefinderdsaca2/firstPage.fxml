@@ -7,27 +7,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" styleClass="bg" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
-   <ImageView fitHeight="119.0" fitWidth="261.0" layoutX="688.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true">
+<AnchorPane maxHeight="900.0" maxWidth="1650.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1650.0" styleClass="bg" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
+   <ImageView fitHeight="93.0" fitWidth="533.0" layoutX="762.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
       <effect>
          <Glow />
       </effect>
-      <Image url="@logo.png" />
+      <Image url="@images/text1.png" />
    </ImageView>
-   <Button contentDisplay="RIGHT" graphicTextGap="20.0" layoutX="598.0" layoutY="627.0" mnemonicParsing="false" onAction="#scene2" prefHeight="71.0" prefWidth="441.0" style="-fx-background-radius: 30; -fx-background-color: transparent;" stylesheets="@stylesheet.css" text="GET STARTED" textFill="WHITE">
+   <ImageView fitHeight="107.0" fitWidth="676.0" layoutX="676.0" layoutY="258.0" pickOnBounds="true" preserveRatio="true">
+      <effect>
+         <Glow />
+      </effect>
+      <Image url="@images/text2.png" />
+   </ImageView>
+   <Button contentDisplay="RIGHT" graphicTextGap="20.0" layoutX="869.0" layoutY="509.0" mnemonicParsing="false" onAction="#scene2" prefHeight="24.0" prefWidth="268.0" style="-fx-background-radius: 30; -fx-background-color: transparent; -fx-border-color: black; -fx-label-padding: 2px; -fx-border-radius: 30px; -fx-border-width: 2px;" stylesheets="@stylesheet.css" textFill="WHITE">
       <font>
          <Font name="Berlin Sans FB Demi Bold" size="36.0" />
       </font>
       <graphic>
-         <ImageView fitHeight="56.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@mouse.gif" />
+         <ImageView fitHeight="26.0" fitWidth="275.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@images/text3.png" />
          </ImageView>
       </graphic>
    </Button>
-   <ImageView fitHeight="91.0" fitWidth="521.0" layoutX="575.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
-      <effect>
-         <Glow />
-      </effect>
-      <Image url="@logo2.png" />
-   </ImageView>
 </AnchorPane>

@@ -1,5 +1,5 @@
 .bg{
-    -fx-background-image: url("bg.png");
+    -fx-background-image: url("images/PARIS.gif");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center; ;
@@ -7,7 +7,7 @@
 
 
 .bg2{
-    -fx-background-image: url("bg2.png");
+    -fx-background-image: url("images/bg2.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center; ;

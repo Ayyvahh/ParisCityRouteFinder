@@ -19,23 +19,27 @@ public class Main extends Application {
         mainStage = primaryStage; // Assign the primaryStage to the static mainStage variable
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("firstPage.fxml"));
-        mainPage = new Scene(fxmlLoader.load(), 1600, 900);
+        mainPage = new Scene(fxmlLoader.load(), 1650, 900);
 
         // Add stylesheet to the scene
         mainPage.getStylesheets().add(Objects.requireNonNull(getClass().getResource("stylesheet.css")).toExternalForm());
-        mainStage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("icon.png"))));
+        mainStage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("icon1.png"))));
         mainStage.setTitle("PARIS CITY ROUTE FINDER");
         mainStage.setScene(mainPage);
+        mainStage.centerOnScreen();
+        mainStage.setResizable(false);
         mainStage.show();
     }
 
 
     public static void switchToSecondScene() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("dashboard.fxml"));
-        secondPage = new Scene(fxmlLoader.load(), 1600, 900);
+        secondPage = new Scene(fxmlLoader.load(), 1650, 900);
         secondPage.getStylesheets().add(Objects.requireNonNull(Main.class.getResource("stylesheet.css")).toExternalForm());
 
         mainStage.setScene(secondPage);
+        mainStage.centerOnScreen();
+
     }
 
 
