@@ -2,13 +2,14 @@ package com.example.parisroutefinderdsaca2;
 
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
 
 import static com.example.parisroutefinderdsaca2.Graph.findCheapestPathDijkstra;
 
 public class RouteFinder {
-
+    @FXML
     public ImageView mapView;
 
     @FXML
@@ -16,22 +17,26 @@ public class RouteFinder {
         Main.switchToSecondScene();
     }
 
-    public void dijkstraTest() {
-        GraphNode<String> a = new GraphNode<>("Eiffel Tower", true);
-        GraphNode<String> b = new GraphNode<>("Arc de Triomphe", true);
-        GraphNode<String> c = new GraphNode<>("The Louvre", true);
-        GraphNode<String> d = new GraphNode<>("Grand Palais", true);
-        GraphNode<String> e = new GraphNode<>("Notre-Dame Cathedral", true);
-        GraphNode<String> f = new GraphNode<>("Champs-Élysées", true);
-        GraphNode<String> g = new GraphNode<>("Opera Garnier", true);
-        GraphNode<String> h = new GraphNode<>("Place de la Concorde", true);
-        GraphNode<String> i = new GraphNode<>("River Seine", true);
-        GraphNode<String> j = new GraphNode<>("Basilica of the Sacré-Coeur", true);
-        GraphNode<String> k = new GraphNode<>("The Centre Pompidou", true);
-        GraphNode<String> l = new GraphNode<>("Pont Alexandre III", true);
-        GraphNode<String> m = new GraphNode<>("Musée d’Orsay", true);
+    public void mapClicked(MouseEvent event) {
+        System.out.println((int) event.getX() + ", " + (int) event.getY());
+    }
 
-        a.connectToNodeUndirected(b, 5);
+    public void dijkstraTest() {
+        GraphNode<String> a = new GraphNode<>("Eiffel Tower", true,1,1); //1,1 PLACEHOLDER
+        GraphNode<String> b = new GraphNode<>("Arc de Triomphe", true,1,1);
+        GraphNode<String> c = new GraphNode<>("The Louvre", true,1,1);
+        GraphNode<String> d = new GraphNode<>("Grand Palais", true,1,1);
+        GraphNode<String> e = new GraphNode<>("Notre-Dame Cathedral", true,1,1);
+        GraphNode<String> f = new GraphNode<>("Champs-Élysées", true,1,1);
+        GraphNode<String> g = new GraphNode<>("Opera Garnier", true,1,1);
+        GraphNode<String> h = new GraphNode<>("Place de la Concorde", true,1,1);
+        GraphNode<String> i = new GraphNode<>("River Seine", true,1,1);
+        GraphNode<String> j = new GraphNode<>("Basilica of the Sacré-Coeur", true,1,1);
+        GraphNode<String> k = new GraphNode<>("The Centre Pompidou", true,1,1);
+        GraphNode<String> l = new GraphNode<>("Pont Alexandre III", true,1,1);
+        GraphNode<String> m = new GraphNode<>("Musée d’Orsay", true,1,1);
+
+        a.connectToNodeUndirected(b, 5); //adding streets between landmarks/junctions
         a.connectToNodeUndirected(c, 9);
         b.connectToNodeUndirected(c, 2);
         b.connectToNodeUndirected(d, 6);
@@ -56,7 +61,7 @@ public class RouteFinder {
 
         assert cpa != null;
         for (GraphNode<?> n : cpa.pathList)
-            System.out.println(n.data);
+            System.out.println(n.name);
         System.out.println("\nThe total path cost is: " + cpa.pathCost);
     }
 }

@@ -11,7 +11,7 @@
       <effect>
          <DropShadow />
       </effect>
-      <ImageView fx:id="mapView" fitHeight="500.0" fitWidth="500.0" layoutX="10.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mapView" fitHeight="500.0" fitWidth="500.0" layoutX="10.0" layoutY="9.0" onMouseClicked="#mapClicked" pickOnBounds="true" preserveRatio="true">
          <Image url="@images/PARISMAP.jpg" />
       </ImageView>
    </AnchorPane>
