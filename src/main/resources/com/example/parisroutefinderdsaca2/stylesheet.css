@@ -1,5 +1,4 @@
 .bg{
-    -fx-background-image: url("images/PARIS.gif");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center; ;
@@ -7,21 +6,31 @@
 
 
 .bg2{
-    -fx-background-image: url("images/bg2.png");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center; ;
 }
 
+.button{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: white;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 18px;
+}
+
 .button:hover {
     -fx-background-color: #3b7bdb;
-    -fx-font-size: 40px;
-    -fx-font-family: "Berlin Sans FB Demi";
+    -fx-font-size: 19px;
+    -fx-rotate: 3px ;
+
 
 }
 
 .button:pressed {
-    -fx-translate-y: 3px;
-    -fx-translate-x: 3px;
+    -fx-rotate: 10px;
 }
 

@@ -6,19 +6,26 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1700.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
-   <AnchorPane layoutX="432.0" layoutY="110.0" prefHeight="520.0" prefWidth="520.0" style="-fx-background-color: #252525;">
+<AnchorPane prefHeight="900.0" prefWidth="1700.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
+   <AnchorPane layoutX="396.0" layoutY="89.0" prefHeight="520.0" prefWidth="770.0" style="-fx-background-color: #252525;">
       <effect>
          <DropShadow />
       </effect>
-      <ImageView fx:id="mapView" fitHeight="500.0" fitWidth="500.0" layoutX="10.0" layoutY="9.0" onMouseClicked="#mapClicked" pickOnBounds="true" preserveRatio="true">
-         <Image url="@images/PARISMAP.jpg" />
+      <ImageView fx:id="mapView" fitHeight="500.0" fitWidth="750.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#mapClicked" pickOnBounds="true" preserveRatio="true">
+         <Image url="@images/ParisVectorMap.png" />
       </ImageView>
    </AnchorPane>
-   <AnchorPane layoutX="-110.0" layoutY="67.0" prefHeight="837.0" prefWidth="344.0" style="-fx-background-color: #252525;">
+   <AnchorPane layoutX="-110.0" layoutY="67.0" prefHeight="837.0" prefWidth="459.0" style="-fx-background-color: #252525;">
       <effect>
          <DropShadow />
       </effect>
+      <children>
+         <Button layoutX="144.0" layoutY="54.0" mnemonicParsing="false" onAction="#dijkstraTest" prefHeight="45.0" prefWidth="275.0" text="DIJKSTRA TEST">
+            <effect>
+               <DropShadow />
+            </effect>
+         </Button>
+      </children>
    </AnchorPane>
    <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="68.0" prefWidth="1700.0" style="-fx-background-color: #252525; -fx-border-color: #1F1F1F;">
       <effect>
@@ -31,5 +38,4 @@
          <Image url="@images/icon.png" />
       </ImageView>
    </AnchorPane>
-   <Button layoutX="1014.0" layoutY="129.0" mnemonicParsing="false" onAction="#dijkstraTest" text="DIJKSTRA TEST" />
 </AnchorPane>
