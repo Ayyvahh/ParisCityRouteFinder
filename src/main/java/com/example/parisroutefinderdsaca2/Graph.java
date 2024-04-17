@@ -22,7 +22,7 @@ public class Graph {
             currentNode=notEncountered.remove(0); //Get the first notEncountered node (sorted list, so will have the lowest value)
             encountered.add(currentNode); //Record current node in encountered list
 
-            if(currentNode.data.equals(lookingFor)){ //Found goal - assemble path list back to start and return it
+            if(currentNode.name.equals(lookingFor)){ //Found goal - assemble path list back to start and return it
                 cp.pathList.add(currentNode); //Add the current (goal) node to the result list (only element)
                 cp.pathCost=currentNode.nodeValue; //The total cheapest path cost is the node value of the current/goal node
 
