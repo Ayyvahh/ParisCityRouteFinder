@@ -7,9 +7,11 @@ public class GraphNode<T> {
     public T data;
     public int nodeValue = Integer.MAX_VALUE;
     public List<GraphLink> adjList = new ArrayList<>();
+    public boolean isLandmark;
 
-    public GraphNode(T data) {
+    public GraphNode(T data, boolean isLandmark) {
         this.data = data;
+        this.isLandmark = isLandmark;
     }
 
     public void connectToNodeDirected(GraphNode<T> destNode, int cost) {
