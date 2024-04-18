@@ -7,6 +7,9 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.ListView;
+import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -23,7 +26,18 @@ import static com.example.parisroutefinderdsaca2.DataStructure.Graph.findCheapes
 
 public class RouteFinder implements Initializable {
     public static RouteFinder routeFinder;
+
+    /*-----------JAVAFX------------*/
+
     public AnchorPane mapPane;
+    public ListView currentWaypoints;
+    public Slider culturalSlid;
+    public ComboBox startPointBox;
+    public ComboBox avoidBox;
+    public ComboBox endPointBox;
+    public Slider prefSlid; /* User preference of how scenic the chosen route is*/
+
+    /*-----------------------------*/
     Graph graph = new Graph();
     @FXML
     public ImageView mapView;
@@ -155,5 +169,7 @@ public class RouteFinder implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         routeFinder = this;
+
+
     }
 }
