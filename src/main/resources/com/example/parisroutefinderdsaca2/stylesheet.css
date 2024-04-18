@@ -12,25 +12,36 @@
 }
 
 .button{
-    -fx-background-color: black;
+    -fx-background-color: #0D89E8;
     -fx-text-fill: white;
-    -fx-background-radius: 10px;
-    -fx-padding: 10px;
-    -fx-border-radius: 10px;
-    -fx-border-color: white;
     -fx-font-family: "Arial Rounded MT Bold";
-    -fx-font-size: 18px;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 5px
 }
+.button2{
+    -fx-background-color: #0D89E8;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 13px;
+    -fx-padding: 3px 3px
+}
+
 
 .button:hover {
-    -fx-background-color: #3b7bdb;
-    -fx-font-size: 19px;
-    -fx-rotate: 3px ;
+    -fx-font-size: 16px;
+    -fx-rotate: 1px ;
 
 
 }
 
-.button:pressed {
-    -fx-rotate: 10px;
+.blue-slider .track {
+    -fx-background-color: #38B6FF;
+    -fx-pref-height: 8px;
+}
+.blue-slider .thumb {
+
+    -fx-pref-height: 15px;
+    -fx-pref-width: 15px;
+    -fx-background-color: white;
 }
 
