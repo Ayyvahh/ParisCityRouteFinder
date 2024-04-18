@@ -10,8 +10,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1700.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
-   <AnchorPane layoutX="647.0" layoutY="95.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #252525;">
+<AnchorPane prefHeight="900.0" prefWidth="1700.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
+   <AnchorPane fx:id="mapPane" layoutX="647.0" layoutY="95.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #252525;">
       <effect>
          <DropShadow />
       </effect>
@@ -114,7 +114,7 @@
                </ImageView>
             </graphic>
          </Button>
-         <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="193.0" layoutY="67.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="DIJKSTRAS">
+         <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="193.0" layoutY="67.0" mnemonicParsing="false" onAction="#dijkstraTest" prefHeight="38.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="DIJKSTRAS">
             <effect>
                <DropShadow />
             </effect>

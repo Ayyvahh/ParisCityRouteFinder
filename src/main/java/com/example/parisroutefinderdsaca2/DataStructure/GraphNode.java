@@ -7,10 +7,9 @@ public class GraphNode<String> {
     public String name;
     public int nodeValue = Integer.MAX_VALUE;
     public List<GraphLink> adjList = new ArrayList<>();
-    public boolean isLandmark;
-    public int graphX;
-    public int graphY;
-
+    private boolean isLandmark;
+    private int graphX;
+    private int graphY;
 
     public GraphNode(String name, boolean isLandmark, int graphX, int graphY) {
         this.name = name;
@@ -18,7 +17,35 @@ public class GraphNode<String> {
         this.graphX = graphX;
         this.graphY = graphY;
     }
-//ALGORITHMS
+
+    public boolean isLandmark() {
+        return isLandmark;
+    }
+    public void setLandmark(boolean landmark) {
+        isLandmark = landmark;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getGraphX() {
+        return graphX;
+    }
+    public void setGraphX(int graphX) {
+        this.graphX = graphX;
+    }
+
+    public int getGraphY() {
+        return graphY;
+    }
+    public void setGraphY(int graphY) {
+        this.graphY = graphY;
+    }
+
     public void connectToNodeDirected(GraphNode<String> destNode, int cost) {
         adjList.add(new GraphLink(destNode, cost));
     }
