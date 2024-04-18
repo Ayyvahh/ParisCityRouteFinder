@@ -1,10 +1,15 @@
 package com.example.parisroutefinderdsaca2.DataStructure;
 
+import javafx.fxml.Initializable;
+
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class Graph {
+public class Graph implements Initializable {
+    public static Graph graph;
 
     public static class CostedPath{
         public int pathCost=0;
@@ -56,5 +61,10 @@ public class Graph {
             notEncountered.sort(Comparator.comparingInt(n -> n.nodeValue)); //Sort in ascending node value order
         } while(!notEncountered.isEmpty());
         return null; //No path found, so return null
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        graph = this;
     }
 }

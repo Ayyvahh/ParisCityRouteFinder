@@ -6,8 +6,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1700.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
-   <AnchorPane layoutX="396.0" layoutY="89.0" prefHeight="520.0" prefWidth="770.0" style="-fx-background-color: #252525;">
+<AnchorPane prefHeight="900.0" prefWidth="1700.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
+   <AnchorPane fx:id="mapPane" layoutX="396.0" layoutY="89.0" prefHeight="520.0" prefWidth="770.0" style="-fx-background-color: #252525;">
       <effect>
          <DropShadow />
       </effect>

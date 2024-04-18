@@ -7,5 +7,5 @@ module com.example.parisroutefinderdsaca2 {
     opens com.example.parisroutefinderdsaca2 to javafx.fxml;
     exports com.example.parisroutefinderdsaca2;
     exports com.example.parisroutefinderdsaca2.DataStructure;
-    opens com.example.parisroutefinderdsaca2.DataStructure to javafx.fxml;
+    opens com.example.parisroutefinderdsaca2.DataStructure to javafx.fxml, xstream;
 }
