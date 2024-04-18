@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
@@ -10,8 +13,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1700.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
-   <AnchorPane fx:id="mapPane" layoutX="647.0" layoutY="95.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #252525;">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="1500.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
+   <AnchorPane layoutX="541.0" layoutY="77.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #252525;">
       <effect>
          <DropShadow />
       </effect>
@@ -19,55 +22,109 @@
          <Image url="@images/ParisVectorMap.png" />
       </ImageView>
    </AnchorPane>
-   <AnchorPane layoutX="-110.0" layoutY="67.0" prefHeight="837.0" prefWidth="459.0" style="-fx-background-color: #252525;">
+   <AnchorPane layoutX="-110.0" layoutY="55.0" prefHeight="849.0" prefWidth="461.0" style="-fx-background-color: #252525;">
       <effect>
          <DropShadow />
       </effect>
-      <children>
-         <AnchorPane layoutX="110.0" layoutY="286.0" prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;">
-            <children>
-               <TextField layoutX="147.0" layoutY="45.0" prefHeight="25.0" prefWidth="176.0" promptText="Landmark Name" style="-fx-text-fill: black; -fx-background-color: #E8E7E7;" />
-               <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="23.0" layoutY="38.0" prefHeight="38.0" prefWidth="114.0" text="Landmark Name: " textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                  <font>
-                     <Font name="Arial Rounded MT Bold" size="13.0" />
-                  </font>
-               </Label>
-               <Label graphicTextGap="6.0" layoutX="23.0" layoutY="86.0" prefHeight="38.0" prefWidth="176.0" text="Cultural Significance:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                  <font>
-                     <Font name="Arial Rounded MT Bold" size="13.0" />
-                  </font>
-               </Label>
-               <Slider blockIncrement="1.0" layoutX="169.0" layoutY="98.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" prefHeight="39.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="blue-slider" value="2.0" />
-               <Button contentDisplay="RIGHT" layoutX="93.0" layoutY="151.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="165.0" styleClass="button2" stylesheets="@stylesheet.css" text="ADD WAYPOINT">
-                  <effect>
-                     <DropShadow />
-                  </effect>
-                  <font>
-                     <Font name="Berlin Sans FB Demi Bold" size="12.0" />
-                  </font>
-                  <graphic>
-                     <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                        <image>
-                           <Image url="@images/waypoint2.png" />
-                        </image>
-                     </ImageView>
-                  </graphic>
-               </Button>
-            </children>
-         </AnchorPane>
-         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="111.0" layoutY="4.0" prefHeight="43.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;" text="Search Algorithims" textFill="WHITE">
+      <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="111.0" layoutY="4.0" prefHeight="43.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;" text="Search Algorithims" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/algo.png" />
+            </ImageView>
+         </graphic>
+      </Label>
+      <Button contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="193.0" layoutY="164.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="BREADTH-FIRST">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/breadth.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="193.0" layoutY="113.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="DEPTH-FIRST">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/depth.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="193.0" layoutY="62.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="DIJKSTRAS">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/DIJK.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="110.0" layoutY="214.0" prefHeight="43.0" prefWidth="349.0" style="-fx-background-color: #1B1B1B;" text="  Current Waypoints" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/waypoint.png" />
+            </ImageView>
+         </graphic>
+      </Label>
+      <ScrollPane layoutX="129.0" layoutY="274.0" prefHeight="157.0" prefWidth="312.0">
+         <ListView fx:id="currentWaypoints" prefHeight="158.0" prefWidth="395.0" />
+      </ScrollPane>
+      <Button contentDisplay="RIGHT" layoutX="202.0" layoutY="453.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="165.0" styleClass="button2" stylesheets="@stylesheet.css" text="REMOVE WAYPOINT">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/waypoint2.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="111.0" layoutY="503.0" prefHeight="43.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;" text="  Add a Waypoint" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/add.png" />
+            </ImageView>
+         </graphic>
+      </Label>
+      <AnchorPane layoutX="111.0" layoutY="546.0" prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;">
+         <TextField layoutX="147.0" layoutY="45.0" prefHeight="25.0" prefWidth="176.0" promptText="Landmark Name" style="-fx-text-fill: black; -fx-background-color: #E8E7E7;" />
+         <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="23.0" layoutY="38.0" prefHeight="38.0" prefWidth="114.0" text="Landmark Name: " textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
-               <Font name="Arial Rounded MT Bold" size="18.0" />
+               <Font name="Arial Rounded MT Bold" size="13.0" />
             </font>
-            <graphic>
-               <ImageView fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@images/algo.png" />
-                  </image>
-               </ImageView>
-            </graphic>
          </Label>
-         <Button contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="193.0" layoutY="179.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="BREADTH-FIRST">
+         <Label graphicTextGap="6.0" layoutX="23.0" layoutY="86.0" prefHeight="38.0" prefWidth="176.0" text="Cultural Significance:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="13.0" />
+            </font>
+         </Label>
+         <Slider fx:id="culturalSlid" blockIncrement="1.0" layoutX="169.0" layoutY="98.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" prefHeight="39.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="blue-slider" value="2.0" />
+         <Button contentDisplay="RIGHT" layoutX="93.0" layoutY="151.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="165.0" styleClass="button2" stylesheets="@stylesheet.css" text="ADD WAYPOINT">
             <effect>
                <DropShadow />
             </effect>
@@ -75,63 +132,19 @@
                <Font name="Berlin Sans FB Demi Bold" size="12.0" />
             </font>
             <graphic>
-               <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@images/breadth.png" />
-                  </image>
+               <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <Image url="@images/waypoint2.png" />
                </ImageView>
             </graphic>
          </Button>
-         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="110.0" layoutY="244.0" prefHeight="43.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;" text="  Add a Waypoint" textFill="WHITE">
-            <font>
-               <Font name="Arial Rounded MT Bold" size="18.0" />
-            </font>
-            <graphic>
-               <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@images/waypoint.png" />
-                  </image>
-               </ImageView>
-            </graphic>
-         </Label>
-         <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="110.0" layoutY="276.0" prefHeight="43.0" prefWidth="350.0" text="Select a location on the Map to Add a Waypoint" textAlignment="CENTER" textFill="#24c8f5" wrapText="true">
+         <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="-6.0" layoutY="-7.0" prefHeight="43.0" prefWidth="350.0" text="Select a location on the Map to Add a Waypoint" textAlignment="CENTER" textFill="#24c8f5" wrapText="true">
             <font>
                <Font name="Arial" size="13.0" />
             </font>
          </Label>
-         <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="193.0" layoutY="123.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="DEPTH-FIRST">
-            <effect>
-               <DropShadow />
-            </effect>
-            <font>
-               <Font name="Berlin Sans FB Demi Bold" size="12.0" />
-            </font>
-            <graphic>
-               <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@images/depth.png" />
-                  </image>
-               </ImageView>
-            </graphic>
-         </Button>
-         <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="193.0" layoutY="67.0" mnemonicParsing="false" onAction="#dijkstraTest" prefHeight="38.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="DIJKSTRAS">
-            <effect>
-               <DropShadow />
-            </effect>
-            <font>
-               <Font name="Berlin Sans FB Demi Bold" size="12.0" />
-            </font>
-            <graphic>
-               <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@images/DIJK.png" />
-                  </image>
-               </ImageView>
-            </graphic>
-         </Button>
-      </children>
+      </AnchorPane>
    </AnchorPane>
-   <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="68.0" prefWidth="1700.0" style="-fx-background-color: #252525; -fx-border-color: #1F1F1F;">
+   <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="59.0" prefWidth="1522.0" style="-fx-background-color: #252525; -fx-border-color: #1F1F1F;">
       <effect>
          <DropShadow />
       </effect>
@@ -141,5 +154,70 @@
       <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="276.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@images/icon.png" />
       </ImageView>
+      <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="409.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="165.0" stylesheets="@stylesheet.css" text="Populate Map">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/DIJK.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+   </AnchorPane>
+   <AnchorPane layoutX="374.0" layoutY="612.0" prefHeight="292.0" prefWidth="1105.0" style="-fx-background-color: #252525;">
+      <effect>
+         <DropShadow />
+      </effect>
+      <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" prefHeight="43.0" prefWidth="1105.0" style="-fx-background-color: #1B1B1B;" text="Find Your Route" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/flag.png" />
+            </ImageView>
+         </graphic>
+      </Label>
+      <ComboBox fx:id="startPointBox" layoutX="25.0" layoutY="81.0" prefHeight="31.0" prefWidth="202.0" promptText="Starting Point" />
+      <ComboBox fx:id="avoidBox" layoutX="282.0" layoutY="81.0" prefHeight="31.0" prefWidth="202.0" promptText="Landmarks to Avoid" />
+      <Button contentDisplay="RIGHT" layoutX="452.0" layoutY="161.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="183.0" styleClass="button2" stylesheets="@stylesheet.css" text="FIND MY ROUTE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/waypoint2.png" />
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="13.0" layoutY="40.0" prefHeight="43.0" prefWidth="227.0" text="Select your Starting Point" textAlignment="CENTER" textFill="#24c8f5" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="269.0" layoutY="40.0" prefHeight="43.0" prefWidth="227.0" text="Any Landmarks to Avoid?" textAlignment="CENTER" textFill="#24c8f5" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="859.0" layoutY="40.0" prefHeight="43.0" prefWidth="227.0" text="Select your Destination Point" textAlignment="CENTER" textFill="#24c8f5" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="endPointBox" layoutX="872.0" layoutY="81.0" prefHeight="31.0" prefWidth="202.0" promptText="End Point" />
+      <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="537.0" layoutY="40.0" prefHeight="43.0" prefWidth="287.0" text="How Cultural/Scenic should the Route be?" textAlignment="CENTER" textFill="#24c8f5" wrapText="true">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <Slider fx:id="prefSlid" blockIncrement="1.0" layoutX="544.0" layoutY="86.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" prefHeight="39.0" prefWidth="273.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="blue-slider" value="2.0" />
    </AnchorPane>
 </AnchorPane>
