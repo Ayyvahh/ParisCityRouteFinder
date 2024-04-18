@@ -1,5 +1,8 @@
 package com.example.parisroutefinderdsaca2;
 
+import com.example.parisroutefinderdsaca2.DataStructure.Graph;
+import com.example.parisroutefinderdsaca2.DataStructure.GraphLink;
+import com.example.parisroutefinderdsaca2.DataStructure.GraphNode;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import javafx.fxml.FXML;
@@ -7,11 +10,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.example.parisroutefinderdsaca2.Graph.findCheapestPathDijkstra;
+import static com.example.parisroutefinderdsaca2.DataStructure.Graph.findCheapestPathDijkstra;
 
 public class RouteFinder {
     @FXML

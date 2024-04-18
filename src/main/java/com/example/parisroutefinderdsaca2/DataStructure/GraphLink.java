@@ -1,4 +1,4 @@
-package com.example.parisroutefinderdsaca2;
+package com.example.parisroutefinderdsaca2.DataStructure;
 
 public class GraphLink {
     public GraphNode<?> destNode;

@@ -1,4 +1,4 @@
-package com.example.parisroutefinderdsaca2;
+package com.example.parisroutefinderdsaca2.DataStructure;
 
 import java.util.ArrayList;
 import java.util.Comparator;

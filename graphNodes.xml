@@ -118,7 +118,7 @@
                                                             <distance>0.0</distance>
                                                           </com.example.parisroutefinderdsaca2.GraphLink>
                                                           <com.example.parisroutefinderdsaca2.GraphLink>
-                                                            <destNode reference="../../com.example.parisroutefinderdsaca2.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[3]/destNode"/>
+                                                            <destNode reference="../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
                                                             <cost>7</cost>
                                                             <distance>0.0</distance>
                                                           </com.example.parisroutefinderdsaca2.GraphLink>
@@ -147,7 +147,7 @@
                                           <distance>0.0</distance>
                                         </com.example.parisroutefinderdsaca2.GraphLink>
                                         <com.example.parisroutefinderdsaca2.GraphLink>
-                                          <destNode reference="../../com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode"/>
+                                          <destNode reference="../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
                                           <cost>2</cost>
                                           <distance>0.0</distance>
                                         </com.example.parisroutefinderdsaca2.GraphLink>
@@ -170,7 +170,7 @@
                                     <distance>0.0</distance>
                                   </com.example.parisroutefinderdsaca2.GraphLink>
                                   <com.example.parisroutefinderdsaca2.GraphLink>
-                                    <destNode reference="../../com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode"/>
+                                    <destNode reference="../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
                                     <cost>9</cost>
                                     <distance>0.0</distance>
                                   </com.example.parisroutefinderdsaca2.GraphLink>
@@ -183,7 +183,7 @@
                               <distance>0.0</distance>
                             </com.example.parisroutefinderdsaca2.GraphLink>
                             <com.example.parisroutefinderdsaca2.GraphLink>
-                              <destNode reference="../../com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode"/>
+                              <destNode reference="../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
                               <cost>2</cost>
                               <distance>0.0</distance>
                             </com.example.parisroutefinderdsaca2.GraphLink>
@@ -270,51 +270,51 @@
     </entry>
     <entry>
       <string>RS</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
     </entry>
     <entry>
       <string>BotSC</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
     </entry>
     <entry>
       <string>CE</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[3]/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
     </entry>
     <entry>
       <string>GP</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
     </entry>
     <entry>
       <string>NDC</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[3]/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
     </entry>
     <entry>
       <string>PdlC</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
     </entry>
     <entry>
       <string>ET</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
     </entry>
     <entry>
       <string>AdT</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
     </entry>
     <entry>
       <string>TL</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
     </entry>
     <entry>
       <string>OG</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
     </entry>
     <entry>
       <string>MdO</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
     </entry>
     <entry>
       <string>PAIII</string>
-      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.GraphNode/adjList/com.example.parisroutefinderdsaca2.GraphLink[2]/destNode"/>
+      <com.example.parisroutefinderdsaca2.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
     </entry>
   </map>
 </object-stream>
