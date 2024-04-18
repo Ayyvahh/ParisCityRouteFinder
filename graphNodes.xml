@@ -98,8 +98,8 @@
                                                                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                     </adjList>
                                                                     <isLandmark>true</isLandmark>
-                                                                    <graphX>112</graphX>
-                                                                    <graphY>444</graphY>
+                                                                    <graphX>358</graphX>
+                                                                    <graphY>192</graphY>
                                                                   </destNode>
                                                                   <cost>6</cost>
                                                                   <distance>0.0</distance>
@@ -110,9 +110,9 @@
                                                                   <distance>0.0</distance>
                                                                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                               </adjList>
-                                                              <isLandmark>false</isLandmark>
-                                                              <graphX>444</graphX>
-                                                              <graphY>324</graphY>
+                                                              <isLandmark>true</isLandmark>
+                                                              <graphX>342</graphX>
+                                                              <graphY>349</graphY>
                                                             </destNode>
                                                             <cost>3</cost>
                                                             <distance>0.0</distance>
@@ -124,24 +124,24 @@
                                                           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                         </adjList>
                                                         <isLandmark>true</isLandmark>
-                                                        <graphX>121</graphX>
-                                                        <graphY>345</graphY>
+                                                        <graphX>309</graphX>
+                                                        <graphY>270</graphY>
                                                       </destNode>
                                                       <cost>5</cost>
                                                       <distance>0.0</distance>
                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                   </adjList>
                                                   <isLandmark>true</isLandmark>
-                                                  <graphX>213</graphX>
-                                                  <graphY>250</graphY>
+                                                  <graphX>133</graphX>
+                                                  <graphY>78</graphY>
                                                 </destNode>
                                                 <cost>9</cost>
                                                 <distance>0.0</distance>
                                               </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                             </adjList>
                                             <isLandmark>true</isLandmark>
-                                            <graphX>30</graphX>
-                                            <graphY>20</graphY>
+                                            <graphX>126</graphX>
+                                            <graphY>377</graphY>
                                           </destNode>
                                           <cost>5</cost>
                                           <distance>0.0</distance>
@@ -158,8 +158,8 @@
                                         </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                       </adjList>
                                       <isLandmark>true</isLandmark>
-                                      <graphX>20</graphX>
-                                      <graphY>50</graphY>
+                                      <graphX>80</graphX>
+                                      <graphY>220</graphY>
                                     </destNode>
                                     <cost>6</cost>
                                     <distance>0.0</distance>
@@ -175,9 +175,9 @@
                                     <distance>0.0</distance>
                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                 </adjList>
-                                <isLandmark>false</isLandmark>
-                                <graphX>234</graphX>
-                                <graphY>134</graphY>
+                                <isLandmark>true</isLandmark>
+                                <graphX>275</graphX>
+                                <graphY>285</graphY>
                               </destNode>
                               <cost>8</cost>
                               <distance>0.0</distance>
@@ -194,8 +194,8 @@
                             </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                           </adjList>
                           <isLandmark>true</isLandmark>
-                          <graphX>312</graphX>
-                          <graphY>433</graphY>
+                          <graphX>411</graphX>
+                          <graphY>436</graphY>
                         </destNode>
                         <cost>5</cost>
                         <distance>0.0</distance>
@@ -207,8 +207,8 @@
                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                     </adjList>
                     <isLandmark>true</isLandmark>
-                    <graphX>493</graphX>
-                    <graphY>123</graphY>
+                    <graphX>349</graphX>
+                    <graphY>77</graphY>
                   </destNode>
                   <cost>3</cost>
                   <distance>0.0</distance>
@@ -220,8 +220,8 @@
                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
               </adjList>
               <isLandmark>true</isLandmark>
-              <graphX>479</graphX>
-              <graphY>268</graphY>
+              <graphX>447</graphX>
+              <graphY>31</graphY>
             </destNode>
             <cost>1</cost>
             <distance>0.0</distance>
@@ -248,24 +248,24 @@
                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                     </adjList>
                     <isLandmark>true</isLandmark>
-                    <graphX>468</graphX>
-                    <graphY>498</graphY>
+                    <graphX>532</graphX>
+                    <graphY>248</graphY>
                   </destNode>
                   <cost>2</cost>
                   <distance>0.0</distance>
                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
               </adjList>
               <isLandmark>true</isLandmark>
-              <graphX>333</graphX>
-              <graphY>378</graphY>
+              <graphX>659</graphX>
+              <graphY>326</graphY>
             </destNode>
             <cost>3</cost>
             <distance>0.0</distance>
           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
         </adjList>
-        <isLandmark>false</isLandmark>
-        <graphX>408</graphX>
-        <graphY>189</graphY>
+        <isLandmark>true</isLandmark>
+        <graphX>505</graphX>
+        <graphY>355</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
     <entry>
