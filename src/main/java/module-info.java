@@ -2,6 +2,7 @@ module com.example.parisroutefinderdsaca2 {
     requires javafx.controls;
     requires javafx.fxml;
     requires xstream;
+    requires org.jetbrains.annotations;
 
 
     opens com.example.parisroutefinderdsaca2 to javafx.fxml;

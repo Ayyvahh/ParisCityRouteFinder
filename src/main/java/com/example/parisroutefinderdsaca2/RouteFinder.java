@@ -7,14 +7,18 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Cursor;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Slider;
+import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
 import java.net.URL;
@@ -29,7 +33,7 @@ public class RouteFinder implements Initializable {
 
     /*-----------JAVAFX------------*/
 
-    public AnchorPane mapPane;
+    public AnchorPane mapPane = new AnchorPane();
     public ListView currentWaypoints;
     public Slider culturalSlid;
     public ComboBox startPointBox;
@@ -43,6 +47,7 @@ public class RouteFinder implements Initializable {
     public ImageView mapView;
     private boolean isMapPopulated = false;
     public Map<String, GraphNode<String>> graphNodes = new HashMap<>();
+    private Tooltip pillTip;
 
     @FXML
     public void scene2() throws IOException {
@@ -87,42 +92,85 @@ public class RouteFinder implements Initializable {
         Circle nodeCircle = new Circle();
         Circle nodeRing = new Circle();
 
-        nodeCircle.setCenterX(node.getGraphX());
-        nodeCircle.setCenterY(node.getGraphY());
-        nodeCircle.setRadius(5);
-
-        nodeRing.setCenterX(node.getGraphX());
-        nodeRing.setCenterY(node.getGraphY());
-        nodeRing.setRadius(8);
-        nodeRing.setFill(Color.TRANSPARENT);
-        nodeRing.setStrokeWidth(2);
-
         if (node.isLandmark()) {
+            nodeCircle.setCenterX(node.getGraphX());
+            nodeCircle.setCenterY(node.getGraphY());
+            nodeCircle.setRadius(5);
             nodeCircle.setFill(Color.RED);
+
+            nodeRing.setCenterX(node.getGraphX());
+            nodeRing.setCenterY(node.getGraphY());
+            nodeRing.setRadius(8);
+            nodeRing.setFill(Color.TRANSPARENT);
+            nodeRing.setStrokeWidth(2);
             nodeRing.setStroke(Color.RED);
         } else {
-            nodeCircle.setFill(Color.LAWNGREEN);
-            nodeRing.setStroke(Color.LAWNGREEN);
+            nodeCircle.setCenterX(node.getGraphX());
+            nodeCircle.setCenterY(node.getGraphY());
+            nodeCircle.setRadius(5);
+            nodeCircle.setFill(Color.BLACK);
         }
 
         mapPane.getChildren().addAll(nodeCircle, nodeRing);
     }
 
+    public void toolTipHover(@NotNull MouseEvent e) {
+        double mouseX = e.getX();
+        double mouseY = e.getY();
+
+        boolean onLandmark = false;
+        GraphNode<String> landmarkOn = null;
+
+        for (GraphNode<String> g : graphNodes.values()) {
+            if (g.isLandmark()) {
+                if (Math.abs(mouseX - g.getGraphX()) <= 3 && Math.abs(mouseY - g.getGraphY()) <= 3) {
+                    onLandmark = true;
+                    landmarkOn = g;
+                    break;
+                }
+            }
+        }
+
+        if (onLandmark) {
+            Main.secondPage.setCursor(Cursor.HAND);
+            pillTip.setText("Name: " + landmarkOn.getName() + ",\nLandmark X: " + landmarkOn.getGraphX() +
+                    ",\nLandmark Y: " + landmarkOn.getGraphY());
+            pillTip.show(mapView, e.getScreenX() + 10, e.getScreenY() + 10);
+        } else {
+            pillTip.hide();
+            Main.secondPage.setCursor(Cursor.DEFAULT);
+        }
+    }
+
     public void dijkstraTest() {
-//        graphNodes.put("ET", new GraphNode<>("Eiffel Tower", true,30,20)); //1,1 PLACEHOLDER, A
-//        graphNodes.put("AdT", new GraphNode<>("Arc de Triomphe", true,20,50)); //B
-//        graphNodes.put("TL", new GraphNode<>("The Louvre", true,213,250)); //C
-//        graphNodes.put("GP", new GraphNode<>("Grand Palais", false,234,134)); //D
-//        graphNodes.put("NDC", new GraphNode<>("Notre-Dame Cathedral", true,121,345)); //E
-//        graphNodes.put("CE", new GraphNode<>("Champs-Élysées", true,112,444)); //F
-//        graphNodes.put("OG", new GraphNode<>("Opera Garnier", false,444,324)); //G
-//        graphNodes.put("PdlC", new GraphNode<>("Place de la Concorde", true,312,433)); //H
-//        graphNodes.put("RS", new GraphNode<>("River Seine", true,493,123)); //I
-//        graphNodes.put("BotSC", new GraphNode<>("Basilica of the Sacré-Coeur", true,479,268)); //J
-//        graphNodes.put("TCP", new GraphNode<>("The Centre Pompidou", false,408,189)); //K
-//        graphNodes.put("PAIII", new GraphNode<>("Pont Alexandre III", true,333,378)); //L
-//        graphNodes.put("MdO", new GraphNode<>("Musée d’Orsay", true,468,498)); //M
-//
+        graphNodes.put("ET", new GraphNode<>("Eiffel Tower", true,126,377)); //A
+        graphNodes.put("AdT", new GraphNode<>("Arc de Triomphe", true,80,220)); //B
+        graphNodes.put("TL", new GraphNode<>("The Louvre", true,133,78)); //C
+        graphNodes.put("GP", new GraphNode<>("Grand Palais", true,275,285)); //D
+        graphNodes.put("NDC", new GraphNode<>("Notre-Dame Cathedral", true,309,270)); //E
+        graphNodes.put("CE", new GraphNode<>("Champs-Élysées", true,358,192)); //F
+        graphNodes.put("OG", new GraphNode<>("Opera Garnier", true,342,349)); //G
+        graphNodes.put("PdlC", new GraphNode<>("Place de la Concorde", true,411,436)); //H
+        graphNodes.put("RS", new GraphNode<>("River Seine", true,349,77)); //I
+        graphNodes.put("BotSC", new GraphNode<>("Basilica of the Sacré-Coeur", true,447,31)); //J
+        graphNodes.put("TCP", new GraphNode<>("The Centre Pompidou", true,505,355)); //K
+        graphNodes.put("PAIII", new GraphNode<>("Pont Alexandre III", true,659,326)); //L
+        graphNodes.put("MdO", new GraphNode<>("Musée d’Orsay", true,532,248)); //M
+
+        graphNodes.put("N1", new GraphNode<>("N1", false, 108,370));
+        graphNodes.put("N2", new GraphNode<>("N2", false, 93,363));
+        graphNodes.put("N3", new GraphNode<>("N3", false, 85,278));
+        graphNodes.put("N4", new GraphNode<>("N4", false, 73,270));
+        graphNodes.put("N5", new GraphNode<>("N5", false, 96,236));
+
+        graphNodes.get("N1").connectToNodeUndirected(graphNodes.get("ET"), (int) Math.sqrt(Math.pow(graphNodes.get("ET").getGraphX() - graphNodes.get("N1").getGraphX(), 2) + Math.pow(graphNodes.get("ET").getGraphY() - graphNodes.get("N1").getGraphY(), 2)));
+        graphNodes.get("N2").connectToNodeUndirected(graphNodes.get("N1"), (int) Math.sqrt(Math.pow(graphNodes.get("N1").getGraphX() - graphNodes.get("N2").getGraphX(), 2) + Math.pow(graphNodes.get("N1").getGraphY() - graphNodes.get("N2").getGraphY(), 2)));
+        graphNodes.get("N3").connectToNodeUndirected(graphNodes.get("N2"), (int) Math.sqrt(Math.pow(graphNodes.get("N2").getGraphX() - graphNodes.get("N3").getGraphX(), 2) + Math.pow(graphNodes.get("N2").getGraphY() - graphNodes.get("N3").getGraphY(), 2)));
+        graphNodes.get("N4").connectToNodeUndirected(graphNodes.get("N3"), (int) Math.sqrt(Math.pow(graphNodes.get("N3").getGraphX() - graphNodes.get("N4").getGraphX(), 2) + Math.pow(graphNodes.get("N3").getGraphY() - graphNodes.get("N4").getGraphY(), 2)));
+        graphNodes.get("N5").connectToNodeUndirected(graphNodes.get("N4"), (int) Math.sqrt(Math.pow(graphNodes.get("N4").getGraphX() - graphNodes.get("N5").getGraphX(), 2) + Math.pow(graphNodes.get("N4").getGraphY() - graphNodes.get("N5").getGraphY(), 2)));
+        graphNodes.get("AdT").connectToNodeUndirected(graphNodes.get("N5"), (int) Math.sqrt(Math.pow(graphNodes.get("AdT").getGraphX() - graphNodes.get("N5").getGraphX(), 2) + Math.pow(graphNodes.get("AdT").getGraphY() - graphNodes.get("N5").getGraphY(), 2)));
+
+
 //        graphNodes.get("ET").connectToNodeUndirected(graphNodes.get("AdT"), 5); //adding streets between landmarks/junctions
 //        graphNodes.get("ET").connectToNodeUndirected(graphNodes.get("TL"), 9);
 //        graphNodes.get("AdT").connectToNodeUndirected(graphNodes.get("TL"), 2);
@@ -140,25 +188,38 @@ public class RouteFinder implements Initializable {
 //        graphNodes.get("TCP").connectToNodeUndirected(graphNodes.get("PAIII"), 3);
 //        graphNodes.get("PAIII").connectToNodeUndirected(graphNodes.get("MdO"), 2);
 //
-//        try {
-//            saveXML();
-//        } catch (Exception e) {
-//            System.err.println("Error writing from file: " + e);
-//        }
+        try {
+            saveXML();
+            System.out.println("Database saved!");
+        } catch (Exception e) {
+            System.err.println("Error writing from file: " + e);
+        }
 
         try {
             loadXML();
+            System.out.println("Database loaded!");
 
-            System.out.println("The cheapest path from Eiffel Tower to Musée d’Orsay");
+            System.out.println("The cheapest path from Eiffel Tower to Arc de Triomphe");
             System.out.println("using Dijkstra's algorithm:");
             System.out.println("-------------------------------------");
 
-            Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get("ET"), "Musée d’Orsay");
+            Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get("ET"), "Arc de Triomphe");
 
             assert cpa != null;
             for (GraphNode<?> n : cpa.pathList)
                 System.out.println(n.name);
             System.out.println("\nThe total path cost is: " + cpa.pathCost);
+
+            for (int i = 0; i < cpa.pathList.size()-1; i++) {
+                    GraphNode<?> firstNode = cpa.pathList.get(i);
+                    GraphNode<?> secondNode = cpa.pathList.get(i+1);
+
+                    Line line = new Line(firstNode.getGraphX(), firstNode.getGraphY(), secondNode.getGraphX(), secondNode.getGraphY());
+                    line.setStroke(Color.BLUEVIOLET);
+                    line.setStrokeWidth(3);
+
+                    mapPane.getChildren().add(line);
+            }
 
             populateMap();
         } catch (Exception e) {
@@ -169,7 +230,7 @@ public class RouteFinder implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         routeFinder = this;
-
-
+        pillTip = new Tooltip("TEST");
+        mapPane.setOnMouseMoved(this::toolTipHover);
     }
 }
