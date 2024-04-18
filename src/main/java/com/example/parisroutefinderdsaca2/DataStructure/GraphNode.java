@@ -11,13 +11,14 @@ public class GraphNode<String> {
     public int graphX;
     public int graphY;
 
+
     public GraphNode(String name, boolean isLandmark, int graphX, int graphY) {
         this.name = name;
         this.isLandmark = isLandmark;
         this.graphX = graphX;
         this.graphY = graphY;
     }
-
+//ALGORITHMS
     public void connectToNodeDirected(GraphNode<String> destNode, int cost) {
         adjList.add(new GraphLink(destNode, cost));
     }

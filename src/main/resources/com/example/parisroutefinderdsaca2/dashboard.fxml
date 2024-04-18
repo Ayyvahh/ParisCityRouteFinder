@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="900.0" prefWidth="1700.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
-   <AnchorPane layoutX="396.0" layoutY="89.0" prefHeight="520.0" prefWidth="770.0" style="-fx-background-color: #252525;">
+   <AnchorPane layoutX="647.0" layoutY="95.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #252525;">
       <effect>
          <DropShadow />
       </effect>
-      <ImageView fx:id="mapView" fitHeight="500.0" fitWidth="750.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#mapClicked" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="mapView" fitHeight="500.0" fitWidth="750.0" layoutX="3.0" layoutY="3.0" onMouseClicked="#mapClicked" pickOnBounds="true" preserveRatio="true">
          <Image url="@images/ParisVectorMap.png" />
       </ImageView>
    </AnchorPane>
@@ -20,10 +24,110 @@
          <DropShadow />
       </effect>
       <children>
-         <Button layoutX="144.0" layoutY="54.0" mnemonicParsing="false" onAction="#dijkstraTest" prefHeight="45.0" prefWidth="275.0" text="DIJKSTRA TEST">
+         <AnchorPane layoutX="110.0" layoutY="286.0" prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;">
+            <children>
+               <TextField layoutX="147.0" layoutY="45.0" prefHeight="25.0" prefWidth="176.0" promptText="Landmark Name" style="-fx-text-fill: black; -fx-background-color: #E8E7E7;" />
+               <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="23.0" layoutY="38.0" prefHeight="38.0" prefWidth="114.0" text="Landmark Name: " textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="13.0" />
+                  </font>
+               </Label>
+               <Label graphicTextGap="6.0" layoutX="23.0" layoutY="86.0" prefHeight="38.0" prefWidth="176.0" text="Cultural Significance:" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <font>
+                     <Font name="Arial Rounded MT Bold" size="13.0" />
+                  </font>
+               </Label>
+               <Slider blockIncrement="1.0" layoutX="169.0" layoutY="98.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" prefHeight="39.0" prefWidth="165.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="blue-slider" value="2.0" />
+               <Button contentDisplay="RIGHT" layoutX="93.0" layoutY="151.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="165.0" styleClass="button2" stylesheets="@stylesheet.css" text="ADD WAYPOINT">
+                  <effect>
+                     <DropShadow />
+                  </effect>
+                  <font>
+                     <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                  </font>
+                  <graphic>
+                     <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/waypoint2.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </children>
+         </AnchorPane>
+         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="111.0" layoutY="4.0" prefHeight="43.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;" text="Search Algorithims" textFill="WHITE">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="18.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="35.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/algo.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Label>
+         <Button contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="193.0" layoutY="179.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="BREADTH-FIRST">
             <effect>
                <DropShadow />
             </effect>
+            <font>
+               <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/breadth.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="110.0" layoutY="244.0" prefHeight="43.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;" text="  Add a Waypoint" textFill="WHITE">
+            <font>
+               <Font name="Arial Rounded MT Bold" size="18.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/waypoint.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Label>
+         <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="110.0" layoutY="276.0" prefHeight="43.0" prefWidth="350.0" text="Select a location on the Map to Add a Waypoint" textAlignment="CENTER" textFill="#24c8f5" wrapText="true">
+            <font>
+               <Font name="Arial" size="13.0" />
+            </font>
+         </Label>
+         <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="193.0" layoutY="123.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="DEPTH-FIRST">
+            <effect>
+               <DropShadow />
+            </effect>
+            <font>
+               <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/depth.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="193.0" layoutY="67.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="183.0" stylesheets="@stylesheet.css" text="DIJKSTRAS">
+            <effect>
+               <DropShadow />
+            </effect>
+            <font>
+               <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/DIJK.png" />
+                  </image>
+               </ImageView>
+            </graphic>
          </Button>
       </children>
    </AnchorPane>
@@ -31,10 +135,10 @@
       <effect>
          <DropShadow />
       </effect>
-      <ImageView fitHeight="35.0" fitWidth="297.0" layoutX="34.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="22.0" fitWidth="243.0" layoutX="25.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@images/AppLogo.png" />
       </ImageView>
-      <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="337.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="276.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@images/icon.png" />
       </ImageView>
    </AnchorPane>
