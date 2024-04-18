@@ -17,6 +17,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Line;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
@@ -208,6 +209,17 @@ public class RouteFinder implements Initializable {
             for (GraphNode<?> n : cpa.pathList)
                 System.out.println(n.name);
             System.out.println("\nThe total path cost is: " + cpa.pathCost);
+
+            for (int i = 0; i < cpa.pathList.size()-1; i++) {
+                    GraphNode<?> firstNode = cpa.pathList.get(i);
+                    GraphNode<?> secondNode = cpa.pathList.get(i+1);
+
+                    Line line = new Line(firstNode.getGraphX(), firstNode.getGraphY(), secondNode.getGraphX(), secondNode.getGraphY());
+                    line.setStroke(Color.BLUEVIOLET);
+                    line.setStrokeWidth(3);
+
+                    mapPane.getChildren().add(line);
+            }
 
             populateMap();
         } catch (Exception e) {
