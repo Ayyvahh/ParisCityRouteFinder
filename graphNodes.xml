@@ -7,6 +7,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>1</culturalSignificance>
         <graphX>505</graphX>
         <graphY>355</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -18,6 +19,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>4</culturalSignificance>
         <graphX>349</graphX>
         <graphY>77</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -29,6 +31,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>3</culturalSignificance>
         <graphX>447</graphX>
         <graphY>31</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -40,6 +43,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>3</culturalSignificance>
         <graphX>358</graphX>
         <graphY>192</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -62,6 +66,7 @@
                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
               </adjList>
               <isLandmark>true</isLandmark>
+              <culturalSignificance>5</culturalSignificance>
               <graphX>126</graphX>
               <graphY>377</graphY>
             </destNode>
@@ -120,6 +125,7 @@
                                         </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                       </adjList>
                                       <isLandmark>true</isLandmark>
+                                      <culturalSignificance>5</culturalSignificance>
                                       <graphX>80</graphX>
                                       <graphY>220</graphY>
                                     </destNode>
@@ -128,6 +134,7 @@
                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                 </adjList>
                                 <isLandmark>false</isLandmark>
+                                <culturalSignificance>0</culturalSignificance>
                                 <graphX>96</graphX>
                                 <graphY>236</graphY>
                               </destNode>
@@ -136,6 +143,7 @@
                             </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                           </adjList>
                           <isLandmark>false</isLandmark>
+                          <culturalSignificance>0</culturalSignificance>
                           <graphX>73</graphX>
                           <graphY>270</graphY>
                         </destNode>
@@ -144,6 +152,7 @@
                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                     </adjList>
                     <isLandmark>false</isLandmark>
+                    <culturalSignificance>0</culturalSignificance>
                     <graphX>85</graphX>
                     <graphY>278</graphY>
                   </destNode>
@@ -152,6 +161,7 @@
                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
               </adjList>
               <isLandmark>false</isLandmark>
+              <culturalSignificance>0</culturalSignificance>
               <graphX>93</graphX>
               <graphY>363</graphY>
             </destNode>
@@ -160,6 +170,7 @@
           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
         </adjList>
         <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
         <graphX>108</graphX>
         <graphY>370</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -187,6 +198,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>4</culturalSignificance>
         <graphX>275</graphX>
         <graphY>285</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -198,6 +210,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>5</culturalSignificance>
         <graphX>309</graphX>
         <graphY>270</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -209,6 +222,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>5</culturalSignificance>
         <graphX>411</graphX>
         <graphY>436</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -228,6 +242,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>4</culturalSignificance>
         <graphX>133</graphX>
         <graphY>78</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -239,6 +254,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>2</culturalSignificance>
         <graphX>342</graphX>
         <graphY>349</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -250,6 +266,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>1</culturalSignificance>
         <graphX>532</graphX>
         <graphY>248</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
@@ -261,6 +278,7 @@
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
+        <culturalSignificance>2</culturalSignificance>
         <graphX>659</graphX>
         <graphY>326</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
