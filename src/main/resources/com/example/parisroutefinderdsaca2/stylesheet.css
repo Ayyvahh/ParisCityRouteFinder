@@ -49,9 +49,9 @@
     .combo-box {
         -fx-background-color: #1B1B1B; /* Background color */
         -fx-text-fill: white; /* Text color */
-        -fx-font-family: "Arial Black"; /* Font family */
+        -fx-font-family: "Arial "; /* Font family */
         -fx-font-size: 12px; /* Font size */
-        -fx-padding: 2px; /* Padding */
+        -fx-padding: 4px; /* Padding */
     }
 
     /* Combo Box Arrow Button */
@@ -62,7 +62,7 @@
 
     /* Combo Box Arrow Icon */
     .combo-box .arrow-button .arrow {
-        -fx-background-color:  #1B1B1B; /* Background color */
+        -fx-background-color:  white; /* Background color */
 
     }
 
@@ -70,17 +70,81 @@
     .combo-box .list-cell {
         -fx-background-color: #1B1B1B; /* Background color */
         -fx-text-fill: white; /* Text color */
-        -fx-font-family: "Arial Black"; /* Font family */
-        -fx-font-size: 12px; /* Font size */
-        -fx-padding: 2px; /* Padding */
+        -fx-font-family: "Arial"; /* Font family */
+        -fx-font-size: 14px; /* Font size */
+        -fx-padding: 4px; /* Padding */
+        -fx-border-color: grey;
+        -fx-border-width: 0 0 1 0; /* Top, Right, Bottom, Left */
     }
 
     /* Combo Box Selected List Cell */
-    .combo-box .list-cell:selected {
+    .combo-box .list-cell:selected:hover {
         -fx-background-color: #1B1B1B; /* Background color */
-        -fx-text-fill: white; /* Text color */
-        -fx-font-size: 13px;
+        -fx-text-fill: #24c8f5; /* Text color */
+        -fx-font-size: 15px;
     }
 
 
+/* ListView */
+.list-view {
+    -fx-background-color: #1B1B1B; /* Background color */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-family: "Arial"; /* Font family */
+    -fx-font-size: 13px; /* Font size */
+    -fx-padding: 6px; /* Padding */
+}
 
+/* ListView Cell */
+.list-view .list-cell {
+    -fx-background-color: #1B1B1B; /* Background color */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
+    -fx-font-size: 12px; /* Font size */
+    -fx-padding: 6px; /* Padding */
+    -fx-border-color: grey;
+    -fx-border-width: 0 0 1 0; /* Top, Right, Bottom, Left */
+}
+
+/* Selected ListView Cell */
+.list-view .list-cell:selected {
+    -fx-background-color: #1B1B1B; /* Background color */
+    -fx-text-fill: #24c8f5; /* Text color */
+    -fx-font-size: 14px; /* Font size */
+}
+.list-view .list-cell:hover {
+    -fx-background-color: #1B1B1B; /* Background color */
+    -fx-text-fill: #24c8f5; /* Text color */
+    -fx-font-size: 15px; /* Font size */
+}
+/* ScrollPane */
+.scroll-pane {
+    -fx-background-color: #1B1B1B; /* Background color */
+    -fx-font-family: "Arial Black"; /* Font family */
+    -fx-font-size: 12px; /* Font size */
+}
+
+/* ScrollBar */
+.scroll-bar:vertical {
+    -fx-background-color: #1B1B1B; /* Background color */
+
+    -fx-min-width: 10px; /* Set minimum width */
+    -fx-max-width: 10px;
+
+}
+
+/* ScrollBar Thumb */
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #3D3D3D; /* Thumb color */
+}
+
+.scroll-bar:horizontal {
+    -fx-background-color: #1B1B1B; /* Background color */
+
+    -fx-min-width: 10px; /* Set minimum width */
+    -fx-max-width: 10px;
+}
+
+/* ScrollBar Thumb */
+.scroll-bar:horizontal .thumb {
+    -fx-background-color: #3D3D3D; /* Thumb color */
+}

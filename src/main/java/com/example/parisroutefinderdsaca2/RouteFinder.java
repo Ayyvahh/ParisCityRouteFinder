@@ -8,16 +8,14 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Slider;
-import javafx.scene.control.Tooltip;
+import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.text.Text;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
@@ -34,12 +32,20 @@ public class RouteFinder implements Initializable {
     /*-----------JAVAFX------------*/
 
     public AnchorPane mapPane = new AnchorPane();
-    public ListView currentWaypoints;
-    public Slider culturalSlid;
-    public ComboBox<GraphNode<?>> startPointBox;
-    public ComboBox avoidBox;
-    public ComboBox endPointBox;
+    public ListView<GraphNode<String>> currentWaypoints = new ListView<>();
+    public Slider culturalSlid = new Slider(0,5,2);
+    public ComboBox<GraphNode<?>> startPointBox = new ComboBox<>();
+    public ComboBox<GraphNode<String>>  avoidBox = new ComboBox<>();
+    public ComboBox<GraphNode<String>>  endPointBox = new ComboBox<>();
     public Slider prefSlid; /* User preference of how scenic the chosen route is*/
+    public RadioButton landmarkBox;
+    public RadioButton junctionBox;
+    public TextField nameField;
+    public double x;
+    public double y;
+    public Label systemMessage = new Label();
+    Circle circle; /*Circle for user to see where they've clicked*/
+    Text text;
 
     /*-----------------------------*/
     Graph graph = new Graph();
@@ -47,7 +53,7 @@ public class RouteFinder implements Initializable {
     public ImageView mapView;
     private boolean isMapPopulated = false;
     public Map<String, GraphNode<String>> graphNodes = new HashMap<>();
-    private Tooltip pillTip;
+    private Tooltip nodeTip;
 
     @FXML
     public void scene2() throws IOException {
@@ -56,7 +62,24 @@ public class RouteFinder implements Initializable {
 
     public void mapClicked(MouseEvent event) {
         System.out.println((int) event.getX() + ", " + (int) event.getY());
+        x = event.getX();
+        y = event.getY();
+
+        /*Method for clearing the circle every new click*/
+       clearMarkers();
+
+        /* Circle marker that shows the user where they have clicked*/
+        circle = new Circle(x, y, 5);
+        circle.setFill(Color.BLUE);
+        mapPane.getChildren().add(circle);
+
+        // Create and add new text
+        text = new Text(x - 37, y - 15, "YOU ARE HERE");
+        text.setFill(Color.BLUE);
+        mapPane.getChildren().add(text);
     }
+
+
 
     public void saveXML() throws Exception {
         XStream xstream = new XStream(new DomDriver());
@@ -79,13 +102,101 @@ public class RouteFinder implements Initializable {
 
     public void populateMap() {
         if (!isMapPopulated) {
+            startPointBox.getItems().addAll(graphNodes.values());
+            endPointBox.getItems().addAll(graphNodes.values());
+            avoidBox.getItems().addAll(graphNodes.values());
+            currentWaypoints.getItems().addAll(graphNodes.values());
             for (GraphNode<String> node : graphNodes.values()) {
                 drawNode(node);
+
             }
             isMapPopulated = true;
         } else {
             System.out.println("Map already populated!");
         }
+    }
+
+    public void addLandmarkOrJunction() {
+        /*Validation checks on name and if its Duplicated*/
+        if (!nameField.getText().isEmpty() && !isDuplicateWayPoint()) {
+            int cult = (int) culturalSlid.getValue();
+            String name = nameField.getText();
+            boolean isJunction = junctionBox.isSelected();
+            boolean isLandmark = landmarkBox.isSelected();
+
+            /* Different behaviour for landmark and junction, so they display right on map */
+            if (isJunction || isLandmark) {
+                GraphNode<String> waypoint = new GraphNode<>(name, true, cult, (int) x, (int) y); // Using class-level x and y
+                if (isJunction) {
+                    /* clearing the location marker, adding to hashmap and setting the node on map */
+                    waypoint.setLandmark(false);
+                    graphNodes.put(name, waypoint);
+                    clearMarkers();
+                    clearFields();
+                    drawNode(waypoint);
+                    currentWaypoints.getItems().add(waypoint);
+                }
+                if (isLandmark) {
+                    clearMarkers();
+                    waypoint.setLandmark(true);
+                    graphNodes.put(name, waypoint);
+                    drawNode(waypoint);
+                    clearFields();
+                    currentWaypoints.getItems().add(waypoint);
+                }
+            } else {
+                Utils.showWarningAlert("ERROR", "PLEASE SPECIFY WHETHER YOU WANT TO ADD A JUNCTION OR A LANDMARK");
+            }
+        } else {
+            Utils.showWarningAlert("ERROR", "PLEASE ENTER A NAME FOR THE WAYPOINT");
+        }
+    }
+
+
+
+public void clearMarkers(){
+    /*Method for clearing the circle every new click or addition of waypoint*/
+        if(circle != null && text != null){
+            mapPane.getChildren().remove(circle);
+            mapPane.getChildren().remove(text);
+        }
+}
+
+    public void removeLandmarkOrJunction() {
+            /*Validation Checks*/
+        if (currentWaypoints != null && currentWaypoints.getSelectionModel().getSelectedItem() != null) {
+            GraphNode<String> selectedNode = currentWaypoints.getSelectionModel().getSelectedItem();
+
+            if (graphNodes.containsKey(selectedNode.getName())) {
+                currentWaypoints.getItems().remove(selectedNode);
+
+                graphNodes.remove(selectedNode.getName());
+
+
+                clearAllCircles();
+                /*Removing all circles from the pane first, repopulating after with contents of graph nodes
+                 * so the removed waypoint also removes from the map*/
+
+                for (GraphNode<String> node : graphNodes.values()) {
+                    drawNode(node);
+                }
+            }
+        } else {
+            Utils.showWarningAlert("ERROR", "Please select a waypoint");
+        }
+    }
+
+
+    private void clearAllCircles() {
+        mapPane.getChildren().removeIf(node -> node instanceof Circle);
+    }
+
+
+
+
+
+    public boolean isDuplicateWayPoint( ) {
+      return graphNodes.containsKey(nameField.getText());
     }
 
     private void drawNode(GraphNode<String> node) {
@@ -133,39 +244,46 @@ public class RouteFinder implements Initializable {
 
         if (onLandmark) {
             Main.secondPage.setCursor(Cursor.HAND);
-            pillTip.setText("Name: " + landmarkOn.getName() + ",\nLandmark X: " + landmarkOn.getGraphX() +
+            nodeTip.setText("Name: " + landmarkOn.getName() + ",\nLandmark X: " + landmarkOn.getGraphX() +
                     ",\nLandmark Y: " + landmarkOn.getGraphY());
-            pillTip.show(mapView, e.getScreenX() + 10, e.getScreenY() + 10);
+            nodeTip.show(mapView, e.getScreenX() + 10, e.getScreenY() + 10);
         } else {
-            pillTip.hide();
+            nodeTip.hide();
             Main.secondPage.setCursor(Cursor.DEFAULT);
         }
     }
 
-    public void dijkstraTest() {
-        graphNodes.put("ET", new GraphNode<>("Eiffel Tower", true,126,377)); //A
-        graphNodes.put("AdT", new GraphNode<>("Arc de Triomphe", true,80,220)); //B
-        graphNodes.put("TL", new GraphNode<>("The Louvre", true,133,78)); //C
-        graphNodes.put("GP", new GraphNode<>("Grand Palais", true,275,285)); //D
-        graphNodes.put("NDC", new GraphNode<>("Notre-Dame Cathedral", true,309,270)); //E
-        graphNodes.put("CE", new GraphNode<>("Champs-Élysées", true,358,192)); //F
-        graphNodes.put("OG", new GraphNode<>("Opera Garnier", true,342,349)); //G
-        graphNodes.put("PdlC", new GraphNode<>("Place de la Concorde", true,411,436)); //H
-        graphNodes.put("RS", new GraphNode<>("River Seine", true,349,77)); //I
-        graphNodes.put("BotSC", new GraphNode<>("Basilica of the Sacré-Coeur", true,447,31)); //J
-        graphNodes.put("TCP", new GraphNode<>("The Centre Pompidou", true,505,355)); //K
-        graphNodes.put("PAIII", new GraphNode<>("Pont Alexandre III", true,659,326)); //L
-        graphNodes.put("MdO", new GraphNode<>("Musée d’Orsay", true,532,248)); //M
 
-        graphNodes.put("N1", new GraphNode<>("N1", false, 108,370));
-        graphNodes.put("N2", new GraphNode<>("N2", false, 93,363));
-        graphNodes.put("N3", new GraphNode<>("N3", false, 85,278));
-        graphNodes.put("N4", new GraphNode<>("N4", false, 73,270));
-        graphNodes.put("N5", new GraphNode<>("N5", false, 96,236));
-        graphNodes.put("N6", new GraphNode<>("N6", false, 133,274));
-        graphNodes.put("N7", new GraphNode<>("N7", false, 224,262));
-        graphNodes.put("N8", new GraphNode<>("N8", false, 172,240));
-        graphNodes.put("N9", new GraphNode<>("N9", false, 365,230));
+
+
+
+
+
+
+    public void dijkstraTest() {
+        graphNodes.put("ET", new GraphNode<>("Eiffel Tower", true,5,126,377)); //A
+        graphNodes.put("AdT", new GraphNode<>("Arc de Triomphe", true,5,80,220)); //B
+        graphNodes.put("TL", new GraphNode<>("The Louvre", true,4,133,78)); //C
+        graphNodes.put("GP", new GraphNode<>("Grand Palais", true,3,275,285)); //D
+        graphNodes.put("NDC", new GraphNode<>("Notre-Dame Cathedral", true,3,309,270)); //E
+        graphNodes.put("CE", new GraphNode<>("Champs-Élysées", true,3,358,192)); //F
+        graphNodes.put("OG", new GraphNode<>("Opera Garnier", true,3,342,349)); //G
+        graphNodes.put("PdlC", new GraphNode<>("Place de la Concorde", true,3,411,436)); //H
+        graphNodes.put("RS", new GraphNode<>("River Seine", true,2,349,77)); //I
+        graphNodes.put("BotSC", new GraphNode<>("Basilica of the Sacré-Coeur", true,2,447,31)); //J
+        graphNodes.put("TCP", new GraphNode<>("The Centre Pompidou", true,2,505,355)); //K
+        graphNodes.put("PAIII", new GraphNode<>("Pont Alexandre III", true,5,659,326)); //L
+        graphNodes.put("MdO", new GraphNode<>("Musée d’Orsay", true,5,532,248)); //M
+
+        graphNodes.put("N1", new GraphNode<>("N1", false, 0,108,370));
+        graphNodes.put("N2", new GraphNode<>("N2", false, 0,93,363));
+        graphNodes.put("N3", new GraphNode<>("N3", false, 0,85,278));
+        graphNodes.put("N4", new GraphNode<>("N4", false, 0,73,270));
+        graphNodes.put("N5", new GraphNode<>("N5", false, 0,96,236));
+        graphNodes.put("N6", new GraphNode<>("N6", false, 0,133,274));
+        graphNodes.put("N7", new GraphNode<>("N7", false, 0,224,262));
+        graphNodes.put("N8", new GraphNode<>("N8", false, 0,172,240));
+        graphNodes.put("N9", new GraphNode<>("N9", false, 0,365,230));
 
         graphNodes.get("N1").connectToNodeUndirected(graphNodes.get("ET"), (int) Math.sqrt(Math.pow(graphNodes.get("ET").getGraphX() - graphNodes.get("N1").getGraphX(), 2) + Math.pow(graphNodes.get("ET").getGraphY() - graphNodes.get("N1").getGraphY(), 2)));
         graphNodes.get("N2").connectToNodeUndirected(graphNodes.get("N1"), (int) Math.sqrt(Math.pow(graphNodes.get("N1").getGraphX() - graphNodes.get("N2").getGraphX(), 2) + Math.pow(graphNodes.get("N1").getGraphY() - graphNodes.get("N2").getGraphY(), 2)));
@@ -243,7 +361,15 @@ public class RouteFinder implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         routeFinder = this;
-        pillTip = new Tooltip("TEST");
+
+        nodeTip = new Tooltip("TEST");
         mapPane.setOnMouseMoved(this::toolTipHover);
+    }
+
+
+    public void clearFields(){
+        nameField.clear();
+        landmarkBox.setSelected(false);
+         junctionBox.setSelected(false);
     }
 }
