@@ -56,7 +56,7 @@ public class GraphNode<String> {
 
     @Override
     public java.lang.String toString() {
-        return name.toString().toUpperCase();
+        return name.toString();
     }
 
     public int getGraphY() {
@@ -74,4 +74,9 @@ public class GraphNode<String> {
         adjList.add(new GraphLink(destNode, cost));
         destNode.adjList.add(new GraphLink(this,cost));
     }
+
+
+
+
+
 }
