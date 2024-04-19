@@ -38,6 +38,7 @@ public class Main extends Application {
 
         mainStage.setScene(secondPage);
         mainStage.centerOnScreen();
+        RouteFinder.routeFinder.dijkstraTest();
     }
 
     public static void main(String[] args) {
