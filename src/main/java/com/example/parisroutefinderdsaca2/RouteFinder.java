@@ -34,11 +34,11 @@ public class RouteFinder implements Initializable {
     /*-----------JAVAFX------------*/
 
     public AnchorPane mapPane = new AnchorPane();
-    public ListView<GraphNode<String>> currentWaypoints;
+    public ListView currentWaypoints;
     public Slider culturalSlid;
-    public ComboBox<GraphNode<String>> startPointBox;
-    public ComboBox<GraphNode<String>> avoidBox;
-    public ComboBox<GraphNode<String>> endPointBox;
+    public ComboBox<GraphNode<?>> startPointBox;
+    public ComboBox avoidBox;
+    public ComboBox endPointBox;
     public Slider prefSlid; /* User preference of how scenic the chosen route is*/
 
     /*-----------------------------*/
@@ -64,7 +64,7 @@ public class RouteFinder implements Initializable {
         out.writeObject(graphNodes);
         out.close();
     }
-    @SuppressWarnings("unchecked") /*warning was annoying me lol*/
+
     public void loadXML() throws Exception {
         Class<?>[] classes = new Class[] {GraphNode.class, GraphLink.class};
 
@@ -81,9 +81,6 @@ public class RouteFinder implements Initializable {
         if (!isMapPopulated) {
             for (GraphNode<String> node : graphNodes.values()) {
                 drawNode(node);
-                startPointBox.getItems().add(node);
-                endPointBox.getItems().add(node);
-                avoidBox.getItems().add(node);
             }
             isMapPopulated = true;
         } else {
@@ -125,13 +122,13 @@ public class RouteFinder implements Initializable {
         GraphNode<String> landmarkOn = null;
 
         for (GraphNode<String> g : graphNodes.values()) {
-            if (g.isLandmark()) {
+            //if (g.isLandmark()) {
                 if (Math.abs(mouseX - g.getGraphX()) <= 3 && Math.abs(mouseY - g.getGraphY()) <= 3) {
                     onLandmark = true;
                     landmarkOn = g;
                     break;
                 }
-            }
+            //}
         }
 
         if (onLandmark) {
@@ -146,25 +143,29 @@ public class RouteFinder implements Initializable {
     }
 
     public void dijkstraTest() {
-        graphNodes.put("ET", new GraphNode<>("Eiffel Tower", true,5,126,377)); //A
-        graphNodes.put("AdT", new GraphNode<>("Arc de Triomphe", true,5,80,220)); //B
-        graphNodes.put("TL", new GraphNode<>("The Louvre", true,4,133,78)); //C
-        graphNodes.put("GP", new GraphNode<>("Grand Palais", true,4,275,285)); //D
-        graphNodes.put("NDC", new GraphNode<>("Notre-Dame Cathedral", true,5,309,270)); //E
-        graphNodes.put("CE", new GraphNode<>("Champs-Élysées", true,3,358,192)); //F
-        graphNodes.put("OG", new GraphNode<>("Opera Garnier", true,2,342,349)); //G
-        graphNodes.put("PdlC", new GraphNode<>("Place de la Concorde", true,5,411,436)); //H
-        graphNodes.put("RS", new GraphNode<>("River Seine", true,4,349,77)); //I
-        graphNodes.put("BotSC", new GraphNode<>("Basilica of the Sacré-Coeur", true,3,447,31)); //J
-        graphNodes.put("TCP", new GraphNode<>("The Centre Pompidou", true,1,505,355)); //K
-        graphNodes.put("PAIII", new GraphNode<>("Pont Alexandre III", true,2,659,326)); //L
-        graphNodes.put("MdO", new GraphNode<>("Musée d’Orsay", true,1,532,248)); //M
+        graphNodes.put("ET", new GraphNode<>("Eiffel Tower", true,126,377)); //A
+        graphNodes.put("AdT", new GraphNode<>("Arc de Triomphe", true,80,220)); //B
+        graphNodes.put("TL", new GraphNode<>("The Louvre", true,133,78)); //C
+        graphNodes.put("GP", new GraphNode<>("Grand Palais", true,275,285)); //D
+        graphNodes.put("NDC", new GraphNode<>("Notre-Dame Cathedral", true,309,270)); //E
+        graphNodes.put("CE", new GraphNode<>("Champs-Élysées", true,358,192)); //F
+        graphNodes.put("OG", new GraphNode<>("Opera Garnier", true,342,349)); //G
+        graphNodes.put("PdlC", new GraphNode<>("Place de la Concorde", true,411,436)); //H
+        graphNodes.put("RS", new GraphNode<>("River Seine", true,349,77)); //I
+        graphNodes.put("BotSC", new GraphNode<>("Basilica of the Sacré-Coeur", true,447,31)); //J
+        graphNodes.put("TCP", new GraphNode<>("The Centre Pompidou", true,505,355)); //K
+        graphNodes.put("PAIII", new GraphNode<>("Pont Alexandre III", true,659,326)); //L
+        graphNodes.put("MdO", new GraphNode<>("Musée d’Orsay", true,532,248)); //M
 
-        graphNodes.put("N1", new GraphNode<>("N1", false, 0,108,370));
-        graphNodes.put("N2", new GraphNode<>("N2", false, 0,93,363));
-        graphNodes.put("N3", new GraphNode<>("N3", false, 0,85,278));
-        graphNodes.put("N4", new GraphNode<>("N4", false, 0,73,270));
-        graphNodes.put("N5", new GraphNode<>("N5", false, 0,96,236));
+        graphNodes.put("N1", new GraphNode<>("N1", false, 108,370));
+        graphNodes.put("N2", new GraphNode<>("N2", false, 93,363));
+        graphNodes.put("N3", new GraphNode<>("N3", false, 85,278));
+        graphNodes.put("N4", new GraphNode<>("N4", false, 73,270));
+        graphNodes.put("N5", new GraphNode<>("N5", false, 96,236));
+        graphNodes.put("N6", new GraphNode<>("N6", false, 133,274));
+        graphNodes.put("N7", new GraphNode<>("N7", false, 224,262));
+        graphNodes.put("N8", new GraphNode<>("N8", false, 172,240));
+        graphNodes.put("N9", new GraphNode<>("N9", false, 365,230));
 
         graphNodes.get("N1").connectToNodeUndirected(graphNodes.get("ET"), (int) Math.sqrt(Math.pow(graphNodes.get("ET").getGraphX() - graphNodes.get("N1").getGraphX(), 2) + Math.pow(graphNodes.get("ET").getGraphY() - graphNodes.get("N1").getGraphY(), 2)));
         graphNodes.get("N2").connectToNodeUndirected(graphNodes.get("N1"), (int) Math.sqrt(Math.pow(graphNodes.get("N1").getGraphX() - graphNodes.get("N2").getGraphX(), 2) + Math.pow(graphNodes.get("N1").getGraphY() - graphNodes.get("N2").getGraphY(), 2)));
@@ -172,7 +173,16 @@ public class RouteFinder implements Initializable {
         graphNodes.get("N4").connectToNodeUndirected(graphNodes.get("N3"), (int) Math.sqrt(Math.pow(graphNodes.get("N3").getGraphX() - graphNodes.get("N4").getGraphX(), 2) + Math.pow(graphNodes.get("N3").getGraphY() - graphNodes.get("N4").getGraphY(), 2)));
         graphNodes.get("N5").connectToNodeUndirected(graphNodes.get("N4"), (int) Math.sqrt(Math.pow(graphNodes.get("N4").getGraphX() - graphNodes.get("N5").getGraphX(), 2) + Math.pow(graphNodes.get("N4").getGraphY() - graphNodes.get("N5").getGraphY(), 2)));
         graphNodes.get("AdT").connectToNodeUndirected(graphNodes.get("N5"), (int) Math.sqrt(Math.pow(graphNodes.get("AdT").getGraphX() - graphNodes.get("N5").getGraphX(), 2) + Math.pow(graphNodes.get("AdT").getGraphY() - graphNodes.get("N5").getGraphY(), 2)));
-
+        graphNodes.get("N3").connectToNodeUndirected(graphNodes.get("N6"), (int) Math.sqrt(Math.pow(graphNodes.get("N3").getGraphX() - graphNodes.get("N6").getGraphX(), 2) + Math.pow(graphNodes.get("N3").getGraphY() - graphNodes.get("N6").getGraphY(), 2)));
+        graphNodes.get("N6").connectToNodeUndirected(graphNodes.get("N5"), (int) Math.sqrt(Math.pow(graphNodes.get("N6").getGraphX() - graphNodes.get("N5").getGraphX(), 2) + Math.pow(graphNodes.get("N6").getGraphY() - graphNodes.get("N5").getGraphY(), 2)));
+        graphNodes.get("N2").connectToNodeUndirected(graphNodes.get("N6"), (int) Math.sqrt(Math.pow(graphNodes.get("N2").getGraphX() - graphNodes.get("N6").getGraphX(), 2) + Math.pow(graphNodes.get("N2").getGraphY() - graphNodes.get("N6").getGraphY(), 2)));
+        graphNodes.get("N6").connectToNodeUndirected(graphNodes.get("N7"), (int) Math.sqrt(Math.pow(graphNodes.get("N6").getGraphX() - graphNodes.get("N7").getGraphX(), 2) + Math.pow(graphNodes.get("N6").getGraphY() - graphNodes.get("N7").getGraphY(), 2)));
+        graphNodes.get("N7").connectToNodeUndirected(graphNodes.get("GP"), (int) Math.sqrt(Math.pow(graphNodes.get("N7").getGraphX() - graphNodes.get("GP").getGraphX(), 2) + Math.pow(graphNodes.get("N7").getGraphY() - graphNodes.get("GP").getGraphY(), 2)));
+        graphNodes.get("N1").connectToNodeUndirected(graphNodes.get("GP"), (int) Math.sqrt(Math.pow(graphNodes.get("N1").getGraphX() - graphNodes.get("GP").getGraphX(), 2) + Math.pow(graphNodes.get("N1").getGraphY() - graphNodes.get("GP").getGraphY(), 2)));
+        graphNodes.get("N7").connectToNodeUndirected(graphNodes.get("N8"), (int) Math.sqrt(Math.pow(graphNodes.get("N7").getGraphX() - graphNodes.get("N8").getGraphX(), 2) + Math.pow(graphNodes.get("N7").getGraphY() - graphNodes.get("N8").getGraphY(), 2)));
+        graphNodes.get("GP").connectToNodeUndirected(graphNodes.get("NDC"), (int) Math.sqrt(Math.pow(graphNodes.get("GP").getGraphX() - graphNodes.get("NDC").getGraphX(), 2) + Math.pow(graphNodes.get("GP").getGraphY() - graphNodes.get("NDC").getGraphY(), 2)));
+        graphNodes.get("NDC").connectToNodeUndirected(graphNodes.get("N9"), (int) Math.sqrt(Math.pow(graphNodes.get("NDC").getGraphX() - graphNodes.get("N9").getGraphX(), 2) + Math.pow(graphNodes.get("NDC").getGraphY() - graphNodes.get("N9").getGraphY(), 2)));
+        graphNodes.get("N9").connectToNodeUndirected(graphNodes.get("CE"), (int) Math.sqrt(Math.pow(graphNodes.get("N9").getGraphX() - graphNodes.get("CE").getGraphX(), 2) + Math.pow(graphNodes.get("N9").getGraphY() - graphNodes.get("CE").getGraphY(), 2)));
 
 //        graphNodes.get("ET").connectToNodeUndirected(graphNodes.get("AdT"), 5); //adding streets between landmarks/junctions
 //        graphNodes.get("ET").connectToNodeUndirected(graphNodes.get("TL"), 9);
@@ -202,11 +212,11 @@ public class RouteFinder implements Initializable {
             loadXML();
             System.out.println("Database loaded!");
 
-            System.out.println("The cheapest path from Eiffel Tower to Arc de Triomphe");
+            System.out.println("The cheapest path from Eiffel Tower to Grand Palais");
             System.out.println("using Dijkstra's algorithm:");
             System.out.println("-------------------------------------");
 
-            Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get("ET"), "Arc de Triomphe");
+            Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get("ET"), "Grand Palais");
 
             assert cpa != null;
             for (GraphNode<?> n : cpa.pathList)
