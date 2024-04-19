@@ -45,3 +45,42 @@
     -fx-background-color: white;
 }
 
+    /* Combo Box */
+    .combo-box {
+        -fx-background-color: #1B1B1B; /* Background color */
+        -fx-text-fill: white; /* Text color */
+        -fx-font-family: "Arial Black"; /* Font family */
+        -fx-font-size: 12px; /* Font size */
+        -fx-padding: 2px; /* Padding */
+    }
+
+    /* Combo Box Arrow Button */
+    .combo-box .arrow-button {
+        -fx-background-color:  #1B1B1B; /* Background color */
+        -fx-padding: 4px; /* Padding */
+    }
+
+    /* Combo Box Arrow Icon */
+    .combo-box .arrow-button .arrow {
+        -fx-background-color:  #1B1B1B; /* Background color */
+
+    }
+
+    /* Combo Box List Cell */
+    .combo-box .list-cell {
+        -fx-background-color: #1B1B1B; /* Background color */
+        -fx-text-fill: white; /* Text color */
+        -fx-font-family: "Arial Black"; /* Font family */
+        -fx-font-size: 12px; /* Font size */
+        -fx-padding: 2px; /* Padding */
+    }
+
+    /* Combo Box Selected List Cell */
+    .combo-box .list-cell:selected {
+        -fx-background-color: #1B1B1B; /* Background color */
+        -fx-text-fill: white; /* Text color */
+        -fx-font-size: 13px;
+    }
+
+
+
