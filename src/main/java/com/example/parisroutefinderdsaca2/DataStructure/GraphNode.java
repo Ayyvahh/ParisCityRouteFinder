@@ -54,6 +54,14 @@ public class GraphNode<String> {
         return -1;
     }
 
+    public List<GraphLink> getAdjList() {
+        return adjList;
+    }
+
+    public void setAdjList(List<GraphLink> adjList) {
+        this.adjList = adjList;
+    }
+
     @Override
     public java.lang.String toString() {
         return name.toString();
@@ -72,7 +80,7 @@ public class GraphNode<String> {
 
     public void connectToNodeUndirected(GraphNode<String> destNode, int cost) {
         adjList.add(new GraphLink(destNode, cost));
-        destNode.adjList.add(new GraphLink(this,cost));
+        destNode.adjList.add(new GraphLink(destNode,cost));
     }
 
 

@@ -1,31 +1,1234 @@
 <object-stream>
   <map>
     <entry>
-      <string>TCP</string>
+      <string>Place de la Concorde</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">The Centre Pompidou</name>
+        <name class="string">Place de la Concorde</name>
         <nodeValue>2147483647</nodeValue>
-        <adjList/>
+        <adjList>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../.."/>
+            <cost>45</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode>
+              <name class="string">N46</name>
+              <nodeValue>2147483647</nodeValue>
+              <adjList>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../.."/>
+                  <cost>70</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode>
+                    <name class="string">N45</name>
+                    <nodeValue>2147483647</nodeValue>
+                    <adjList>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../.."/>
+                        <cost>35</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode>
+                          <name class="string">N39</name>
+                          <nodeValue>2147483647</nodeValue>
+                          <adjList>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../.."/>
+                              <cost>42</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode>
+                                <name class="string">The Centre Pompidou</name>
+                                <nodeValue>2147483647</nodeValue>
+                                <adjList>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../.."/>
+                                    <cost>84</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../.."/>
+                                    <cost>59</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                </adjList>
+                                <isLandmark>true</isLandmark>
+                                <culturalSignificance>2</culturalSignificance>
+                                <graphX>505</graphX>
+                                <graphY>355</graphY>
+                              </destNode>
+                              <cost>59</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode>
+                                <name class="string">N43</name>
+                                <nodeValue>2147483647</nodeValue>
+                                <adjList>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../.."/>
+                                    <cost>130</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode>
+                                      <name class="string">Pont Alexandre III</name>
+                                      <nodeValue>2147483647</nodeValue>
+                                      <adjList>
+                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                          <destNode reference="../../.."/>
+                                          <cost>23</cost>
+                                          <distance>0.0</distance>
+                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                      </adjList>
+                                      <isLandmark>true</isLandmark>
+                                      <culturalSignificance>5</culturalSignificance>
+                                      <graphX>659</graphX>
+                                      <graphY>326</graphY>
+                                    </destNode>
+                                    <cost>23</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                </adjList>
+                                <isLandmark>false</isLandmark>
+                                <culturalSignificance>0</culturalSignificance>
+                                <graphX>645</graphX>
+                                <graphY>345</graphY>
+                              </destNode>
+                              <cost>130</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode>
+                                <name class="string">N56</name>
+                                <nodeValue>2147483647</nodeValue>
+                                <adjList>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../.."/>
+                                    <cost>82</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode>
+                                      <name class="string">N57</name>
+                                      <nodeValue>2147483647</nodeValue>
+                                      <adjList>
+                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                          <destNode reference="../../.."/>
+                                          <cost>38</cost>
+                                          <distance>0.0</distance>
+                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                          <destNode>
+                                            <name class="string">Musée d’Orsay</name>
+                                            <nodeValue>2147483647</nodeValue>
+                                            <adjList>
+                                              <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                <destNode reference="../../.."/>
+                                                <cost>69</cost>
+                                                <distance>0.0</distance>
+                                              </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                              <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                <destNode>
+                                                  <name class="string">N42</name>
+                                                  <nodeValue>2147483647</nodeValue>
+                                                  <adjList>
+                                                    <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                      <destNode reference="../../.."/>
+                                                      <cost>35</cost>
+                                                      <distance>0.0</distance>
+                                                    </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                    <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                      <destNode>
+                                                        <name class="string">N50</name>
+                                                        <nodeValue>2147483647</nodeValue>
+                                                        <adjList>
+                                                          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                            <destNode reference="../../.."/>
+                                                            <cost>28</cost>
+                                                            <distance>0.0</distance>
+                                                          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                            <destNode>
+                                                              <name class="string">N51</name>
+                                                              <nodeValue>2147483647</nodeValue>
+                                                              <adjList>
+                                                                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                                  <destNode reference="../../.."/>
+                                                                  <cost>84</cost>
+                                                                  <distance>0.0</distance>
+                                                                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                                  <destNode>
+                                                                    <name class="string">The Panthéon</name>
+                                                                    <nodeValue>2147483647</nodeValue>
+                                                                    <adjList>
+                                                                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                                        <destNode reference="../../.."/>
+                                                                        <cost>28</cost>
+                                                                        <distance>0.0</distance>
+                                                                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                                    </adjList>
+                                                                    <isLandmark>true</isLandmark>
+                                                                    <culturalSignificance>5</culturalSignificance>
+                                                                    <graphX>572</graphX>
+                                                                    <graphY>98</graphY>
+                                                                  </destNode>
+                                                                  <cost>28</cost>
+                                                                  <distance>0.0</distance>
+                                                                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                              </adjList>
+                                                              <isLandmark>false</isLandmark>
+                                                              <culturalSignificance>0</culturalSignificance>
+                                                              <graphX>581</graphX>
+                                                              <graphY>125</graphY>
+                                                            </destNode>
+                                                            <cost>84</cost>
+                                                            <distance>0.0</distance>
+                                                          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                        </adjList>
+                                                        <isLandmark>false</isLandmark>
+                                                        <culturalSignificance>0</culturalSignificance>
+                                                        <graphX>571</graphX>
+                                                        <graphY>209</graphY>
+                                                      </destNode>
+                                                      <cost>28</cost>
+                                                      <distance>0.0</distance>
+                                                    </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                                  </adjList>
+                                                  <isLandmark>false</isLandmark>
+                                                  <culturalSignificance>0</culturalSignificance>
+                                                  <graphX>566</graphX>
+                                                  <graphY>237</graphY>
+                                                </destNode>
+                                                <cost>35</cost>
+                                                <distance>0.0</distance>
+                                              </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                            </adjList>
+                                            <isLandmark>true</isLandmark>
+                                            <culturalSignificance>5</culturalSignificance>
+                                            <graphX>532</graphX>
+                                            <graphY>248</graphY>
+                                          </destNode>
+                                          <cost>69</cost>
+                                          <distance>0.0</distance>
+                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                      </adjList>
+                                      <isLandmark>false</isLandmark>
+                                      <culturalSignificance>0</culturalSignificance>
+                                      <graphX>580</graphX>
+                                      <graphY>298</graphY>
+                                    </destNode>
+                                    <cost>38</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                </adjList>
+                                <isLandmark>false</isLandmark>
+                                <culturalSignificance>0</culturalSignificance>
+                                <graphX>563</graphX>
+                                <graphY>332</graphY>
+                              </destNode>
+                              <cost>82</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                          </adjList>
+                          <isLandmark>false</isLandmark>
+                          <culturalSignificance>0</culturalSignificance>
+                          <graphX>531</graphX>
+                          <graphY>408</graphY>
+                        </destNode>
+                        <cost>42</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../.."/>
+                        <cost>100</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                    </adjList>
+                    <isLandmark>false</isLandmark>
+                    <culturalSignificance>0</culturalSignificance>
+                    <graphX>491</graphX>
+                    <graphY>421</graphY>
+                  </destNode>
+                  <cost>35</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+              </adjList>
+              <isLandmark>false</isLandmark>
+              <culturalSignificance>0</culturalSignificance>
+              <graphX>479</graphX>
+              <graphY>454</graphY>
+            </destNode>
+            <cost>70</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode>
+              <name class="string">N18</name>
+              <nodeValue>2147483647</nodeValue>
+              <adjList>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../.."/>
+                  <cost>65</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../.."/>
+                  <cost>54</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode>
+                    <name class="string">N17</name>
+                    <nodeValue>2147483647</nodeValue>
+                    <adjList>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../.."/>
+                        <cost>66</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../.."/>
+                        <cost>60</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode>
+                          <name class="string">N9</name>
+                          <nodeValue>2147483647</nodeValue>
+                          <adjList>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../.."/>
+                              <cost>67</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode>
+                                <name class="string">Champs-Élysées</name>
+                                <nodeValue>2147483647</nodeValue>
+                                <adjList>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../.."/>
+                                    <cost>43</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../.."/>
+                                    <cost>49</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode>
+                                      <name class="string">N27</name>
+                                      <nodeValue>2147483647</nodeValue>
+                                      <adjList>
+                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                          <destNode reference="../../.."/>
+                                          <cost>61</cost>
+                                          <distance>0.0</distance>
+                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                      </adjList>
+                                      <isLandmark>false</isLandmark>
+                                      <culturalSignificance>0</culturalSignificance>
+                                      <graphX>323</graphX>
+                                      <graphY>141</graphY>
+                                    </destNode>
+                                    <cost>61</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode>
+                                      <name class="string">N28</name>
+                                      <nodeValue>2147483647</nodeValue>
+                                      <adjList>
+                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                          <destNode reference="../../.."/>
+                                          <cost>47</cost>
+                                          <distance>0.0</distance>
+                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                      </adjList>
+                                      <isLandmark>false</isLandmark>
+                                      <culturalSignificance>0</culturalSignificance>
+                                      <graphX>387</graphX>
+                                      <graphY>155</graphY>
+                                    </destNode>
+                                    <cost>47</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                </adjList>
+                                <isLandmark>true</isLandmark>
+                                <culturalSignificance>3</culturalSignificance>
+                                <graphX>358</graphX>
+                                <graphY>192</graphY>
+                              </destNode>
+                              <cost>43</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../.."/>
+                              <cost>84</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                          </adjList>
+                          <isLandmark>false</isLandmark>
+                          <culturalSignificance>0</culturalSignificance>
+                          <graphX>367</graphX>
+                          <graphY>235</graphY>
+                        </destNode>
+                        <cost>84</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode>
+                          <name class="string">N36</name>
+                          <nodeValue>2147483647</nodeValue>
+                          <adjList>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../.."/>
+                              <cost>43</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../../../../../../../../../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+                              <cost>84</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../.."/>
+                              <cost>51</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                          </adjList>
+                          <isLandmark>false</isLandmark>
+                          <culturalSignificance>0</culturalSignificance>
+                          <graphX>422</graphX>
+                          <graphY>337</graphY>
+                        </destNode>
+                        <cost>43</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                    </adjList>
+                    <isLandmark>false</isLandmark>
+                    <culturalSignificance>0</culturalSignificance>
+                    <graphX>383</graphX>
+                    <graphY>318</graphY>
+                  </destNode>
+                  <cost>66</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode"/>
+                  <cost>51</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../../../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+                  <cost>100</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+              </adjList>
+              <isLandmark>false</isLandmark>
+              <culturalSignificance>0</culturalSignificance>
+              <graphX>398</graphX>
+              <graphY>383</graphY>
+            </destNode>
+            <cost>54</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+        </adjList>
         <isLandmark>true</isLandmark>
-        <culturalSignificance>2</culturalSignificance>
-        <graphX>505</graphX>
-        <graphY>355</graphY>
+        <culturalSignificance>3</culturalSignificance>
+        <graphX>411</graphX>
+        <graphY>436</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
     <entry>
-      <string>RS</string>
+      <string>Grand Palais</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">River Seine</name>
+        <name class="string">Grand Palais</name>
         <nodeValue>2147483647</nodeValue>
-        <adjList/>
+        <adjList>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../.."/>
+            <cost>55</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../.."/>
+            <cost>187</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode>
+              <name class="string">Notre-Dame Cathedral</name>
+              <nodeValue>2147483647</nodeValue>
+              <adjList>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../.."/>
+                  <cost>37</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../../../../../../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+                  <cost>67</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode>
+                    <name class="string">N16</name>
+                    <nodeValue>2147483647</nodeValue>
+                    <adjList>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../.."/>
+                        <cost>28</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode>
+                          <name class="string">Opera Garnier</name>
+                          <nodeValue>2147483647</nodeValue>
+                          <adjList>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../.."/>
+                              <cost>61</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode>
+                                <name class="string">N21</name>
+                                <nodeValue>2147483647</nodeValue>
+                                <adjList>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../.."/>
+                                    <cost>90</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../../../../../../../../../../../../../../../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode"/>
+                                    <cost>45</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../.."/>
+                                    <cost>39</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode>
+                                      <name class="string">N38</name>
+                                      <nodeValue>2147483647</nodeValue>
+                                      <adjList>
+                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                          <destNode reference="../../.."/>
+                                          <cost>134</cost>
+                                          <distance>0.0</distance>
+                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                          <destNode reference="../../../../../.."/>
+                                          <cost>39</cost>
+                                          <distance>0.0</distance>
+                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                          <destNode reference="../../.."/>
+                                          <cost>39</cost>
+                                          <distance>0.0</distance>
+                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                      </adjList>
+                                      <isLandmark>false</isLandmark>
+                                      <culturalSignificance>0</culturalSignificance>
+                                      <graphX>360</graphX>
+                                      <graphY>475</graphY>
+                                    </destNode>
+                                    <cost>39</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                </adjList>
+                                <isLandmark>false</isLandmark>
+                                <culturalSignificance>0</culturalSignificance>
+                                <graphX>366</graphX>
+                                <graphY>436</graphY>
+                              </destNode>
+                              <cost>90</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../../../../../../../../../../../../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+                              <cost>65</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                          </adjList>
+                          <isLandmark>true</isLandmark>
+                          <culturalSignificance>3</culturalSignificance>
+                          <graphX>342</graphX>
+                          <graphY>349</graphY>
+                        </destNode>
+                        <cost>61</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../../../../../../../../../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+                        <cost>60</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                    </adjList>
+                    <isLandmark>false</isLandmark>
+                    <culturalSignificance>0</culturalSignificance>
+                    <graphX>331</graphX>
+                    <graphY>288</graphY>
+                  </destNode>
+                  <cost>28</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+              </adjList>
+              <isLandmark>true</isLandmark>
+              <culturalSignificance>3</culturalSignificance>
+              <graphX>309</graphX>
+              <graphY>270</graphY>
+            </destNode>
+            <cost>37</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode>
+              <name class="string">N59</name>
+              <nodeValue>2147483647</nodeValue>
+              <adjList>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../.."/>
+                  <cost>69</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../.."/>
+                  <cost>69</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode>
+                    <name class="string">N58</name>
+                    <nodeValue>2147483647</nodeValue>
+                    <adjList>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../.."/>
+                        <cost>37</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode>
+                          <name class="string">N47</name>
+                          <nodeValue>2147483647</nodeValue>
+                          <adjList>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../.."/>
+                              <cost>43</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode>
+                                <name class="string">N65</name>
+                                <nodeValue>2147483647</nodeValue>
+                                <adjList>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../.."/>
+                                    <cost>82</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../../../../../../../../../../../../../../../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+                                    <cost>49</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                </adjList>
+                                <isLandmark>false</isLandmark>
+                                <culturalSignificance>0</culturalSignificance>
+                                <graphX>318</graphX>
+                                <graphY>163</graphY>
+                              </destNode>
+                              <cost>82</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                          </adjList>
+                          <isLandmark>false</isLandmark>
+                          <culturalSignificance>0</culturalSignificance>
+                          <graphX>236</graphX>
+                          <graphY>171</graphY>
+                        </destNode>
+                        <cost>43</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                    </adjList>
+                    <isLandmark>false</isLandmark>
+                    <culturalSignificance>0</culturalSignificance>
+                    <graphX>249</graphX>
+                    <graphY>212</graphY>
+                  </destNode>
+                  <cost>37</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+              </adjList>
+              <isLandmark>false</isLandmark>
+              <culturalSignificance>0</culturalSignificance>
+              <graphX>286</graphX>
+              <graphY>216</graphY>
+            </destNode>
+            <cost>69</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode"/>
+            <cost>69</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+        </adjList>
         <isLandmark>true</isLandmark>
-        <culturalSignificance>2</culturalSignificance>
-        <graphX>349</graphX>
-        <graphY>77</graphY>
+        <culturalSignificance>3</culturalSignificance>
+        <graphX>275</graphX>
+        <graphY>285</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
     <entry>
-      <string>BotSC</string>
+      <string>N61</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N61</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>455</graphX>
+        <graphY>248</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N60</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N60</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>414</graphX>
+        <graphY>253</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N63</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N63</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>445</graphX>
+        <graphY>153</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N62</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N62</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../.."/>
+            <cost>89</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../../../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode"/>
+            <cost>134</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+        </adjList>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>233</graphX>
+        <graphY>432</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N21</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N65</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N20</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N20</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>89</graphX>
+        <graphY>130</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N64</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N64</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>367</graphX>
+        <graphY>45</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N23</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N23</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>366</graphX>
+        <graphY>436</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N22</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N22</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>145</graphX>
+        <graphY>139</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N25</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N25</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>334</graphX>
+        <graphY>114</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N24</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N24</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>188</graphX>
+        <graphY>45</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N27</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+    </entry>
+    <entry>
+      <string>N26</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N26</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>334</graphX>
+        <graphY>114</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N29</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N29</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>401</graphX>
+        <graphY>52</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N28</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode"/>
+    </entry>
+    <entry>
+      <string>N1</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N1</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode>
+              <name class="string">Eiffel Tower</name>
+              <nodeValue>2147483647</nodeValue>
+              <adjList>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../.."/>
+                  <cost>19</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode>
+                    <name class="string">N10</name>
+                    <nodeValue>2147483647</nodeValue>
+                    <adjList>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../.."/>
+                        <cost>30</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../../../../../../../../../../entry[6]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode"/>
+                        <cost>89</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                    </adjList>
+                    <isLandmark>false</isLandmark>
+                    <culturalSignificance>0</culturalSignificance>
+                    <graphX>151</graphX>
+                    <graphY>395</graphY>
+                  </destNode>
+                  <cost>30</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+              </adjList>
+              <isLandmark>true</isLandmark>
+              <culturalSignificance>5</culturalSignificance>
+              <graphX>126</graphX>
+              <graphY>377</graphY>
+            </destNode>
+            <cost>19</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../.."/>
+            <cost>16</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../../../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode"/>
+            <cost>187</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+        </adjList>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>108</graphX>
+        <graphY>370</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N2</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N2</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../../../../entry[19]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode"/>
+            <cost>16</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../.."/>
+            <cost>85</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode>
+              <name class="string">N6</name>
+              <nodeValue>2147483647</nodeValue>
+              <adjList>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../.."/>
+                  <cost>48</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode>
+                    <name class="string">N5</name>
+                    <nodeValue>2147483647</nodeValue>
+                    <adjList>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode>
+                          <name class="string">N4</name>
+                          <nodeValue>2147483647</nodeValue>
+                          <adjList>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode>
+                                <name class="string">N3</name>
+                                <nodeValue>2147483647</nodeValue>
+                                <adjList>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../../../../../../../../../../../../../.."/>
+                                    <cost>85</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../.."/>
+                                    <cost>14</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                    <destNode reference="../../../../../../../../../../../.."/>
+                                    <cost>48</cost>
+                                    <distance>0.0</distance>
+                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                                </adjList>
+                                <isLandmark>false</isLandmark>
+                                <culturalSignificance>0</culturalSignificance>
+                                <graphX>85</graphX>
+                                <graphY>278</graphY>
+                              </destNode>
+                              <cost>14</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../.."/>
+                              <cost>41</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                          </adjList>
+                          <isLandmark>false</isLandmark>
+                          <culturalSignificance>0</culturalSignificance>
+                          <graphX>73</graphX>
+                          <graphY>270</graphY>
+                        </destNode>
+                        <cost>41</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../.."/>
+                        <cost>22</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../.."/>
+                        <cost>53</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                    </adjList>
+                    <isLandmark>false</isLandmark>
+                    <culturalSignificance>0</culturalSignificance>
+                    <graphX>96</graphX>
+                    <graphY>236</graphY>
+                  </destNode>
+                  <cost>53</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode reference="../../.."/>
+                  <cost>97</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                  <destNode>
+                    <name class="string">N7</name>
+                    <nodeValue>2147483647</nodeValue>
+                    <adjList>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../.."/>
+                        <cost>91</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode reference="../../../../../../../../../../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode"/>
+                        <cost>55</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                        <destNode>
+                          <name class="string">N8</name>
+                          <nodeValue>2147483647</nodeValue>
+                          <adjList>
+                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                              <destNode reference="../../.."/>
+                              <cost>56</cost>
+                              <distance>0.0</distance>
+                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                          </adjList>
+                          <isLandmark>false</isLandmark>
+                          <culturalSignificance>0</culturalSignificance>
+                          <graphX>172</graphX>
+                          <graphY>240</graphY>
+                        </destNode>
+                        <cost>56</cost>
+                        <distance>0.0</distance>
+                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+                    </adjList>
+                    <isLandmark>false</isLandmark>
+                    <culturalSignificance>0</culturalSignificance>
+                    <graphX>224</graphX>
+                    <graphY>262</graphY>
+                  </destNode>
+                  <cost>91</cost>
+                  <distance>0.0</distance>
+                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+              </adjList>
+              <isLandmark>false</isLandmark>
+              <culturalSignificance>0</culturalSignificance>
+              <graphX>133</graphX>
+              <graphY>274</graphY>
+            </destNode>
+            <cost>97</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+        </adjList>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>93</graphX>
+        <graphY>363</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N3</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[20]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
+    </entry>
+    <entry>
+      <string>N4</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[20]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
+    </entry>
+    <entry>
+      <string>N5</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[20]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>Eiffel Tower</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[19]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
+    </entry>
+    <entry>
+      <string>N6</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[20]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+    </entry>
+    <entry>
+      <string>N7</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[20]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode"/>
+    </entry>
+    <entry>
+      <string>N8</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[20]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+    </entry>
+    <entry>
+      <string>N30</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N30</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>225</graphX>
+        <graphY>124</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N9</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+    </entry>
+    <entry>
+      <string>N32</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N32</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>476</graphX>
+        <graphY>134</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N31</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N31</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>221</graphX>
+        <graphY>62</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>Pont Alexandre III</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N34</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N34</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>481</graphX>
+        <graphY>186</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N33</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N33</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>396</graphX>
+        <graphY>131</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N36</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode"/>
+    </entry>
+    <entry>
+      <string>N35</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N35</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>467</graphX>
+        <graphY>216</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N38</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode"/>
+    </entry>
+    <entry>
+      <string>N37</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N37</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>268</graphX>
+        <graphY>389</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N39</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>The Panthéon</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>Basilica of the Sacré-Coeur</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
         <name class="string">Basilica of the Sacré-Coeur</name>
         <nodeValue>2147483647</nodeValue>
@@ -37,361 +1240,107 @@
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
     <entry>
-      <string>CE</string>
+      <string>N41</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">Champs-Élysées</name>
+        <name class="string">N41</name>
         <nodeValue>2147483647</nodeValue>
-        <adjList>
-          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-            <destNode>
-              <name class="string">N9</name>
-              <nodeValue>2147483647</nodeValue>
-              <adjList>
-                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                  <destNode>
-                    <name class="string">Notre-Dame Cathedral</name>
-                    <nodeValue>2147483647</nodeValue>
-                    <adjList>
-                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                        <destNode>
-                          <name class="string">Grand Palais</name>
-                          <nodeValue>2147483647</nodeValue>
-                          <adjList>
-                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                              <destNode>
-                                <name class="string">N7</name>
-                                <nodeValue>2147483647</nodeValue>
-                                <adjList>
-                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                    <destNode>
-                                      <name class="string">N6</name>
-                                      <nodeValue>2147483647</nodeValue>
-                                      <adjList>
-                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                          <destNode>
-                                            <name class="string">N3</name>
-                                            <nodeValue>2147483647</nodeValue>
-                                            <adjList>
-                                              <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                <destNode>
-                                                  <name class="string">N2</name>
-                                                  <nodeValue>2147483647</nodeValue>
-                                                  <adjList>
-                                                    <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                      <destNode>
-                                                        <name class="string">N1</name>
-                                                        <nodeValue>2147483647</nodeValue>
-                                                        <adjList>
-                                                          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                            <destNode>
-                                                              <name class="string">Eiffel Tower</name>
-                                                              <nodeValue>2147483647</nodeValue>
-                                                              <adjList>
-                                                                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                                  <destNode reference="../../../../../.."/>
-                                                                  <cost>19</cost>
-                                                                  <distance>0.0</distance>
-                                                                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                              </adjList>
-                                                              <isLandmark>true</isLandmark>
-                                                              <culturalSignificance>5</culturalSignificance>
-                                                              <graphX>126</graphX>
-                                                              <graphY>377</graphY>
-                                                            </destNode>
-                                                            <cost>19</cost>
-                                                            <distance>0.0</distance>
-                                                          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                            <destNode reference="../../../../../.."/>
-                                                            <cost>16</cost>
-                                                            <distance>0.0</distance>
-                                                          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                            <destNode reference="../../../../../../../../../../../../../../../../../.."/>
-                                                            <cost>187</cost>
-                                                            <distance>0.0</distance>
-                                                          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                        </adjList>
-                                                        <isLandmark>false</isLandmark>
-                                                        <culturalSignificance>0</culturalSignificance>
-                                                        <graphX>108</graphX>
-                                                        <graphY>370</graphY>
-                                                      </destNode>
-                                                      <cost>16</cost>
-                                                      <distance>0.0</distance>
-                                                    </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                    <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                      <destNode reference="../../../../../.."/>
-                                                      <cost>85</cost>
-                                                      <distance>0.0</distance>
-                                                    </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                    <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                      <destNode reference="../../../../../../../../.."/>
-                                                      <cost>97</cost>
-                                                      <distance>0.0</distance>
-                                                    </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                  </adjList>
-                                                  <isLandmark>false</isLandmark>
-                                                  <culturalSignificance>0</culturalSignificance>
-                                                  <graphX>93</graphX>
-                                                  <graphY>363</graphY>
-                                                </destNode>
-                                                <cost>85</cost>
-                                                <distance>0.0</distance>
-                                              </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                              <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                <destNode>
-                                                  <name class="string">N4</name>
-                                                  <nodeValue>2147483647</nodeValue>
-                                                  <adjList>
-                                                    <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                      <destNode reference="../../../../../.."/>
-                                                      <cost>14</cost>
-                                                      <distance>0.0</distance>
-                                                    </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                    <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                      <destNode>
-                                                        <name class="string">N5</name>
-                                                        <nodeValue>2147483647</nodeValue>
-                                                        <adjList>
-                                                          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                            <destNode reference="../../../../../.."/>
-                                                            <cost>41</cost>
-                                                            <distance>0.0</distance>
-                                                          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                            <destNode>
-                                                              <name class="string">Arc de Triomphe</name>
-                                                              <nodeValue>2147483647</nodeValue>
-                                                              <adjList>
-                                                                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                                  <destNode reference="../../../../../.."/>
-                                                                  <cost>22</cost>
-                                                                  <distance>0.0</distance>
-                                                                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                              </adjList>
-                                                              <isLandmark>true</isLandmark>
-                                                              <culturalSignificance>5</culturalSignificance>
-                                                              <graphX>80</graphX>
-                                                              <graphY>220</graphY>
-                                                            </destNode>
-                                                            <cost>22</cost>
-                                                            <distance>0.0</distance>
-                                                          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                            <destNode reference="../../../../../../../../../../../.."/>
-                                                            <cost>53</cost>
-                                                            <distance>0.0</distance>
-                                                          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                        </adjList>
-                                                        <isLandmark>false</isLandmark>
-                                                        <culturalSignificance>0</culturalSignificance>
-                                                        <graphX>96</graphX>
-                                                        <graphY>236</graphY>
-                                                      </destNode>
-                                                      <cost>41</cost>
-                                                      <distance>0.0</distance>
-                                                    </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                  </adjList>
-                                                  <isLandmark>false</isLandmark>
-                                                  <culturalSignificance>0</culturalSignificance>
-                                                  <graphX>73</graphX>
-                                                  <graphY>270</graphY>
-                                                </destNode>
-                                                <cost>14</cost>
-                                                <distance>0.0</distance>
-                                              </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                              <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                                <destNode reference="../../../../../.."/>
-                                                <cost>48</cost>
-                                                <distance>0.0</distance>
-                                              </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                            </adjList>
-                                            <isLandmark>false</isLandmark>
-                                            <culturalSignificance>0</culturalSignificance>
-                                            <graphX>85</graphX>
-                                            <graphY>278</graphY>
-                                          </destNode>
-                                          <cost>48</cost>
-                                          <distance>0.0</distance>
-                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                          <destNode reference="../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
-                                          <cost>53</cost>
-                                          <distance>0.0</distance>
-                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                          <destNode reference="../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-                                          <cost>97</cost>
-                                          <distance>0.0</distance>
-                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                          <destNode reference="../../../../../.."/>
-                                          <cost>91</cost>
-                                          <distance>0.0</distance>
-                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                      </adjList>
-                                      <isLandmark>false</isLandmark>
-                                      <culturalSignificance>0</culturalSignificance>
-                                      <graphX>133</graphX>
-                                      <graphY>274</graphY>
-                                    </destNode>
-                                    <cost>91</cost>
-                                    <distance>0.0</distance>
-                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                    <destNode reference="../../../../../.."/>
-                                    <cost>55</cost>
-                                    <distance>0.0</distance>
-                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                  <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                    <destNode>
-                                      <name class="string">N8</name>
-                                      <nodeValue>2147483647</nodeValue>
-                                      <adjList>
-                                        <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                          <destNode reference="../../../../../.."/>
-                                          <cost>56</cost>
-                                          <distance>0.0</distance>
-                                        </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                      </adjList>
-                                      <isLandmark>false</isLandmark>
-                                      <culturalSignificance>0</culturalSignificance>
-                                      <graphX>172</graphX>
-                                      <graphY>240</graphY>
-                                    </destNode>
-                                    <cost>56</cost>
-                                    <distance>0.0</distance>
-                                  </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                                </adjList>
-                                <isLandmark>false</isLandmark>
-                                <culturalSignificance>0</culturalSignificance>
-                                <graphX>224</graphX>
-                                <graphY>262</graphY>
-                              </destNode>
-                              <cost>55</cost>
-                              <distance>0.0</distance>
-                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                              <destNode reference="../../com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-                              <cost>187</cost>
-                              <distance>0.0</distance>
-                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                            <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                              <destNode reference="../../../../../.."/>
-                              <cost>37</cost>
-                              <distance>0.0</distance>
-                            </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                          </adjList>
-                          <isLandmark>true</isLandmark>
-                          <culturalSignificance>3</culturalSignificance>
-                          <graphX>275</graphX>
-                          <graphY>285</graphY>
-                        </destNode>
-                        <cost>37</cost>
-                        <distance>0.0</distance>
-                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                      <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                        <destNode reference="../../../../../.."/>
-                        <cost>68</cost>
-                        <distance>0.0</distance>
-                      </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                    </adjList>
-                    <isLandmark>true</isLandmark>
-                    <culturalSignificance>3</culturalSignificance>
-                    <graphX>309</graphX>
-                    <graphY>270</graphY>
-                  </destNode>
-                  <cost>68</cost>
-                  <distance>0.0</distance>
-                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-                  <destNode reference="../../../../../.."/>
-                  <cost>38</cost>
-                  <distance>0.0</distance>
-                </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-              </adjList>
-              <isLandmark>false</isLandmark>
-              <culturalSignificance>0</culturalSignificance>
-              <graphX>365</graphX>
-              <graphY>230</graphY>
-            </destNode>
-            <cost>38</cost>
-            <distance>0.0</distance>
-          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
-        </adjList>
-        <isLandmark>true</isLandmark>
-        <culturalSignificance>3</culturalSignificance>
-        <graphX>358</graphX>
-        <graphY>192</graphY>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>493</graphX>
+        <graphY>249</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
     <entry>
-      <string>N1</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>N2</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>N3</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>N4</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
-    </entry>
-    <entry>
-      <string>N5</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
-    </entry>
-    <entry>
-      <string>N6</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>GP</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>N7</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>N8</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
-    </entry>
-    <entry>
-      <string>N9</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>NDC</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>PdlC</string>
+      <string>N40</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">Place de la Concorde</name>
+        <name class="string">N40</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>508</graphX>
+        <graphY>300</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N43</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+    </entry>
+    <entry>
+      <string>N42</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N45</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N44</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N44</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>530</graphX>
+        <graphY>409</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N47</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N46</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N49</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N49</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>438</graphX>
+        <graphY>170</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N48</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N48</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>454</graphX>
+        <graphY>134</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>Musée d’Orsay</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>Champs-Élysées</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>River Seine</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">River Seine</name>
         <nodeValue>2147483647</nodeValue>
         <adjList/>
         <isLandmark>true</isLandmark>
-        <culturalSignificance>3</culturalSignificance>
-        <graphX>411</graphX>
-        <graphY>436</graphY>
+        <culturalSignificance>2</culturalSignificance>
+        <graphX>349</graphX>
+        <graphY>77</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
     <entry>
-      <string>ET</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>AdT</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[4]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
-    </entry>
-    <entry>
-      <string>TL</string>
+      <string>The Louvre</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
         <name class="string">The Louvre</name>
         <nodeValue>2147483647</nodeValue>
@@ -403,39 +1352,193 @@
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
     <entry>
-      <string>OG</string>
+      <string>Notre-Dame Cathedral</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+    </entry>
+    <entry>
+      <string>The Centre Pompidou</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N50</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>Arc de Triomphe</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">Opera Garnier</name>
+        <name class="string">Arc de Triomphe</name>
         <nodeValue>2147483647</nodeValue>
-        <adjList/>
+        <adjList>
+          <com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+            <destNode reference="../../../../../entry[20]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+            <cost>22</cost>
+            <distance>0.0</distance>
+          </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
+        </adjList>
         <isLandmark>true</isLandmark>
-        <culturalSignificance>3</culturalSignificance>
-        <graphX>342</graphX>
-        <graphY>349</graphY>
+        <culturalSignificance>5</culturalSignificance>
+        <graphX>80</graphX>
+        <graphY>220</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
     <entry>
-      <string>MdO</string>
+      <string>N52</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">Musée d’Orsay</name>
+        <name class="string">N52</name>
         <nodeValue>2147483647</nodeValue>
         <adjList/>
-        <isLandmark>true</isLandmark>
-        <culturalSignificance>5</culturalSignificance>
-        <graphX>532</graphX>
-        <graphY>248</graphY>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>624</graphX>
+        <graphY>286</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
     <entry>
-      <string>PAIII</string>
+      <string>N51</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N10</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[19]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N54</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">Pont Alexandre III</name>
+        <name class="string">N54</name>
         <nodeValue>2147483647</nodeValue>
         <adjList/>
-        <isLandmark>true</isLandmark>
-        <culturalSignificance>5</culturalSignificance>
-        <graphX>659</graphX>
-        <graphY>326</graphY>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>605</graphX>
+        <graphY>222</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N53</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N53</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>597</graphX>
+        <graphY>288</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N12</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N12</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>240</graphX>
+        <graphY>331</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N56</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode"/>
+    </entry>
+    <entry>
+      <string>N11</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N11</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>197</graphX>
+        <graphY>356</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N55</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N55</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>523</graphX>
+        <graphY>6</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N14</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N14</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>320</graphX>
+        <graphY>360</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N58</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+    </entry>
+    <entry>
+      <string>N13</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N13</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>288</graphX>
+        <graphY>309</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N57</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N16</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+    </entry>
+    <entry>
+      <string>N15</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N15</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>366</graphX>
+        <graphY>436</graphY>
+      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+    </entry>
+    <entry>
+      <string>N59</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode"/>
+    </entry>
+    <entry>
+      <string>N18</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+    </entry>
+    <entry>
+      <string>N17</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode"/>
+    </entry>
+    <entry>
+      <string>Opera Garnier</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry[2]/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode"/>
+    </entry>
+    <entry>
+      <string>N19</string>
+      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
+        <name class="string">N19</name>
+        <nodeValue>2147483647</nodeValue>
+        <adjList/>
+        <isLandmark>false</isLandmark>
+        <culturalSignificance>0</culturalSignificance>
+        <graphX>366</graphX>
+        <graphY>436</graphY>
       </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
   </map>

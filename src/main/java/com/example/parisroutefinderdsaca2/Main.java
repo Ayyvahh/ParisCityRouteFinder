@@ -18,11 +18,11 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         mainStage = primaryStage; // Assign the primaryStage to the static mainStage variable
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("firstPage.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("dashboard.fxml"));
         mainPage = new Scene(fxmlLoader.load(), 1630, 900);
 
         // Add stylesheet to the scene
-        mainPage.getStylesheets().add(Objects.requireNonNull(getClass().getResource("stylesheet.css")).toExternalForm());
+        mainPage.getStylesheets().add(Objects.requireNonNull(getClass().getResource("stylesheet.css")).toExternalForm()); //TODO change when done
         mainStage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("icon1.png"))));
         mainStage.setTitle("PARIS CITY ROUTE FINDER");
         mainStage.setScene(mainPage);
@@ -32,7 +32,7 @@ public class Main extends Application {
     }
 
     public static void switchToSecondScene() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("dashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("firstPage.fxml")); //TODO change when done
         secondPage = new Scene(fxmlLoader.load(), 1630, 900);
         secondPage.getStylesheets().add(Objects.requireNonNull(Main.class.getResource("stylesheet.css")).toExternalForm());
 
