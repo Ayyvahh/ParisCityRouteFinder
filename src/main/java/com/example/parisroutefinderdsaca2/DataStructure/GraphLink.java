@@ -8,6 +8,6 @@ public class GraphLink {
     public GraphLink(GraphNode<?> destNode, int cost) {
         this.destNode = destNode;
         this.cost = cost;
-        //this.distance = distance; d=√((x2 – x1)² + (y2 – y1)²)
+        //this.distance = distance; d=√((x2 – x1)² + (y2 – y1)²d)
     }
 }

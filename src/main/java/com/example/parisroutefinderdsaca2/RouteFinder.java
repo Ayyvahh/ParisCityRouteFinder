@@ -482,9 +482,9 @@ public void clearMarkers(){
             System.out.println("using Dijkstra's algorithm:");
             System.out.println("-------------------------------------");
 
-            //Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get("Eiffel Tower"), "The Panthéon");
+            Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get("Eiffel Tower"), "The Panthéon");
 
-             /*
+
         assert cpa != null;
         for (GraphNode<?> n : cpa.pathList)
             System.out.println(n.name);
@@ -500,7 +500,7 @@ public void clearMarkers(){
 
             mapPane.getChildren().add(line);
         }
-        */
+
 
             populateMap();
             for(GraphNode<String> n : graphNodes.values()){

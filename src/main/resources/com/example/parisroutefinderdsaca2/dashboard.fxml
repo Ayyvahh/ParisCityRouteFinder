@@ -57,7 +57,7 @@
             </font>
          </Label>
          <Slider fx:id="prefSlid" blockIncrement="1.0" layoutX="103.0" layoutY="263.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" prefHeight="39.0" prefWidth="273.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" styleClass="blue-slider" value="2.0" />
-         <Button contentDisplay="RIGHT" layoutX="159.0" layoutY="321.0" mnemonicParsing="false" onAction="#dijkstraFind" prefHeight="34.0" prefWidth="183.0" styleClass="button2" stylesheets="@stylesheet.css" text="FIND MY ROUTE">
+         <Button contentDisplay="RIGHT" layoutX="159.0" layoutY="321.0" mnemonicParsing="false"  prefHeight="34.0" prefWidth="183.0" styleClass="button2" stylesheets="@stylesheet.css" text="FIND MY ROUTE">
             <effect>
                <DropShadow />
             </effect>
