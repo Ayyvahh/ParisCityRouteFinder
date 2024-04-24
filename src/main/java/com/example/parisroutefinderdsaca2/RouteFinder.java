@@ -42,6 +42,9 @@ public class RouteFinder implements Initializable {
     public double y;
     public Label systemMessage = new Label();
     public ToggleGroup selection;
+    public RadioButton dfsButton;
+    public RadioButton bfsButton;
+    public RadioButton dijkstraButton;
     Circle circle; /*Circle for user to see where they've clicked*/
     Text text;
     @FXML
