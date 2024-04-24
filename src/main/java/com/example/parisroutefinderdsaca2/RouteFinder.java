@@ -41,10 +41,10 @@ public class RouteFinder implements Initializable {
     public double x;
     public double y;
     public Label systemMessage = new Label();
-    public ToggleGroup selection;
     public RadioButton dfsButton;
     public RadioButton bfsButton;
     public RadioButton dijkstraButton;
+    public ToggleGroup algoSelection;
     Circle circle; /*Circle for user to see where they've clicked*/
     Text text;
     @FXML
@@ -507,7 +507,26 @@ public class RouteFinder implements Initializable {
         }
     }
 
+    public void findRoute() {
+        if (algoSelection.getSelectedToggle() == null) {
+            Utils.showWarningAlert("SELECT AN ALGORITHM", "Please select a radio button of the algorithm you wish to use!");
+        } else {
+            if (algoSelection.getSelectedToggle().equals(dijkstraButton)) {
+                shortestPathDijkstra();
+            } else if (algoSelection.getSelectedToggle().equals(bfsButton)) {
+                //BFS
+            } else {
+                //DFS
+            }
+        }
+    }
+
     public void shortestPathDijkstra() {
+        if (startPointBox.getSelectionModel().getSelectedItem() == null || endPointBox.getSelectionModel().getSelectedItem() == null) {
+            Utils.showWarningAlert("ERROR", "SELECT START AND END POINT");
+            return;
+        }
+
         mapPane.getChildren().removeIf(node -> node instanceof Line);
 
         System.out.println("The cheapest path from Eiffel Tower to Grand Palais");

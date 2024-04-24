@@ -63,6 +63,16 @@ public class Graph implements Initializable {
         return null; //No path found, so return null
     }
 
+//    //Regular recursive depth-first graph traversal
+//    public static void traverseGraphDepthFirst(GraphNode<?> from, List<GraphNode<?>> encountered ){
+//        System.out.println(from.name);
+//        if(encountered==null) encountered=new ArrayList<>(); //First node so create new (empty) encountered list
+//        encountered.add(from);
+//        for(GraphNode<?> adjNode : from.adjList)
+//            if(!encountered.contains(adjNode)) traverseGraphDepthFirst(adjNode, encountered );
+//    }
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         graph = this;

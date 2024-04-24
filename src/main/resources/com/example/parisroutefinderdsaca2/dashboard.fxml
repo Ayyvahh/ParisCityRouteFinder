@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="1630.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="1630.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
    <AnchorPane fx:id="mapPane" layoutX="847.0" layoutY="72.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #252525;">
       <effect>
          <DropShadow />
@@ -155,7 +155,7 @@
          <ComboBox fx:id="startPointBox" layoutX="33.0" layoutY="104.0" prefHeight="31.0" prefWidth="183.0" promptText="Starting Point" visibleRowCount="6" />
          <ComboBox fx:id="endPointBox" layoutX="308.0" layoutY="104.0" prefHeight="33.0" prefWidth="183.0" promptText="End Point" visibleRowCount="6" />
          <ComboBox fx:id="avoidBox" layoutX="576.0" layoutY="103.0" prefHeight="31.0" prefWidth="202.0" promptText="Landmarks to Avoid" visibleRowCount="6" />
-         <Button contentDisplay="RIGHT" layoutX="271.0" layoutY="268.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="258.0" styleClass="button2" stylesheets="@stylesheet.css" text="FIND MY ROUTE">
+         <Button contentDisplay="RIGHT" layoutX="271.0" layoutY="268.0" mnemonicParsing="false" onAction="#findRoute" prefHeight="34.0" prefWidth="258.0" styleClass="button2" stylesheets="@stylesheet.css" text="FIND MY ROUTE">
             <effect>
                <DropShadow />
             </effect>
@@ -206,7 +206,7 @@
                </ImageView>
             </graphic>
             <toggleGroup>
-               <ToggleGroup fx:id="algoSelection1" />
+               <ToggleGroup fx:id="algoSelection" />
             </toggleGroup>
          </RadioButton>
          <ImageView fitHeight="25.0" fitWidth="52.0" layoutX="238.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
@@ -219,7 +219,7 @@
                <Image url="@images/RROW.png" />
             </image>
          </ImageView>
-         <RadioButton fx:id="bfsButton" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="338.0" layoutY="216.0" mnemonicParsing="false" text="Breadth-First" textFill="WHITE" toggleGroup="$algoSelection1">
+         <RadioButton fx:id="bfsButton" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="338.0" layoutY="216.0" mnemonicParsing="false" text="Breadth-First" textFill="WHITE" toggleGroup="$algoSelection">
             <font>
                <Font name="Arial" size="14.0" />
             </font>
@@ -231,7 +231,7 @@
                </ImageView>
             </graphic>
          </RadioButton>
-         <RadioButton fx:id="dfsButton" contentDisplay="RIGHT" layoutX="518.0" layoutY="215.0" mnemonicParsing="false" text="Depth-First" textFill="WHITE" toggleGroup="$algoSelection1">
+         <RadioButton fx:id="dfsButton" contentDisplay="RIGHT" layoutX="518.0" layoutY="215.0" mnemonicParsing="false" text="Depth-First" textFill="WHITE" toggleGroup="$algoSelection">
             <font>
                <Font name="Arial" size="14.0" />
             </font>
