@@ -512,7 +512,7 @@ public void clearMarkers(){
         graphNodes.get("N67").connectToNodeUndirected(graphNodes.get("N25"), calculateDistance(graphNodes.get("N67"), graphNodes.get("N25")));
         graphNodes.get("N30").connectToNodeUndirected(graphNodes.get("N67"), calculateDistance(graphNodes.get("N30"), graphNodes.get("N67")));
         graphNodes.get("N31").connectToNodeUndirected(graphNodes.get("N25"), calculateDistance(graphNodes.get("N31"), graphNodes.get("N25")));
-        graphNodes.get("N25").connectToNodeUndirected(graphNodes.get("68"), calculateDistance(graphNodes.get("N25"), graphNodes.get("68")));
+        graphNodes.get("N25").connectToNodeUndirected(graphNodes.get("N68"), calculateDistance(graphNodes.get("N25"), graphNodes.get("N68")));
         graphNodes.get("N68").connectToNodeUndirected(graphNodes.get("River Seine"), calculateDistance(graphNodes.get("N68"), graphNodes.get("River Seine")));
         graphNodes.get("N66").connectToNodeUndirected(graphNodes.get("N64"), calculateDistance(graphNodes.get("N66"), graphNodes.get("N64")));
         graphNodes.get("River Seine").connectToNodeUndirected(graphNodes.get("N64"), calculateDistance(graphNodes.get("River Seine"), graphNodes.get("N64")));
