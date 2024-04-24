@@ -465,8 +465,6 @@ public void clearMarkers(){
 
         populateMap();
 
-
-
         try {
             saveXML();
             System.out.println("Database saved!");
@@ -482,7 +480,7 @@ public void clearMarkers(){
             System.out.println("using Dijkstra's algorithm:");
             System.out.println("-------------------------------------");
 
-            Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get("Eiffel Tower"), "The Panthéon");
+            Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()), endPointBox.getSelectionModel().getSelectedItem().getName());
 
 
         assert cpa != null;
