@@ -46,6 +46,8 @@ public class RouteFinder implements Initializable {
     public RadioButton bfsButton;
     public RadioButton dijkstraButton;
     public ToggleGroup algoSelection;
+    public Label avoidingLabel = new Label();
+
     Circle circle; /*Circle for user to see where they've clicked*/
     Text text;
     @FXML
@@ -54,6 +56,7 @@ public class RouteFinder implements Initializable {
     /*-----------------------------*/
     private boolean isMapPopulated = false;
     public Map<String, GraphNode<String>> graphNodes = new HashMap<>();
+    public List<GraphNode<String>> avoidNodes = new ArrayList<>();
 
     @FXML
     public void scene2() throws IOException {
@@ -108,7 +111,6 @@ public class RouteFinder implements Initializable {
                 if (node.isLandmark()) {
                     startPointBox.getItems().add(node);
                     endPointBox.getItems().add(node);
-
                     avoidBox.getItems().add(node);
 
                 }
@@ -270,6 +272,38 @@ public class RouteFinder implements Initializable {
             }
         }
     }
+
+    public void addToAvoid() {
+        GraphNode<String> selectedItem = avoidBox.getSelectionModel().getSelectedItem();
+
+        if (selectedItem != null && selectedItem.getName().equals("AVOID NONE")) {
+            avoidNodes.clear();
+            avoidingLabel.setText("Currently Avoiding: NONE");
+            return;
+        }
+
+        // Check if selectedItem is not null and is not already in avoidNodes
+        if (selectedItem != null && !avoidNodes.contains(selectedItem) && avoidNodes !=null) {
+            avoidNodes.add(selectedItem);
+        }
+       printAvoidNodes();
+    }
+
+
+    private void printAvoidNodes() {
+        String s = "Currently Avoiding: ";
+        // Check if the adjacent list is not empty
+        if (!avoidNodes.isEmpty()) {
+
+            for (GraphNode<String> a : avoidNodes) {
+                s += a.getName() + ", ";
+
+            }
+            avoidingLabel.setText(s);
+        }
+
+    }
+
 
     public void populateDatabase() {
         graphNodes.put("Eiffel Tower", new GraphNode<>("Eiffel Tower", true,5,126,377)); //A
@@ -582,7 +616,7 @@ public class RouteFinder implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         routeFinder = this;
-
+        populateDatabase();
         nodeTip = new Tooltip("TEST");
         mapPane.setOnMouseMoved(this::toolTipHover);
     }
