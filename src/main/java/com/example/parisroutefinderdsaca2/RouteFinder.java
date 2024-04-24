@@ -99,13 +99,17 @@ public class RouteFinder implements Initializable {
 
     public void populateMap() {
         if (!isMapPopulated) {
+            avoidBox.getItems().add(new GraphNode<>("AVOID NONE",false,0,0,0));
+
             for (GraphNode<String> node : graphNodes.values()) {
                 drawNode(node);
+
                 if (node.isLandmark()) {
                     startPointBox.getItems().add(node);
                     endPointBox.getItems().add(node);
+
                     avoidBox.getItems().add(node);
-                    currentWaypoints.getItems().add(node);
+
                 }
             }
             isMapPopulated = true;
@@ -114,37 +118,7 @@ public class RouteFinder implements Initializable {
         }
     }
 
-//NOT WORKING LOL
-//    public void dijkstraFind() {
-//        GraphNode<String> startNode = startPointBox.getSelectionModel().getSelectedItem();
-//        GraphNode<String> destinationNode = endPointBox.getSelectionModel().getSelectedItem();
-//
-//        if (startNode == null || destinationNode == null) {
-//            Utils.showWarningAlert("ERROR", "SELECT START AND END POINT");
-//            return;
-//        }
-//
-//        Graph.CostedPath cpa = findCheapestPathDijkstra(startNode, destinationNode);
-//        if (cpa == null) {
-//            System.out.println("No path found between selected nodes.");
-//            return;
-//        }
-//
-//        for (GraphNode<?> n : cpa.pathList)
-//            System.out.println(n.name);
-//        System.out.println("\nThe total path cost is: " + cpa.pathCost);
-//
-//        for (int i = 0; i < cpa.pathList.size() - 1; i++) {
-//            GraphNode<?> firstNode = cpa.pathList.get(i);
-//            GraphNode<?> secondNode = cpa.pathList.get(i + 1);
-//
-//            Line line = new Line(firstNode.getGraphX(), firstNode.getGraphY(), secondNode.getGraphX(), secondNode.getGraphY());
-//            line.setStroke(Color.BLUEVIOLET);
-//            line.setStrokeWidth(3);
-//
-//            mapPane.getChildren().add(line);
-//        }
-//    }
+
 
     public void addLandmarkOrJunction() {
         /*Validation checks on name and if its Duplicated*/
@@ -577,6 +551,8 @@ public class RouteFinder implements Initializable {
             mapPane.getChildren().add(line);
         }
     }
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
