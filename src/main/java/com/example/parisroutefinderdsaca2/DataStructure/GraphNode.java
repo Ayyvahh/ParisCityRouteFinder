@@ -80,7 +80,7 @@ public class GraphNode<String> {
 
     public void connectToNodeUndirected(GraphNode<String> destNode, int cost) {
         adjList.add(new GraphLink(destNode, cost));
-        destNode.adjList.add(new GraphLink(destNode,cost));
+        destNode.adjList.add(new GraphLink(this,cost));
     }
 
 

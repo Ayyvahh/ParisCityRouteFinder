@@ -434,6 +434,39 @@ public void clearMarkers(){
         graphNodes.get("N16").connectToNodeUndirected(graphNodes.get("Opera Garnier"), calculateDistance(graphNodes.get("N16"), graphNodes.get("Opera Garnier")));
         graphNodes.get("Opera Garnier").connectToNodeUndirected(graphNodes.get("N21"), calculateDistance(graphNodes.get("Opera Garnier"), graphNodes.get("N21")));
         graphNodes.get("Opera Garnier").connectToNodeUndirected(graphNodes.get("N18"), calculateDistance(graphNodes.get("Opera Garnier"), graphNodes.get("N18")));
+        graphNodes.get("Champs-Élysées").connectToNodeUndirected(graphNodes.get("N41"), calculateDistance(graphNodes.get("Champs-Élysées"), graphNodes.get("N41")));
+        graphNodes.get("N41").connectToNodeUndirected(graphNodes.get("Musée d’Orsay"), calculateDistance(graphNodes.get("N41"), graphNodes.get("Musée d’Orsay")));
+        graphNodes.get("The Centre Pompidou").connectToNodeUndirected(graphNodes.get("N40"), calculateDistance(graphNodes.get("The Centre Pompidou"), graphNodes.get("N40")));
+        graphNodes.get("N60").connectToNodeUndirected(graphNodes.get("N61"), calculateDistance(graphNodes.get("N60"), graphNodes.get("N61")));
+        graphNodes.get("N61").connectToNodeUndirected(graphNodes.get("N35"), calculateDistance(graphNodes.get("N61"), graphNodes.get("N35")));
+        graphNodes.get("N35").connectToNodeUndirected(graphNodes.get("N34"), calculateDistance(graphNodes.get("N35"), graphNodes.get("N34")));
+        graphNodes.get("N18").connectToNodeUndirected(graphNodes.get("The Centre Pompidou"), calculateDistance(graphNodes.get("N18"), graphNodes.get("The Centre Pompidou")));
+
+
+        graphNodes.get("N10").connectToNodeUndirected(graphNodes.get("N11"), calculateDistance(graphNodes.get("N10"), graphNodes.get("N11")));
+        graphNodes.get("N11").connectToNodeUndirected(graphNodes.get("N12"), calculateDistance(graphNodes.get("N11"), graphNodes.get("N12")));
+        graphNodes.get("N12").connectToNodeUndirected(graphNodes.get("N13"), calculateDistance(graphNodes.get("N12"), graphNodes.get("N13")));
+        graphNodes.get("Grand Palais").connectToNodeUndirected(graphNodes.get("N13"), calculateDistance(graphNodes.get("Grand Palais"), graphNodes.get("N13")));
+        graphNodes.get("N13").connectToNodeUndirected(graphNodes.get("N14"), calculateDistance(graphNodes.get("N13"), graphNodes.get("N14")));
+        graphNodes.get("N14").connectToNodeUndirected(graphNodes.get("Opera Garnier"), calculateDistance(graphNodes.get("N14"), graphNodes.get("Opera Garnier")));
+        graphNodes.get("N7").connectToNodeUndirected(graphNodes.get("N12"), calculateDistance(graphNodes.get("N7"), graphNodes.get("N12")));
+        graphNodes.get("N12").connectToNodeUndirected(graphNodes.get("N37"), calculateDistance(graphNodes.get("N12"), graphNodes.get("N37")));
+        graphNodes.get("N3").connectToNodeUndirected(graphNodes.get("N11"), calculateDistance(graphNodes.get("N3"), graphNodes.get("N11")));
+        graphNodes.get("N11").connectToNodeUndirected(graphNodes.get("N37"), calculateDistance(graphNodes.get("N11"), graphNodes.get("N37")));
+        graphNodes.get("N37").connectToNodeUndirected(graphNodes.get("N21"), calculateDistance(graphNodes.get("N37"), graphNodes.get("N21")));
+        graphNodes.get("N62").connectToNodeUndirected(graphNodes.get("N37"), calculateDistance(graphNodes.get("N62"), graphNodes.get("N37")));
+        graphNodes.get("N37").connectToNodeUndirected(graphNodes.get("N13"), calculateDistance(graphNodes.get("N37"), graphNodes.get("N13")));
+        graphNodes.get("N13").connectToNodeUndirected(graphNodes.get("N16"), calculateDistance(graphNodes.get("N13"), graphNodes.get("N16")));
+        graphNodes.get("N16").connectToNodeUndirected(graphNodes.get("N60"), calculateDistance(graphNodes.get("N16"), graphNodes.get("N60")));
+        graphNodes.get("N9").connectToNodeUndirected(graphNodes.get("N17"), calculateDistance(graphNodes.get("N9"), graphNodes.get("N17")));
+        graphNodes.get("N59").connectToNodeUndirected(graphNodes.get("Notre-Dame Cathedral"), calculateDistance(graphNodes.get("N59"), graphNodes.get("Notre-Dame Cathedral")));
+        graphNodes.get("N47").connectToNodeUndirected(graphNodes.get("N30"), calculateDistance(graphNodes.get("N47"), graphNodes.get("N30")));
+        graphNodes.get("N8").connectToNodeUndirected(graphNodes.get("N47"), calculateDistance(graphNodes.get("N8"), graphNodes.get("N47")));
+        graphNodes.get("N7").connectToNodeUndirected(graphNodes.get("N59"), calculateDistance(graphNodes.get("N7"), graphNodes.get("N59")));
+        graphNodes.get("N57").connectToNodeUndirected(graphNodes.get("N53"), calculateDistance(graphNodes.get("N57"), graphNodes.get("N53")));
+
+
+
 
         graphNodes.get("N21").connectToNodeUndirected(graphNodes.get("Place de la Concorde"), calculateDistance(graphNodes.get("N21"), graphNodes.get("Place de la Concorde")));
         graphNodes.get("Place de la Concorde").connectToNodeUndirected(graphNodes.get("N46"), calculateDistance(graphNodes.get("Place de la Concorde"), graphNodes.get("N46")));
