@@ -114,7 +114,7 @@
       <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="211.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
          <Image url="@images/waypoint.png" />
       </ImageView>
-      <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="1584.0" layoutY="11.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="31.0" stylesheets="@stylesheet.css">
+      <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="1584.0" layoutY="11.0" mnemonicParsing="false" onAction="#populateDatabase" prefHeight="31.0" prefWidth="31.0" stylesheets="@stylesheet.css">
          <effect>
             <DropShadow />
          </effect>
