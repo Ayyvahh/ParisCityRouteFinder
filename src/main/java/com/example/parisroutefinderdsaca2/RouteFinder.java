@@ -8,7 +8,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
-import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -21,10 +20,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.*;
 import java.net.URL;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 import static com.example.parisroutefinderdsaca2.DataStructure.Graph.findCheapestPathDijkstra;
 
@@ -45,16 +41,15 @@ public class RouteFinder implements Initializable {
     public double x;
     public double y;
     public Label systemMessage = new Label();
+    public ToggleGroup selection;
     Circle circle; /*Circle for user to see where they've clicked*/
     Text text;
-    /*-----------------------------*/
-
-    Graph graph = new Graph();
     @FXML
     public ImageView mapView;
+    private Tooltip nodeTip;
+    /*-----------------------------*/
     private boolean isMapPopulated = false;
     public Map<String, GraphNode<String>> graphNodes = new HashMap<>();
-    private Tooltip nodeTip;
 
     @FXML
     public void scene2() throws IOException {
@@ -80,12 +75,12 @@ public class RouteFinder implements Initializable {
         mapPane.getChildren().add(text);
     }
 
-    public void saveXML() throws Exception {
-        XStream xstream = new XStream(new DomDriver());
-        ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("graphNodes.xml"));
-        out.writeObject(graphNodes);
-        out.close();
-    }
+//    public void saveXML() throws Exception {
+//        XStream xstream = new XStream(new DomDriver());
+//        ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("graphNodes.xml"));
+//        out.writeObject(graphNodes);
+//        out.close();
+//    }
 
     public void loadXML() throws Exception {
         Class<?>[] classes = new Class[] {GraphNode.class, GraphLink.class};
@@ -95,7 +90,7 @@ public class RouteFinder implements Initializable {
         xstream.allowTypes(classes);
 
         ObjectInputStream is = xstream.createObjectInputStream(new FileReader("graphNodes.xml"));
-        graphNodes = (Map<String, GraphNode<String>>) is.readObject();
+        graphNodes = Collections.unmodifiableMap((Map<String, GraphNode<String>>) is.readObject());
         is.close();
     }
 
@@ -273,14 +268,14 @@ public class RouteFinder implements Initializable {
         }
     }
 
-    private int calculateDistance(GraphNode<String> n1, GraphNode<String> n2) {
-        int x1 = n1.getGraphX();
-        int x2 = n2.getGraphX();
-        int y1 = n1.getGraphY();
-        int y2 = n2.getGraphY();
-
-        return (int) Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
-    }
+//    private int calculateDistance(GraphNode<String> n1, GraphNode<String> n2) {
+//        int x1 = n1.getGraphX();
+//        int x2 = n2.getGraphX();
+//        int y1 = n1.getGraphY();
+//        int y2 = n2.getGraphY();
+//
+//        return (int) Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
+//    }
 
     private void printAdjacentNodes(GraphNode<String> node) {
         // Get the adjacent list of the given station

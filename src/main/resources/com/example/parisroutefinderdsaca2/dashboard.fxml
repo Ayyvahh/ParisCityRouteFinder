@@ -84,7 +84,7 @@
       <effect>
          <DropShadow />
       </effect>
-      <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="111.0" layoutY="4.0" prefHeight="43.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;" text="Search Algorithims" textFill="WHITE">
+      <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="111.0" layoutY="4.0" prefHeight="43.0" prefWidth="350.0" style="-fx-background-color: #1B1B1B;" text="Search Algorithms" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="18.0" />
          </font>
