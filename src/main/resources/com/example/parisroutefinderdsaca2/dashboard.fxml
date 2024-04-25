@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="1630.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="1630.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
    <AnchorPane fx:id="mapPane" layoutX="847.0" layoutY="57.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #252525;">
       <effect>
          <DropShadow />
@@ -265,4 +265,32 @@
          <Font name="Arial" size="14.0" />
       </font>
    </Label>
+   <ListView fx:id="dfsListView" layoutX="54.0" layoutY="568.0" prefHeight="200.0" prefWidth="200.0" />
+   <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="41.0" layoutY="516.0" prefHeight="43.0" prefWidth="227.0" text="DFS PATHS TEST" textAlignment="CENTER" textFill="#459ee2">
+      <font>
+         <Font name="Arial" size="14.0" />
+      </font>
+      <graphic>
+         <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/waypoint.png" />
+            </image>
+         </ImageView>
+      </graphic>
+   </Label>
+   <Button contentDisplay="RIGHT" layoutX="26.0" layoutY="778.0" mnemonicParsing="false" onAction="#dfsPathDisplay" prefHeight="34.0" prefWidth="258.0" styleClass="button2" stylesheets="@stylesheet.css" text="Display Route">
+      <effect>
+         <DropShadow />
+      </effect>
+      <font>
+         <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+      </font>
+      <graphic>
+         <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/waypoint2.png" />
+            </image>
+         </ImageView>
+      </graphic>
+   </Button>
 </AnchorPane>
