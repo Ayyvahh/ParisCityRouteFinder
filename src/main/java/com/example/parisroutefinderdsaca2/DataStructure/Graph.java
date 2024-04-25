@@ -7,6 +7,7 @@ import java.util.*;
 
 public class Graph implements Initializable {
     public static Graph graph;
+    List<CostedPath> allPaths;
 
     public static class CostedPath{
         public int pathCost=0;
@@ -60,31 +61,58 @@ public class Graph implements Initializable {
         return null; //No path found, so return null
     }
 
-    //Retrieve the cheapest path by expanding all paths recursively depth-first
-    public static <T> CostedPath searchGraphDepthFirstCheapestPath(GraphNode<?> from, List<GraphNode<?>> encountered, int totalCost, T lookingfor){
-        if(from.name.equals(lookingfor)){ //Found it - end of path
-            CostedPath cp=new CostedPath(); //Create a new CostedPath object
-            cp.pathList.add(from); //Add the current node to it - only (end of path) element
-            cp.pathCost=totalCost; //Use the current total cost
-            return cp; //Return the CostedPath object
+//    //Retrieve the cheapest path by expanding all paths recursively depth-first
+//    public static <T> CostedPath searchGraphDepthFirstCheapestPath(GraphNode<?> from, List<GraphNode<?>> encountered, int totalCost, T lookingfor){
+//        if(from.name.equals(lookingfor)){ //Found it - end of path
+//            CostedPath cp=new CostedPath(); //Create a new CostedPath object
+//            cp.pathList.add(from); //Add the current node to it - only (end of path) element
+//            cp.pathCost=totalCost; //Use the current total cost
+//            return cp; //Return the CostedPath object
+//        }
+//
+//        if(encountered==null) encountered=new ArrayList<>(); //First node so create new (empty) encountered list
+//        encountered.add(from);
+//        List<CostedPath> allPaths=new ArrayList<>(); //Collection for all candidate costed paths from this node
+//
+//        for(GraphLink adjLink : from.adjList) //For every adjacent node
+//            if(!encountered.contains(adjLink.destNode)) //That has not yet been encountered
+//            {
+//                //Create a new CostedPath from this node to the searched for item (if a valid path exists)
+//                CostedPath temp = searchGraphDepthFirstCheapestPath(adjLink.destNode,encountered, totalCost+adjLink.cost,lookingfor);
+//                if(temp==null) continue; //No path was found, so continue to the next iteration
+//                temp.pathList.add(0,from); //Add the current node to the front of the path list
+//                allPaths.add(temp); //Add the new candidate path to the list of all costed paths
+//            }
+//        //If no paths were found then return null. Otherwise, return the cheapest path (i.e. the one with min pathCost)
+//        return allPaths.isEmpty() ? null : Collections.min(allPaths, Comparator.comparingInt(p -> p.pathCost));
+//    }
+
+    public static <T> List<CostedPath> searchGraphDepthFirst(GraphNode<?> from, List<GraphNode<?>> encountered, int totalCost, T lookingfor) {
+        List<CostedPath> allPaths = new ArrayList<>();
+
+        if (from.name.equals(lookingfor)) {
+            CostedPath cp = new CostedPath();
+            cp.pathList.add(from);
+            cp.pathCost = totalCost;
+            allPaths.add(cp);
+            return allPaths;
         }
 
-        if(encountered==null) encountered=new ArrayList<>(); //First node so create new (empty) encountered list
+        if (encountered == null) encountered = new ArrayList<>();
         encountered.add(from);
-        List<CostedPath> allPaths=new ArrayList<>(); //Collection for all candidate costed paths from this node
 
-        for(GraphLink adjLink : from.adjList) //For every adjacent node
-            if(!encountered.contains(adjLink.destNode)) //That has not yet been encountered
-            {
-                //Create a new CostedPath from this node to the searched for item (if a valid path exists)
-                CostedPath temp = searchGraphDepthFirstCheapestPath(adjLink.destNode,encountered, totalCost+adjLink.cost,lookingfor);
-                if(temp==null) continue; //No path was found, so continue to the next iteration
-                temp.pathList.add(0,from); //Add the current node to the front of the path list
-                allPaths.add(temp); //Add the new candidate path to the list of all costed paths
+        for (GraphLink adjLink : from.adjList) {
+            if (!encountered.contains(adjLink.destNode)) {
+                List<CostedPath> pathsFromAdj = searchGraphDepthFirst(adjLink.destNode, encountered, totalCost + adjLink.cost, lookingfor);
+                for (CostedPath path : pathsFromAdj) {
+                    path.pathList.add(0, from);
+                    allPaths.add(path);
+                }
             }
-        //If no paths were found then return null. Otherwise, return the cheapest path (i.e. the one with min pathCost)
-        return allPaths.isEmpty() ? null : Collections.min(allPaths, Comparator.comparingInt(p -> p.pathCost));
+        }
+        return allPaths;
     }
+
 
 
 
