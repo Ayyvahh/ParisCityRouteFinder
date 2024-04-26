@@ -12,6 +12,27 @@ public class Graph implements Initializable {
     public static class CostedPath{
         public int pathCost=0;
         public List<GraphNode<?>> pathList=new ArrayList<>();
+        public int index; //Just for displaying in listView, Ex. Route 1, Route 2 etc. for clarity
+        @Override
+        public String toString() {
+
+            String pathString = "[ ROUTE " + index + " ]  -   PATH COST : " + pathCost + "\n\n";
+            for (int i = 0; i < pathList.size(); i++) {
+                GraphNode<?> node = pathList.get(i);
+                pathString += node.getName();
+
+                if (i < pathList.size() - 1) {
+                    pathString += "  ->  ";
+                }
+            }
+            return pathString + "\n\n";
+        }
+
+
+
+        public void setIndex(int index) {
+            this.index = index;
+        }
     }
 
     public static <T> CostedPath findCheapestPathDijkstra(GraphNode<?> startNode, T lookingFor){
@@ -113,8 +134,12 @@ public class Graph implements Initializable {
         return allPaths;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Graph{" +
+                "allPaths=" + allPaths +
+                '}';
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
