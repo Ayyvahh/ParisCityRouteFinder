@@ -13,8 +13,10 @@ class GraphNodeConnectionTest {
             GraphNode<String> n2 = new GraphNode<>("Node2", false, 0, 0, 0);
             GraphNode<String> n3 = new GraphNode<>("Node3", false, 0, 0, 0);
 
-        /*Linking Node 1 to N2
-            n1.connectToNodeUndirected(n2, 5);
+        /*Linking Node 1 to N2*/
+                   n1.connectToNodeUndirected(n2, 7);
+
+
         /*Node 1 and Node 2 should both have an entry in their adjacency list for the link to be bidirectional */
             assertEquals(1, n1.getAdjList().size());
             assertEquals(1, n2.getAdjList().size());
@@ -22,8 +24,8 @@ class GraphNodeConnectionTest {
             GraphLink l1 = n1.getAdjList().getFirst();
             GraphLink l2 = n2.getAdjList().getFirst();
             GraphLink l3 = n2.getAdjList().getFirst();
-        /* Checking both nodes are each others destNode*/
 
+        /* Checking both nodes are each others destNode*/
             assertEquals(n2, l1.getDestNode());
             assertEquals(n1, l2.getDestNode());
 
