@@ -13,6 +13,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
@@ -34,7 +35,6 @@ public class RouteFinder implements Initializable {
     public ComboBox<GraphNode<String>> startPointBox = new ComboBox<>();
     public ComboBox<GraphNode<String>>  avoidBox = new ComboBox<>();
     public ComboBox<GraphNode<String>>  endPointBox = new ComboBox<>();
-    public Slider prefSlid; /* User preference of how scenic the chosen route is*/
     public RadioButton landmarkBox;
     public RadioButton junctionBox;
     public TextField nameField;
@@ -202,19 +202,20 @@ public class RouteFinder implements Initializable {
     private void drawNode(GraphNode<String> node) {
         Circle nodeCircle = new Circle();
         Circle nodeRing = new Circle();
+        Color blue = Color.rgb (13, 137, 232);
 
         if (node.isLandmark()) {
             nodeCircle.setCenterX(node.getGraphX());
             nodeCircle.setCenterY(node.getGraphY());
             nodeCircle.setRadius(5);
-            nodeCircle.setFill(Color.RED);
+            nodeCircle.setFill(blue);
 
             nodeRing.setCenterX(node.getGraphX());
             nodeRing.setCenterY(node.getGraphY());
             nodeRing.setRadius(8);
             nodeRing.setFill(Color.TRANSPARENT);
             nodeRing.setStrokeWidth(2);
-            nodeRing.setStroke(Color.RED);
+            nodeRing.setStroke(blue);
         }
 
         mapPane.getChildren().addAll(nodeCircle, nodeRing);
@@ -239,8 +240,8 @@ public class RouteFinder implements Initializable {
 
         if (onLandmark) {
             Main.mainPage.setCursor(Cursor.HAND);
-            nodeTip.setText("Name: " + landmarkOn.getName() + ",\nLandmark X: " + landmarkOn.getGraphX() +
-                    ",\nLandmark Y: " + landmarkOn.getGraphY());
+            nodeTip.setText(landmarkOn.getName() + ",\n X :  " + landmarkOn.getGraphX() +
+                    "  |   Y :  " + landmarkOn.getGraphY());
             nodeTip.show(mapView, e.getScreenX() + 10, e.getScreenY() + 10);
         } else {
             nodeTip.hide();
@@ -278,7 +279,8 @@ public class RouteFinder implements Initializable {
 
         if (selectedItem != null && selectedItem.getName().equals("AVOID NONE")) {
             avoidNodes.clear();
-            avoidingLabel.setText("Currently Avoiding: NONE");
+            avoidingLabel.setText(null);
+
             return;
         }
 
@@ -534,9 +536,9 @@ public class RouteFinder implements Initializable {
             System.out.println("Database loaded!");
 
             populateMap();
-            for(GraphNode<String> n : graphNodes.values()){
-                printAdjacentNodes(n);
-            }
+//            for(GraphNode<String> n : graphNodes.values()){
+//                printAdjacentNodes(n);
+//            }
         } catch (Exception e) {
             System.err.println("Error writing from file: " + e);
         }
@@ -562,66 +564,58 @@ public class RouteFinder implements Initializable {
     public void shortestPathDijkstra() {
         mapPane.getChildren().removeIf(node -> node instanceof Line);
 
-        System.out.println("The cheapest path from " + startPointBox.getSelectionModel().getSelectedItem().getName() + " to " + endPointBox.getSelectionModel().getSelectedItem().getName());
-        System.out.println("using Dijkstra's algorithm:");
-        System.out.println("-------------------------------------");
 
         Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()), endPointBox.getSelectionModel().getSelectedItem().getName());
 
         assert cpa != null;
         for (GraphNode<?> n : cpa.pathList)
-            System.out.println(n.name);
-        System.out.println("\nThe total path cost is: " + cpa.pathCost);
+             clearFeedback();
+             systemMessage.setText("Shortest Path from " + startPointBox.getSelectionModel().getSelectedItem().getName() + " TO " + endPointBox.getSelectionModel().getSelectedItem().getName() + " using Dijkstra's Algorithm");
+             cpa.setIndex(1);
+             dfsListView.getItems().add(cpa);
 
         for (int i = 0; i < cpa.pathList.size() - 1; i++) {
             GraphNode<?> firstNode = cpa.pathList.get(i);
             GraphNode<?> secondNode = cpa.pathList.get(i + 1);
 
             Line line = new Line(firstNode.getGraphX(), firstNode.getGraphY(), secondNode.getGraphX(), secondNode.getGraphY());
-            line.setStroke(Color.BLUEVIOLET);
+            line.setStroke(Color.BLUE);
             line.setStrokeWidth(3);
 
             mapPane.getChildren().add(line);
         }
     }
 
-//    public void shortestPathDFS() {
-//        mapPane.getChildren().removeIf(node -> node instanceof Line);
-//
-//        System.out.println("The cheapest path from " + startPointBox.getSelectionModel().getSelectedItem().getName() + " to " + endPointBox.getSelectionModel().getSelectedItem().getName());
-//        System.out.println("using depth first search:");
-//        System.out.println("-------------------------------------");
-//
-//        Graph.CostedPath cp = searchGraphDepthFirstCheapestPath(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()),null,0,endPointBox.getSelectionModel().getSelectedItem().getName());
-//
-//        assert cp != null;
-//        for(GraphNode<?> n : cp.pathList)
-//            System.out.println(n.name);
-//        System.out.println("The total path cost is: "+cp.pathCost);
-//
-//        for (int i = 0; i < cp.pathList.size() - 1; i++) {
-//            GraphNode<?> firstNode = cp.pathList.get(i);
-//            GraphNode<?> secondNode = cp.pathList.get(i + 1);
-//
-//            Line line = new Line(firstNode.getGraphX(), firstNode.getGraphY(), secondNode.getGraphX(), secondNode.getGraphY());
-//            line.setStroke(Color.BLUEVIOLET);
-//            line.setStrokeWidth(3);
-//
-//            mapPane.getChildren().add(line);
-//        }
-//    }
+    public void clearFeedback(){
+        if(systemMessage.getText()!= null){
+            systemMessage.setText(null);
+        }
+        if(!(dfsListView.getItems() == null)){
+            dfsListView.getItems().clear();
+        }
+    }
+
 
     public void shortestPathDFS() {
         mapPane.getChildren().removeIf(node -> node instanceof Line);
 
         List<Graph.CostedPath> cp = searchGraphDepthFirst(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()),null,0,endPointBox.getSelectionModel().getSelectedItem().getName());
+        clearFeedback();
 
-        if (dfsListView.getItems() != null) dfsListView.getItems().clear();
+        int pathCount = 0;// Reset pathCount before counting paths
+        for (Graph.CostedPath costedPath : cp) {
 
-        for (CostedPath costedPath : cp) {
+            pathCount++;
+
+
+            costedPath.setIndex(pathCount);
+            systemMessage.setText("Routes From " + startPointBox.getSelectionModel().getSelectedItem().getName() + " TO " + endPointBox.getSelectionModel().getSelectedItem().getName() + " Using Depth First Search");
             dfsListView.getItems().add(costedPath);
         }
+
     }
+
+
 
     public void dfsPathDisplay() {
         if (dfsListView.getSelectionModel().getSelectedItem() != null) {
@@ -631,10 +625,11 @@ public class RouteFinder implements Initializable {
 
             for (GraphNode<?> n : costedPath.pathList)
                 System.out.println(n.name);
-            System.out.println("The total path cost is: " + costedPath.pathCost);
+           // System.out.println("The total path cost is: " + costedPath.pathCost);
 
             Random random = new Random();
-            Color randomColor = Color.rgb(random.nextInt(256), random.nextInt(256), random.nextInt(256));
+            int blue = random.nextInt(106) + 150; // Generates random shades of blue to match UI Theme :)
+            Color randomColor = Color.rgb(0, 0, blue);
 
             for (int i = 0; i < costedPath.pathList.size() - 1; i++) {
                 GraphNode<?> firstNode = costedPath.pathList.get(i);
@@ -653,12 +648,16 @@ public class RouteFinder implements Initializable {
 
 
 
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         routeFinder = this;
         populateDatabase();
         nodeTip = new Tooltip("TEST");
         mapPane.setOnMouseMoved(this::toolTipHover);
+
+
+
     }
 
 
