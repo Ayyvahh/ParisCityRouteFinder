@@ -2,9 +2,11 @@ package com.example.parisroutefinderdsaca2.DataStructure;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static com.example.parisroutefinderdsaca2.RouteFinder.routeFinder;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
-class GraphNodeConnectionTest {
+class GraphTests {
 
     @Test
     void testingConnectNodeUndirectedCreatesBidirectionalLink() {
@@ -14,7 +16,7 @@ class GraphNodeConnectionTest {
             GraphNode<String> n3 = new GraphNode<>("Node3", false, 0, 0, 0);
 
         /*Linking Node 1 to N2*/
-                   n1.connectToNodeUndirected(n2, 7);
+        n1.connectToNodeUndirected(n2, 7);
 
 
         /*Node 1 and Node 2 should both have an entry in their adjacency list for the link to be bidirectional */
@@ -45,5 +47,25 @@ class GraphNodeConnectionTest {
         assertEquals(l3.getDestNode(), l2.getDestNode());
 
     }
+
+
+
+
+        @Test
+        public void findCheapestPathDijkstra_shouldReturnTheCheapestPath_givenValidInput() {
+
+            /* NOT DONE */
+            Graph.graph = new Graph();
+            GraphNode<String> n1 = new GraphNode<>("Node1", false, 0, 100, 100);
+            GraphNode<String> n2 = new GraphNode<>("Node2", false, 0, 375, 250);
+            GraphNode<String> n3 = new GraphNode<>("Node3", false, 0, 700, 400);
+
+            n1.connectToNodeUndirected(n2, routeFinder.calculateDistance(n1, n2));
+            n2.connectToNodeUndirected(n3, routeFinder.calculateDistance(n2, n3));
+
+
+
+        }
+
 
 }

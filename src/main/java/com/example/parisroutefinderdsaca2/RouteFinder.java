@@ -249,7 +249,7 @@ public class RouteFinder implements Initializable {
         }
     }
 
-    private int calculateDistance(GraphNode<String> n1, GraphNode<String> n2) {
+    public int calculateDistance(GraphNode<String> n1, GraphNode<String> n2) {
         int x1 = n1.getGraphX();
         int x2 = n2.getGraphX();
         int y1 = n1.getGraphY();
