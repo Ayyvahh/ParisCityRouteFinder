@@ -28,8 +28,6 @@ public class Graph implements Initializable {
             return pathString + "\n\n";
         }
 
-
-
         public void setIndex(int index) {
             this.index = index;
         }
@@ -37,13 +35,13 @@ public class Graph implements Initializable {
 
     public static <T> CostedPath findCheapestPathDijkstra(GraphNode<?> startNode, T lookingFor){
         CostedPath cp=new CostedPath(); //Create result object for cheapest path
-        List<GraphNode<?>> encountered=new ArrayList<>(), notEncountered=new ArrayList<>(); //Create encountered/notEncountered lists
+        LinkedList<GraphNode<?>> encountered=new LinkedList<>(), notEncountered=new LinkedList<>(); //Create encountered/notEncountered lists
         startNode.nodeValue=0; //Set the starting node value to zero
         notEncountered.add(startNode); //Add the start node as the only value in the notEncountered list to start
         GraphNode<?> currentNode;
 
         do{ //Loop until notEncountered list is empty
-            currentNode=notEncountered.remove(0); //Get the first notEncountered node (sorted list, so will have the lowest value)
+            currentNode=notEncountered.removeFirst(); //Get the first notEncountered node (sorted list, so will have the lowest value)
             encountered.add(currentNode); //Record current node in encountered list
 
             if(currentNode.name.equals(lookingFor)){ //Found goal - assemble path list back to start and return it
@@ -56,7 +54,7 @@ public class Graph implements Initializable {
                         for(GraphLink e : n.adjList) //For each edge from that node...
                             if(e.destNode==currentNode && currentNode.nodeValue-e.cost==n.nodeValue){ //If that edge links to the
                                 //current node and the difference in node values is the cost of the edge -> found path node!
-                                cp.pathList.add(0,n); //Add the identified path node to the front of the result list
+                                cp.pathList.addFirst(n); //Add the identified path node to the front of the result list
                                 currentNode=n; //Move the currentNode reference back to the identified path node
                                 foundPrevPathNode=true; //Set the flag to break the outer loop
                                 break; //We've found the correct previous path node and moved the currentNode reference

@@ -8,4 +8,15 @@ public class GraphLink {
         this.destNode = destNode;
         this.cost = cost;
     }
+
+    public GraphNode<?> getDestNode() {
+        return destNode;
+    }
+
+    public void setDestNode(GraphNode<?> destNode) {
+        this.destNode = destNode;
+    }
+    public int getCost() {
+        return cost;
+    }
 }
