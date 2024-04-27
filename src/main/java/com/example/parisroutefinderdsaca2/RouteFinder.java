@@ -8,16 +8,12 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
@@ -36,10 +32,10 @@ public class RouteFinder implements Initializable {
     /*-----------JAVAFX------------*/
     public AnchorPane mapPane = new AnchorPane();
     public ListView<GraphNode<String>> currentWaypoints = new ListView<>();
-    public Slider culturalSlid = new Slider(0,5,2);
+    public Slider culturalSlid = new Slider(0, 5, 2);
     public ComboBox<GraphNode<String>> startPointBox = new ComboBox<>();
-    public ComboBox<GraphNode<String>>  avoidBox = new ComboBox<>();
-    public ComboBox<GraphNode<String>>  endPointBox = new ComboBox<>();
+    public ComboBox<GraphNode<String>> avoidBox = new ComboBox<>();
+    public ComboBox<GraphNode<String>> endPointBox = new ComboBox<>();
     public RadioButton landmarkBox;
     public RadioButton junctionBox;
     public TextField nameField;
@@ -52,6 +48,7 @@ public class RouteFinder implements Initializable {
     public ToggleGroup algoSelection;
     public Label avoidingLabel = new Label();
     public ListView<CostedPath> dfsListView;
+    public Label bfsMessage = new Label();
 
     Circle circle; /*Circle for user to see where they've clicked*/
     Text text;
@@ -74,7 +71,7 @@ public class RouteFinder implements Initializable {
         y = event.getY();
 
         /*Method for clearing the circle every new click*/
-       clearMarkers();
+        clearMarkers();
 
         /* Circle marker that shows the user where they have clicked*/
         circle = new Circle(x, y, 5);
@@ -95,7 +92,7 @@ public class RouteFinder implements Initializable {
     }
 
     public void loadXML() throws Exception {
-        Class<?>[] classes = new Class[] {GraphNode.class, GraphLink.class};
+        Class<?>[] classes = new Class[]{GraphNode.class, GraphLink.class};
 
         XStream xstream = new XStream(new DomDriver());
         XStream.setupDefaultSecurity(xstream);
@@ -108,7 +105,7 @@ public class RouteFinder implements Initializable {
 
     public void populateMap() {
         if (!isMapPopulated) {
-            avoidBox.getItems().add(new GraphNode<>("AVOID NONE",false,0,0,0));
+            avoidBox.getItems().add(new GraphNode<>("AVOID NONE", false, 0, 0, 0));
 
             for (GraphNode<String> node : graphNodes.values()) {
                 drawNode(node);
@@ -125,7 +122,6 @@ public class RouteFinder implements Initializable {
             System.out.println("Map already populated!");
         }
     }
-
 
 
     public void addLandmarkOrJunction() {
@@ -164,16 +160,16 @@ public class RouteFinder implements Initializable {
         }
     }
 
-    public void clearMarkers(){
-    /*Method for clearing the circle every new click or addition of waypoint*/
-        if(circle != null && text != null){
+    public void clearMarkers() {
+        /*Method for clearing the circle every new click or addition of waypoint*/
+        if (circle != null && text != null) {
             mapPane.getChildren().remove(circle);
             mapPane.getChildren().remove(text);
         }
     }
 
     public void removeLandmarkOrJunction() {
-            /*Validation Checks*/
+        /*Validation Checks*/
         if (currentWaypoints != null && currentWaypoints.getSelectionModel().getSelectedItem() != null) {
             GraphNode<String> selectedNode = currentWaypoints.getSelectionModel().getSelectedItem();
 
@@ -200,14 +196,14 @@ public class RouteFinder implements Initializable {
         mapPane.getChildren().removeIf(node -> node instanceof Circle);
     }
 
-    public boolean isDuplicateWayPoint( ) {
-      return graphNodes.containsKey(nameField.getText());
+    public boolean isDuplicateWayPoint() {
+        return graphNodes.containsKey(nameField.getText());
     }
 
     private void drawNode(GraphNode<String> node) {
         Circle nodeCircle = new Circle();
         Circle nodeRing = new Circle();
-        Color blue = Color.rgb (13, 137, 232);
+        Color blue = Color.rgb(13, 137, 232);
 
         if (node.isLandmark()) {
             nodeCircle.setCenterX(node.getGraphX());
@@ -254,7 +250,7 @@ public class RouteFinder implements Initializable {
         }
     }
 
-    public int calculateDistance(GraphNode<String> n1, GraphNode<String> n2) {
+    public int calculateEuclideanDistance(GraphNode<String> n1, GraphNode<String> n2) {
         int x1 = n1.getGraphX();
         int x2 = n2.getGraphX();
         int y1 = n1.getGraphY();
@@ -280,40 +276,8 @@ public class RouteFinder implements Initializable {
     }
 
 
-    public void findPills(MouseEvent m) {
-
-        if (mapView == null) {
-            Utils.showWarningAlert("ERROR", "UPLOAD A PHOTO FIRST");
-        } else {
-            mapView.setImage(mapView.getImage());
-            double x = m.getX();
-            double y = m.getY();
-
-            Color c = mapView.getImage().getPixelReader().getColor((int) x, (int) y); /*Get the color of pixel clicked*/
-
-            System.out.println(c.toString());
 
 
-        }
-    }
-
-
-
-    public  boolean roadColorIsSimilar(Color color1, Color color2, int tolerance) {
-        int redDiff = (int) Math.abs(color1.getRed() - color2.getRed());
-        int greenDiff = (int) Math.abs(color1.getGreen() - color2.getGreen());
-        int blueDiff = (int) Math.abs(color1.getBlue() - color2.getBlue());
-
-        // Check if the differences are within the tolerance range
-        return (redDiff <= tolerance && greenDiff <= tolerance && blueDiff <= tolerance);
-    }
-
-
-
-
-     public void getBWMap() throws IOException {
-     BWConverter.convert();
-     }
 
 
 
@@ -329,10 +293,10 @@ public class RouteFinder implements Initializable {
         }
 
         // Check if selectedItem is not null and is not already in avoidNodes
-        if (selectedItem != null && !avoidNodes.contains(selectedItem) && avoidNodes !=null) {
+        if (selectedItem != null && !avoidNodes.contains(selectedItem) && avoidNodes != null) {
             avoidNodes.add(selectedItem);
         }
-       printAvoidNodes();
+        printAvoidNodes();
     }
 
 
@@ -615,10 +579,10 @@ public class RouteFinder implements Initializable {
 
         assert cpa != null;
         for (GraphNode<?> n : cpa.pathList)
-             clearFeedback();
+            clearFeedback();
         systemMessage.setText("Shortest Path from " + startPointBox.getSelectionModel().getSelectedItem().getName() + " TO " + endPointBox.getSelectionModel().getSelectedItem().getName() + " using Dijkstra's Algorithm");
-             cpa.setIndex(1);
-             dfsListView.getItems().add(cpa);
+        cpa.setIndex(1);
+        dfsListView.getItems().add(cpa);
 
         for (int i = 0; i < cpa.pathList.size() - 1; i++) {
             GraphNode<?> firstNode = cpa.pathList.get(i);
@@ -632,17 +596,17 @@ public class RouteFinder implements Initializable {
         }
     }
 
-    public void clearFeedback(){
-        if(systemMessage.getText()!= null){
+    public void clearFeedback() {
+        if (systemMessage.getText() != null) {
             systemMessage.setText(null);
         }
-        if(!(dfsListView.getItems() == null)){
+        if (!(dfsListView.getItems() == null)) {
             dfsListView.getItems().clear();
         }
+        if (!(bfsMessage.getText() == null)) {
+            bfsMessage.setText(null);
+        }
     }
-
-
-
 
 
     public void shortestPathBFS() {
@@ -663,6 +627,28 @@ public class RouteFinder implements Initializable {
             // Perform BFS shortest path algorithm
             ArrayList<Point2D> path = searchBFS(start, end);
 
+            // Calculate the total distance of the path
+            double totalDistance = 0.0;
+            for (int i = 0; i < path.size() - 1; i++) {
+                Point2D p1 = path.get(i);
+                Point2D p2 = path.get(i + 1);
+
+                // Calculate the Euclidean distance between consecutive points
+                double distance = p1.distance(p2);
+                totalDistance += pixelToKilometers(distance, 100);
+            }
+
+            // Round the total distance to two decimal places
+
+            String walkingTime = calculateAndFormatTime(totalDistance, 5.0);
+            String drivingTime = calculateAndFormatTime(totalDistance, 50.0);
+            String cyclingTime = calculateAndFormatTime(totalDistance, 20.0);
+            // Set the formatted distance in the systemMessage
+            bfsMessage.setText("Estimated Distance from " + startLandmark.getName() + " to " + destLandmark.getName() + " is " + String.format("%.2f", totalDistance) + " km" + "\n\n"
+            +"Walking Time:  "+walkingTime + "    |    " + "Driving: " + drivingTime + "    |    " + "Cycling: " + cyclingTime + "\n");
+
+
+
             // Add lines between consecutive points in the path to the mapPane
             for (int i = 0; i < path.size() - 1; i++) {
                 Point2D p1 = path.get(i);
@@ -675,12 +661,27 @@ public class RouteFinder implements Initializable {
 
                 // Add the line to the mapPane
                 mapPane.getChildren().add(line);
-
             }
+
+            // Draw graph nodes
             for (GraphNode<String> node : graphNodes.values()) {
                 drawNode(node);
             }
         }
+    }
+    private static String calculateAndFormatTime(double distance, double speed) {
+        double timeInHours = distance / speed;
+        int hours = (int) timeInHours;
+        int minutes = (int) ((timeInHours - hours) * 60);
+        return String.format("%d hr %d m", hours, minutes);
+    }
+
+
+    public double pixelToKilometers(double distanceInPixels, double pixelsPerKilometer) {
+        // Convert pixels to kilometers
+        double distanceInKilometers = distanceInPixels / pixelsPerKilometer;
+
+        return Math.round(distanceInKilometers * 100.0) / 100.0;
     }
 
 

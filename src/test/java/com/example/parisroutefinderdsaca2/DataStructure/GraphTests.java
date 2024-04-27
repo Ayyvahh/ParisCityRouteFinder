@@ -60,8 +60,8 @@ class GraphTests {
             GraphNode<String> n2 = new GraphNode<>("Node2", false, 0, 375, 250);
             GraphNode<String> n3 = new GraphNode<>("Node3", false, 0, 700, 400);
 
-            n1.connectToNodeUndirected(n2, routeFinder.calculateDistance(n1, n2));
-            n2.connectToNodeUndirected(n3, routeFinder.calculateDistance(n2, n3));
+            n1.connectToNodeUndirected(n2, routeFinder.calculateEuclideanDistance(n1, n2));
+            n2.connectToNodeUndirected(n3, routeFinder.calculateEuclideanDistance(n2, n3));
 
 
 
