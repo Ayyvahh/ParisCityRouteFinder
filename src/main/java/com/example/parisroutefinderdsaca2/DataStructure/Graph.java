@@ -1,6 +1,11 @@
 package com.example.parisroutefinderdsaca2.DataStructure;
 
+import com.example.parisroutefinderdsaca2.BWConverter;
 import javafx.fxml.Initializable;
+import javafx.geometry.Point2D;
+import javafx.scene.image.Image;
+import javafx.scene.image.PixelReader;
+import javafx.scene.paint.Color;
 
 import java.net.URL;
 import java.util.*;
@@ -132,12 +137,80 @@ public class Graph implements Initializable {
         return allPaths;
     }
 
-    @Override
-    public String toString() {
-        return "Graph{" +
-                "allPaths=" + allPaths +
-                '}';
+    public static ArrayList<Point2D> searchBFS(Point2D start, Point2D end) {
+        Image im = BWConverter.convert();
+        int width = (int) im.getWidth();
+        int height = (int) im.getHeight();
+
+        Set<Point2D> visitedPixels = new HashSet<>();
+        Queue<Point2D> queue = new LinkedList<>();
+        Map<Point2D, Point2D> cameFrom = new HashMap<>();
+
+        queue.add(start);
+        visitedPixels.add(start);
+
+        while (!queue.isEmpty()) {
+            Point2D current = queue.poll();
+            if (current.equals(end)) {
+                ArrayList<Point2D> path = new ArrayList<>();
+                while (current != null) {
+                    path.add(0, current);
+                    current = cameFrom.get(current);
+                }
+                return path;
+            }
+
+            for (Point2D neighbor : getNeighbors(current, width, height)) {
+                if (!visitedPixels.contains(neighbor)) {
+                    queue.add(neighbor);
+                    visitedPixels.add(neighbor);
+                    cameFrom.put(neighbor, current);
+                }
+            }
+        }
+
+        return new ArrayList<>();
     }
+
+    private static List<Point2D> getNeighbors(Point2D current, int width, int height) {
+        List<Point2D> neighbors = new ArrayList<>();
+        int[] pixelArray = BWConverter.getPixelArray();
+        // Define the changes in x and y directions for moving in four directions: up, left, down, and right
+        int[] dx = {-1, 0, 1, 0};
+        int[] dy = {0, -1, 0, 1};
+
+        int currX = (int) current.getX();
+        int currY = (int) current.getY();
+
+        // Explore neighboring pixels
+        for (int i = 0; i < dx.length; i++) {
+            int x = currX + dx[i];
+            int y = currY + dy[i];
+
+            // Check if the neighboring pixel is within bounds
+            if (x >= 0 && x < width && y >= 0 && y < height) {
+                int pixelValue = pixelArray[y * width + x];
+                // Check if the pixel value indicates a white color
+                if (pixelValue == 0) { // Assuming 0 represents white in the pixel array
+                    Point2D neighbor = new Point2D(x, y);
+                    neighbors.add(neighbor);
+                }
+            }
+        }
+
+        return neighbors;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

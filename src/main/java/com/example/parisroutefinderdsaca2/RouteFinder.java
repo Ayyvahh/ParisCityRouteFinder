@@ -8,8 +8,12 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Cursor;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -19,6 +23,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 import org.jetbrains.annotations.NotNull;
 
+import javafx.geometry.Point2D;
 import java.io.*;
 import java.net.URL;
 import java.util.*;
@@ -273,6 +278,45 @@ public class RouteFinder implements Initializable {
             }
         }
     }
+
+
+    public void findPills(MouseEvent m) {
+
+        if (mapView == null) {
+            Utils.showWarningAlert("ERROR", "UPLOAD A PHOTO FIRST");
+        } else {
+            mapView.setImage(mapView.getImage());
+            double x = m.getX();
+            double y = m.getY();
+
+            Color c = mapView.getImage().getPixelReader().getColor((int) x, (int) y); /*Get the color of pixel clicked*/
+
+            System.out.println(c.toString());
+
+
+        }
+    }
+
+
+
+    public  boolean roadColorIsSimilar(Color color1, Color color2, int tolerance) {
+        int redDiff = (int) Math.abs(color1.getRed() - color2.getRed());
+        int greenDiff = (int) Math.abs(color1.getGreen() - color2.getGreen());
+        int blueDiff = (int) Math.abs(color1.getBlue() - color2.getBlue());
+
+        // Check if the differences are within the tolerance range
+        return (redDiff <= tolerance && greenDiff <= tolerance && blueDiff <= tolerance);
+    }
+
+
+
+
+     public void getBWMap() throws IOException {
+     BWConverter.convert();
+     }
+
+
+
 
     public void addToAvoid() {
         GraphNode<String> selectedItem = avoidBox.getSelectionModel().getSelectedItem();
@@ -557,6 +601,8 @@ public class RouteFinder implements Initializable {
                 shortestPathDijkstra();
             } else if (algoSelection.getSelectedToggle().equals(dfsButton)) {
                 shortestPathDFS();
+            } else if (algoSelection.getSelectedToggle().equals(bfsButton)) {
+                shortestPathBFS();
             }
         }
     }
@@ -570,7 +616,7 @@ public class RouteFinder implements Initializable {
         assert cpa != null;
         for (GraphNode<?> n : cpa.pathList)
              clearFeedback();
-             systemMessage.setText("Shortest Path from " + startPointBox.getSelectionModel().getSelectedItem().getName() + " TO " + endPointBox.getSelectionModel().getSelectedItem().getName() + " using Dijkstra's Algorithm");
+        systemMessage.setText("Shortest Path from " + startPointBox.getSelectionModel().getSelectedItem().getName() + " TO " + endPointBox.getSelectionModel().getSelectedItem().getName() + " using Dijkstra's Algorithm");
              cpa.setIndex(1);
              dfsListView.getItems().add(cpa);
 
@@ -592,6 +638,48 @@ public class RouteFinder implements Initializable {
         }
         if(!(dfsListView.getItems() == null)){
             dfsListView.getItems().clear();
+        }
+    }
+
+
+
+
+
+    public void shortestPathBFS() {
+        clearAllCircles();
+        mapPane.getChildren().removeIf(node -> node instanceof Line);
+        clearFeedback();
+
+        // Get the start and end landmarks
+        GraphNode<?> startLandmark = startPointBox.getValue();
+        GraphNode<?> destLandmark = endPointBox.getValue();
+
+        // Check if both start and end landmarks are selected
+        if (startLandmark != null && destLandmark != null) {
+            // Retrieve the coordinates of the start and end landmarks
+            Point2D start = new Point2D(startLandmark.getGraphX(), startLandmark.getGraphY());
+            Point2D end = new Point2D(destLandmark.getGraphX(), destLandmark.getGraphY());
+
+            // Perform BFS shortest path algorithm
+            ArrayList<Point2D> path = searchBFS(start, end);
+
+            // Add lines between consecutive points in the path to the mapPane
+            for (int i = 0; i < path.size() - 1; i++) {
+                Point2D p1 = path.get(i);
+                Point2D p2 = path.get(i + 1);
+
+                // Create a line between the current point and the next point in the path
+                Line line = new Line(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+                line.setStroke(Color.DARKBLUE);
+                line.setStrokeWidth(3);
+
+                // Add the line to the mapPane
+                mapPane.getChildren().add(line);
+
+            }
+            for (GraphNode<String> node : graphNodes.values()) {
+                drawNode(node);
+            }
         }
     }
 
@@ -655,8 +743,9 @@ public class RouteFinder implements Initializable {
         populateDatabase();
         nodeTip = new Tooltip("TEST");
         mapPane.setOnMouseMoved(this::toolTipHover);
+        Image mapViewImage = new Image(Objects.requireNonNull(BWConverter.class.getResourceAsStream("ParisVectorMap.png")));
 
-
+        mapView.setImage(mapViewImage);
 
     }
 

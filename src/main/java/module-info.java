@@ -3,6 +3,7 @@ module com.example.parisroutefinderdsaca2 {
     requires javafx.fxml;
     requires xstream;
     requires org.jetbrains.annotations;
+    requires java.desktop;
 
 
     exports com.example.parisroutefinderdsaca2;
