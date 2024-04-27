@@ -20,7 +20,7 @@
          <DropShadow />
       </effect>
       <ImageView fx:id="mapView" fitHeight="500.0" fitWidth="750.0" layoutX="3.0" layoutY="2.0" onMouseClicked="#mapClicked" pickOnBounds="true" preserveRatio="true">
-         <Image url="@images/ParisVectorMap.png" />
+         <Image url="@ParisVectorMap.png" />
       </ImageView>
    </AnchorPane>
    <AnchorPane layoutX="849.0" layoutY="568.0" prefHeight="323.0" prefWidth="751.0" style="-fx-background-color: #252525;">
@@ -147,9 +147,7 @@
             </font>
             <graphic>
                <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@images/waypoint2.png" />
-                  </image>
+                  <Image url="@images/waypoint2.png" />
                </ImageView>
             </graphic>
          </Button>
@@ -265,10 +263,15 @@
          </ImageView>
       </graphic>
    </Label>
-   <ListView fx:id="dfsListView" layoutX="76.0" layoutY="506.0" onMouseClicked="#dfsPathDisplay" prefHeight="200.0" prefWidth="660.0" style="-fx-background-color: #1F1F1F;" />
-   <Label fx:id="systemMessage" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="45.0" layoutY="463.0" prefHeight="43.0" prefWidth="721.0" textAlignment="CENTER" textFill="#459ee2">
+   <ListView fx:id="dfsListView" layoutX="42.0" layoutY="592.0" onMouseClicked="#dfsPathDisplay" prefHeight="200.0" prefWidth="753.0" style="-fx-background-color: #1F1F1F;" />
+   <Label fx:id="systemMessage" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="58.0" layoutY="528.0" prefHeight="43.0" prefWidth="721.0" textAlignment="CENTER" textFill="#459ee2">
       <font>
-         <Font name="Arial Bold" size="14.0" />
+         <Font name="Arial Bold" size="15.0" />
+      </font>
+   </Label>
+   <Label fx:id="bfsMessage" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="58.0" layoutY="465.0" prefHeight="77.0" prefWidth="721.0" textAlignment="CENTER" textFill="#459ee2">
+      <font>
+         <Font name="Arial Bold" size="15.0" />
       </font>
    </Label>
 </AnchorPane>
