@@ -47,8 +47,9 @@
 
     /* Combo Box */
     .combo-box {
-        -fx-background-color: #1B1B1B; /* Background color */
-        -fx-text-fill: white; /* Text color */
+
+        -fx-background-color:  #222121; /* Background color */
+        -fx-text-fill: #0D89E8; /* Text color */
         -fx-font-family: "Arial "; /* Font family */
         -fx-font-size: 12px; /* Font size */
         -fx-padding: 4px; /* Padding */
@@ -56,31 +57,31 @@
 
     /* Combo Box Arrow Button */
     .combo-box .arrow-button {
-        -fx-background-color:  #1B1B1B; /* Background color */
+        -fx-background-color:   #222121; /* Background color */
         -fx-padding: 4px; /* Padding */
     }
 
     /* Combo Box Arrow Icon */
     .combo-box .arrow-button .arrow {
-        -fx-background-color:  white; /* Background color */
+        -fx-background-color:  #0D89E8; /* Background color */
 
     }
 
     /* Combo Box List Cell */
     .combo-box .list-cell {
-        -fx-background-color: #1B1B1B; /* Background color */
+        -fx-background-color: #222121; /* Background color */
         -fx-text-fill: white; /* Text color */
         -fx-font-family: "Arial"; /* Font family */
         -fx-font-size: 14px; /* Font size */
         -fx-padding: 4px; /* Padding */
         -fx-border-color: grey;
-        -fx-border-width: 0 0 1 0; /* Top, Right, Bottom, Left */
+        -fx-border-width: 0 0 0.5 0; /* Top, Right, Bottom, Left */
     }
 
     /* Combo Box Selected List Cell */
     .combo-box .list-cell:selected:hover {
-        -fx-background-color: #1B1B1B; /* Background color */
-        -fx-text-fill: #24c8f5; /* Text color */
+        -fx-background-color: #222121; /* Background color */
+        -fx-text-fill: #0D89E8; /* Text color */
         -fx-font-size: 15px;
     }
 
@@ -90,7 +91,7 @@
     -fx-background-color: #1B1B1B; /* Background color */
     -fx-text-fill: white; /* Text color */
     -fx-font-family: "Arial"; /* Font family */
-    -fx-font-size: 13px; /* Font size */
+    -fx-font-size: 12px; /* Font size */
     -fx-padding: 6px; /* Padding */
 }
 
@@ -148,3 +149,5 @@
 .scroll-bar:horizontal .thumb {
     -fx-background-color: #3D3D3D; /* Thumb color */
 }
+
+

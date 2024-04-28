@@ -14,8 +14,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="1630.0" style="-fx-background-color: #1F1F1F;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
-   <AnchorPane fx:id="mapPane" layoutX="847.0" layoutY="57.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #252525;">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="1630.0" style="-fx-background-color: #1B1A1A #1B1A1A;" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.parisroutefinderdsaca2.RouteFinder">
+   <AnchorPane fx:id="mapPane" layoutX="848.0" layoutY="73.0" prefHeight="500.0" prefWidth="750.0" style="-fx-background-color: #252525;">
       <effect>
          <DropShadow />
       </effect>
@@ -23,12 +23,12 @@
          <Image url="@ParisVectorMap.png" />
       </ImageView>
    </AnchorPane>
-   <AnchorPane layoutX="849.0" layoutY="568.0" prefHeight="323.0" prefWidth="751.0" style="-fx-background-color: #252525;">
+   <AnchorPane layoutX="14.0" layoutY="535.0" prefHeight="333.0" prefWidth="783.0" style="-fx-background-color: #222121;">
       <effect>
          <DropShadow />
       </effect>
-      <ListView fx:id="currentWaypoints" layoutX="24.0" layoutY="48.0" prefHeight="192.0" prefWidth="350.0" />
-      <Button contentDisplay="RIGHT" layoutX="78.0" layoutY="253.0" mnemonicParsing="false" onAction="#removeLandmarkOrJunction" prefHeight="31.0" prefWidth="242.0" styleClass="button2" stylesheets="@stylesheet.css" text="REMOVE WAYPOINT">
+      <ListView fx:id="currentWaypoints" layoutX="24.0" layoutY="48.0" prefHeight="192.0" prefWidth="350.0" style="-fx-background-color: #222121;" />
+      <Button contentDisplay="RIGHT" layoutX="78.0" layoutY="253.0" mnemonicParsing="false" onAction="#removeLandmarkOrJunction" prefHeight="31.0" prefWidth="191.0" styleClass="button2" stylesheets="@stylesheet.css" text="REMOVE WAYPOINT">
          <effect>
             <DropShadow />
          </effect>
@@ -41,7 +41,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <AnchorPane layoutX="391.0" layoutY="29.0" prefHeight="281.0" prefWidth="359.0">
+      <AnchorPane layoutX="413.0" layoutY="39.0" prefHeight="281.0" prefWidth="359.0">
          <TextField fx:id="nameField" layoutX="146.0" layoutY="60.0" prefHeight="20.0" prefWidth="191.0" promptText="Landmark Name" style="-fx-text-fill: black; -fx-background-color: #E8E7E7;" />
          <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="6.0" layoutX="20.0" layoutY="52.0" prefHeight="38.0" prefWidth="123.0" text="Landmark Name: " textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
@@ -72,7 +72,7 @@
                <Font name="Arial" size="13.0" />
             </font>
          </RadioButton>
-         <Button contentDisplay="RIGHT" layoutX="70.0" layoutY="225.0" mnemonicParsing="false" onAction="#addLandmarkOrJunction" prefHeight="31.0" prefWidth="242.0" styleClass="button2" stylesheets="@stylesheet.css" text="ADD WAYPOINT">
+         <Button contentDisplay="RIGHT" layoutX="74.0" layoutY="213.0" mnemonicParsing="false" onAction="#addLandmarkOrJunction" prefHeight="31.0" prefWidth="202.0" styleClass="button2" stylesheets="@stylesheet.css" text="ADD WAYPOINT">
             <effect>
                <DropShadow />
             </effect>
@@ -86,46 +86,45 @@
             </graphic>
          </Button>
       </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="3.0" layoutY="4.0" prefHeight="34.0" prefWidth="776.0" style="-fx-background-color: #1B1B1B;" text="Add or Remove Waypoints" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="16.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@images/waypoint.png" />
+            </ImageView>
+         </graphic>
+      </Label>
    </AnchorPane>
-   <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="54.0" prefWidth="1630.0" style="-fx-background-color: #252525; -fx-border-color: #1F1F1F;">
+   <AnchorPane layoutX="-2.0" layoutY="-1.0" prefHeight="64.0" prefWidth="1630.0" style="-fx-background-color: #222121; -fx-border-color: #1F1F1F;">
       <effect>
          <DropShadow />
       </effect>
-      <ImageView fitHeight="17.0" fitWidth="236.0" layoutX="21.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@images/AppLogo.png" />
+      <ImageView fitHeight="53.0" fitWidth="242.0" layoutX="83.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/PARISlOGO.png" />
+         </image>
       </ImageView>
-      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="211.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
-         <Image url="@images/waypoint.png" />
+      <ImageView fitHeight="46.0" fitWidth="42.0" layoutX="32.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/FINDERICON.png" />
+         </image>
       </ImageView>
-      <Button alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="1584.0" layoutY="11.0" mnemonicParsing="false" onAction="#populateDatabase" prefHeight="31.0" prefWidth="31.0" stylesheets="@stylesheet.css">
-         <effect>
-            <DropShadow />
-         </effect>
-         <font>
-            <Font name="Berlin Sans FB Demi Bold" size="12.0" />
-         </font>
-      </Button>
    </AnchorPane>
-   <AnchorPane layoutX="14.0" layoutY="64.0" prefHeight="375.0" prefWidth="809.0" style="-fx-background-color: #252525;">
+   <AnchorPane layoutX="30.0" layoutY="91.0" prefHeight="413.0" prefWidth="751.0" style="-fx-background-color: #222121;">
       <effect>
          <DropShadow />
       </effect>
       <children>
-         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutY="1.0" prefHeight="43.0" prefWidth="809.0" style="-fx-background-color: #1B1B1B;" text="Route Finder" textFill="WHITE">
+         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutY="-5.0" prefHeight="39.0" prefWidth="751.0" style="-fx-background-color: #1B1B1B;" textFill="WHITE">
             <font>
-               <Font name="Arial Rounded MT Bold" size="19.0" />
+               <Font name="Arial Rounded MT Bold" size="17.0" />
             </font>
-            <graphic>
-               <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@images/flag.png" />
-                  </image>
-               </ImageView>
-            </graphic>
          </Label>
-         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="11.0" layoutY="60.0" prefHeight="43.0" prefWidth="227.0" text="Start" textAlignment="CENTER" textFill="#459ee2">
+         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="11.0" layoutY="-5.0" prefHeight="43.0" prefWidth="143.0" text="Start" textAlignment="CENTER" textFill="WHITE">
             <font>
-               <Font name="Arial" size="14.0" />
+               <Font name="Arial" size="15.0" />
             </font>
             <graphic>
                <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -135,10 +134,10 @@
                </ImageView>
             </graphic>
          </Label>
-         <ComboBox fx:id="startPointBox" layoutX="33.0" layoutY="104.0" prefHeight="31.0" prefWidth="183.0" promptText="Starting Point" visibleRowCount="6" />
-         <ComboBox fx:id="endPointBox" layoutX="308.0" layoutY="104.0" prefHeight="33.0" prefWidth="183.0" promptText="End Point" visibleRowCount="6" />
-         <ComboBox fx:id="avoidBox" layoutX="576.0" layoutY="103.0" prefHeight="31.0" prefWidth="202.0" promptText="Add Places to Avoid" visibleRowCount="6" />
-         <Button contentDisplay="RIGHT" layoutX="271.0" layoutY="268.0" mnemonicParsing="false" onAction="#findRoute" prefHeight="34.0" prefWidth="258.0" styleClass="button2" stylesheets="@stylesheet.css" text="FIND MY ROUTE">
+         <ComboBox fx:id="startPointBox" layoutX="19.0" layoutY="49.0" prefHeight="33.0" prefWidth="123.0" promptText="       ---------" stylesheets="@stylesheet.css" visibleRowCount="6" />
+         <ComboBox fx:id="endPointBox" layoutX="209.0" layoutY="52.0" prefHeight="33.0" prefWidth="123.0" promptText="       ---------" visibleRowCount="6" />
+         <ComboBox fx:id="avoidBox" layoutX="409.0" layoutY="52.0" prefHeight="33.0" prefWidth="123.0" promptText="       ---------" visibleRowCount="6" />
+         <Button contentDisplay="RIGHT" layoutX="287.0" layoutY="354.0" mnemonicParsing="false" onAction="#findRoute" prefHeight="34.0" prefWidth="178.0" styleClass="button2" stylesheets="@stylesheet.css" text="FIND MY ROUTE">
             <effect>
                <DropShadow />
             </effect>
@@ -151,9 +150,9 @@
                </ImageView>
             </graphic>
          </Button>
-         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="291.0" layoutY="60.0" prefHeight="43.0" prefWidth="227.0" text="Destination" textAlignment="CENTER" textFill="#459ee2" wrapText="true">
+         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="204.0" layoutY="-5.0" prefHeight="43.0" prefWidth="133.0" text="Destination" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
-               <Font name="Arial" size="14.0" />
+               <Font name="Arial" size="15.0" />
             </font>
             <graphic>
                <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -163,9 +162,9 @@
                </ImageView>
             </graphic>
          </Label>
-         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="562.0" layoutY="60.0" prefHeight="43.0" prefWidth="227.0" text="Avoid" textAlignment="CENTER" textFill="#459ee2" wrapText="true">
+         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="416.0" prefHeight="34.0" prefWidth="81.0" text="Avoid" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
-               <Font name="Arial" size="14.0" />
+               <Font name="Arial" size="15.0" />
             </font>
             <graphic>
                <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -175,12 +174,12 @@
                </ImageView>
             </graphic>
          </Label>
-         <RadioButton fx:id="dijkstraButton" contentDisplay="RIGHT" layoutX="180.0" layoutY="216.0" mnemonicParsing="false" text="Dijkstras" textFill="WHITE">
+         <RadioButton fx:id="dijkstraButton" contentDisplay="RIGHT" layoutX="129.0" layoutY="161.0" mnemonicParsing="false" text="Dijkstras" textFill="#0d89e8">
             <font>
-               <Font name="Arial Rounded MT Bold" size="14.0" />
+               <Font name="Arial" size="15.0" />
             </font>
             <graphic>
-               <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="24.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@images/DIJK.png" />
                   </image>
@@ -190,38 +189,38 @@
                <ToggleGroup fx:id="algoSelection" />
             </toggleGroup>
          </RadioButton>
-         <ImageView fitHeight="25.0" fitWidth="52.0" layoutX="238.0" layoutY="112.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="17.0" fitWidth="42.0" layoutX="159.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@images/RROW.png" />
             </image>
          </ImageView>
-         <RadioButton fx:id="bfsButton" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="338.0" layoutY="216.0" mnemonicParsing="false" text="Breadth-First" textFill="WHITE" toggleGroup="$algoSelection">
+         <RadioButton fx:id="bfsButton" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="497.0" layoutY="162.0" mnemonicParsing="false" text="Breadth-First" textFill="#0d89e8" toggleGroup="$algoSelection">
             <font>
-               <Font name="Arial" size="14.0" />
+               <Font name="Arial" size="15.0" />
             </font>
             <graphic>
-               <ImageView fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="19.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@images/breadth.png" />
                   </image>
                </ImageView>
             </graphic>
          </RadioButton>
-         <RadioButton fx:id="dfsButton" contentDisplay="RIGHT" layoutX="518.0" layoutY="215.0" mnemonicParsing="false" text="Depth-First" textFill="WHITE" toggleGroup="$algoSelection">
+         <RadioButton fx:id="dfsButton" contentDisplay="RIGHT" layoutX="310.0" layoutY="162.0" mnemonicParsing="false" text="Depth-First" textFill="#0d89e8" toggleGroup="$algoSelection">
             <font>
-               <Font name="Arial" size="14.0" />
+               <Font name="Arial" size="15.0" />
             </font>
             <graphic>
-               <ImageView fitHeight="19.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="13.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@images/depth.png" />
                   </image>
                </ImageView>
             </graphic>
          </RadioButton>
-         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="225.0" layoutY="156.0" prefHeight="43.0" prefWidth="350.0" text="Choose a Search Algorithm" textAlignment="CENTER" textFill="#459ee2" wrapText="true">
+         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="1.0" layoutY="109.0" prefHeight="34.0" prefWidth="750.0" style="-fx-background-color: #1B1B1B;" text="Choose a Search Algorithm" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
-               <Font name="Arial Bold" size="15.0" />
+               <Font name="Arial Rounded MT Bold" size="14.0" />
             </font>
             <graphic>
                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
@@ -231,7 +230,7 @@
                </ImageView>
             </graphic>
          </Label>
-         <Button contentDisplay="RIGHT" layoutX="750.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToAvoid" prefHeight="22.0" prefWidth="20.0" styleClass="button2" stylesheets="@stylesheet.css">
+         <Button contentDisplay="RIGHT" layoutX="497.0" layoutY="5.0" mnemonicParsing="false" onAction="#addToAvoid" prefHeight="17.0" prefWidth="20.0" styleClass="button2" stylesheets="@stylesheet.css">
             <effect>
                <DropShadow />
             </effect>
@@ -239,37 +238,60 @@
                <Font name="Berlin Sans FB Demi Bold" size="12.0" />
             </font>
             <graphic>
-               <ImageView fitHeight="13.0" fitWidth="13.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@images/plus.png" />
                   </image>
                </ImageView>
             </graphic>
          </Button>
-         <Label fx:id="avoidingLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="320.0" prefHeight="43.0" prefWidth="715.0" textFill="#ff8585" wrapText="true">
+         <Label fx:id="avoidingLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="216.0" prefHeight="43.0" prefWidth="715.0" text="LEAVING ROOM HERE FOR DOING DIJKSTRA CULTURAL SEARCH" textFill="#ff8585" wrapText="true">
             <font>
                <Font name="Arial" size="14.0" />
             </font>
          </Label>
+         <ImageView fitHeight="17.0" fitWidth="42.0" layoutX="351.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/RROW.png" />
+            </image>
+         </ImageView>
+         <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="603.0" prefHeight="34.0" prefWidth="89.0" text="Visit" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+            <font>
+               <Font name="Arial" size="15.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="17.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/museum.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Label>
+         <Button contentDisplay="RIGHT" layoutX="682.0" layoutY="6.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="20.0" styleClass="button2" stylesheets="@stylesheet.css">
+            <effect>
+               <DropShadow />
+            </effect>
+            <font>
+               <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+            </font>
+            <graphic>
+               <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/plus.png" />
+                  </image>
+               </ImageView>
+            </graphic>
+         </Button>
+         <ImageView fitHeight="17.0" fitWidth="42.0" layoutX="550.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@images/RROW.png" />
+            </image>
+         </ImageView>
+         <ComboBox layoutX="603.0" layoutY="52.0" prefHeight="33.0" prefWidth="123.0" promptText="       ---------" visibleRowCount="6" />
       </children>
    </AnchorPane>
-   <Label alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="6.0" layoutX="850.0" layoutY="568.0" prefHeight="38.0" prefWidth="753.0" style="-fx-background-color: #1B1B1B;" text="Add or Remove Waypoints" textFill="WHITE">
-      <font>
-         <Font name="Arial Rounded MT Bold" size="18.0" />
-      </font>
-      <graphic>
-         <ImageView fitHeight="28.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-            <Image url="@images/waypoint.png" />
-         </ImageView>
-      </graphic>
-   </Label>
-   <ListView fx:id="dfsListView" layoutX="42.0" layoutY="592.0" onMouseClicked="#dfsPathDisplay" prefHeight="200.0" prefWidth="753.0" style="-fx-background-color: #1F1F1F;" />
-   <Label fx:id="systemMessage" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="58.0" layoutY="528.0" prefHeight="43.0" prefWidth="721.0" textAlignment="CENTER" textFill="#459ee2">
-      <font>
-         <Font name="Arial Bold" size="15.0" />
-      </font>
-   </Label>
-   <Label fx:id="bfsMessage" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="58.0" layoutY="465.0" prefHeight="77.0" prefWidth="721.0" textAlignment="CENTER" textFill="#459ee2">
+   <ListView fx:id="dfsListView" layoutX="849.0" layoutY="657.0" onMouseClicked="#dfsPathDisplay" prefHeight="173.0" prefWidth="751.0" style="-fx-background-color: #1B1A1A #1B1A1A;" />
+   <Label fx:id="systemMessage" alignment="TOP_CENTER" contentDisplay="RIGHT" graphicTextGap="7.0" layoutX="864.0" layoutY="605.0" prefHeight="77.0" prefWidth="721.0" textAlignment="CENTER" textFill="#459ee2">
       <font>
          <Font name="Arial Bold" size="15.0" />
       </font>

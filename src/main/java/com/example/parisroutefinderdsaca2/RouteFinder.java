@@ -48,7 +48,7 @@ public class RouteFinder implements Initializable {
     public ToggleGroup algoSelection;
     public Label avoidingLabel = new Label();
     public ListView<CostedPath> dfsListView;
-    public Label bfsMessage = new Label();
+
     Color route = Color.rgb(13, 137, 232);
     Color landMark = Color.rgb(0, 74, 173);
     Circle circle; /*Circle for user to see where they've clicked*/
@@ -652,14 +652,12 @@ public class RouteFinder implements Initializable {
 
 
     public void clearFeedback() {
-        if (systemMessage.getText() != null) {
-            systemMessage.setText(null);
-        }
+
         if (!(dfsListView.getItems() == null)) {
             dfsListView.getItems().clear();
         }
-        if (!(bfsMessage.getText() == null)) {
-            bfsMessage.setText(null);
+        if (!(systemMessage.getText() == null)) {
+            systemMessage.setText(null);
         }
     }
 
@@ -699,12 +697,12 @@ public class RouteFinder implements Initializable {
             String drivingTime = calculateAndFormatTime(totalDistance, 50.0);
             String cyclingTime = calculateAndFormatTime(totalDistance, 20.0);
             // Set the formatted distance in the systemMessage
-            bfsMessage.setText("Estimated Distance from " + startLandmark.getName() + " to " + destLandmark.getName() + " is " + String.format("%.2f", totalDistance) + " km" + "\n\n"
+            systemMessage.setText("Estimated Distance from " + startLandmark.getName() + " to " + destLandmark.getName() + " is " + String.format("%.2f", totalDistance) + " km" + "\n\n"
             +"Walking Time:  "+walkingTime + "    |    " + "Driving: " + drivingTime + "    |    " + "Cycling: " + cyclingTime + "\n");
 
 
 
-            // Add lines between consecutive points in the path to the mapPane
+            // Add lines between  points in the path to the mapPane
             for (int i = 0; i < path.size() - 1; i++) {
                 Point2D p1 = path.get(i);
                 Point2D p2 = path.get(i + 1);
