@@ -12,14 +12,14 @@
 }
 
 .button{
-    -fx-background-color: #0D89E8;
+    -fx-background-color: #0B77CB;
     -fx-text-fill: white;
     -fx-font-family: "Arial Rounded MT Bold";
     -fx-font-size: 14px;
     -fx-padding: 5px 5px
 }
 .button2{
-    -fx-background-color: #0D89E8;
+    -fx-background-color: #0B77CB;
     -fx-text-fill: white;
     -fx-font-family: "Arial Rounded MT Bold";
     -fx-font-size: 13px;
@@ -51,7 +51,7 @@
         -fx-background-color:  #222121; /* Background color */
         -fx-text-fill: #0D89E8; /* Text color */
         -fx-font-family: "Arial "; /* Font family */
-        -fx-font-size: 12px; /* Font size */
+        -fx-font-size: 14px; /* Font size */
         -fx-padding: 4px; /* Padding */
     }
 
@@ -64,6 +64,8 @@
     /* Combo Box Arrow Icon */
     .combo-box .arrow-button .arrow {
         -fx-background-color:  #0D89E8; /* Background color */
+        -fx-pref-width: 10px;
+        -fx-pref-height: 10px;
 
     }
 
@@ -71,18 +73,18 @@
     .combo-box .list-cell {
         -fx-background-color: #222121; /* Background color */
         -fx-text-fill: white; /* Text color */
-        -fx-font-family: "Arial"; /* Font family */
-        -fx-font-size: 14px; /* Font size */
+        -fx-font-size: 16px; /* Font size */
         -fx-padding: 4px; /* Padding */
         -fx-border-color: grey;
+        -fx-font-family: "Arial Rounded MT Bold";
         -fx-border-width: 0 0 0.5 0; /* Top, Right, Bottom, Left */
     }
 
     /* Combo Box Selected List Cell */
-    .combo-box .list-cell:selected:hover {
+    .combo-box .list-cell:hover {
         -fx-background-color: #222121; /* Background color */
         -fx-text-fill: #0D89E8; /* Text color */
-        -fx-font-size: 15px;
+        -fx-font-size: 16px;
     }
 
 
@@ -91,7 +93,7 @@
     -fx-background-color: #1B1B1B; /* Background color */
     -fx-text-fill: white; /* Text color */
     -fx-font-family: "Arial"; /* Font family */
-    -fx-font-size: 12px; /* Font size */
+    -fx-font-size: 14px; /* Font size */
     -fx-padding: 6px; /* Padding */
 }
 
@@ -109,7 +111,7 @@
 /* Selected ListView Cell */
 .list-view .list-cell:selected {
     -fx-background-color: #1B1B1B; /* Background color */
-    -fx-text-fill: #24c8f5; /* Text color */
+    -fx-text-fill: #0d89e8; /* Text color */
     -fx-font-size: 14px; /* Font size */
 }
 .list-view .list-cell:hover {
@@ -151,3 +153,79 @@
 }
 
 
+.Stage-button {
+    -fx-background-color: #222121;
+    -fx-text-fill: white;
+
+}
+
+.Stage-button:hover {
+    -fx-background-color: #555555;
+}
+
+/* Custom styles for accordion header */
+.accordion .titled-pane > .title {
+    -fx-background-color:  #1B1B1B; /* Background color */
+    -fx-text-fill: #0d89e8; /* Text color */
+    -fx-font-weight: bold; /* Font weight */
+    -fx-font-size: 14px; /* Title font size */
+    -fx-padding: 20px; /* Padding */
+    -fx-border-color:  black;
+    -fx-border-width: 0 0 2 0; /* Top, Right, Bottom, Left */
+}
+
+/* Hover effect */
+.accordion .titled-pane > .title:hover {
+    -fx-background-color: #555555; /* Background color on hover */
+}
+.accordion .titled-pane > .title > .arrow-button {
+    -fx-shape: "M0,0 L7,5 L14,0 Z"; /* Custom arrow shape */
+    -fx-background-color: transparent; /* Make background behind the arrow transparent */
+    -fx-padding: 0; /* Remove padding to prevent background color from showing */
+    -fx-fill: blue; /* Color of the arrow */
+}
+
+
+
+.accordion .titled-pane > .title > .arrow-button .arrow {
+    -fx-background-color:  #0D89E8; /* Background color */
+    -fx-pref-width: 10px;
+    -fx-pref-height: 10px;
+}
+
+.accordion {
+    -fx-border-color: transparent;
+    -fx-background-color:  #1B1A1A ;
+}
+
+.titled-pane .content {
+    -fx-background-color: transparent; /* Set background color to transparent */
+    -fx-border-width: 0; /* Remove border */
+    -fx-padding: 0;
+    -fx-margin:0;
+}
+
+.radio-button .radio {
+    /* Your custom styles for the radio button */
+    -fx-background-color:  #151515 ; /* Example: Background color */
+    -fx-pref-width: 20px;
+    -fx-pref-height: 20px;
+
+}
+
+
+/* Custom styles for the selected state of radio buttons */
+.radio-button:selected .dot {
+    -fx-background-color: white;
+}
+
+/* Custom styles for the unselected state of radio buttons */
+.radio-button .dot {
+    -fx-background-color: #151515; /* Transparent color */
+}
+
+
+/* Custom styles for the title pane */
+.accordion .titled-pane {
+    -fx-border-color: transparent;
+}
