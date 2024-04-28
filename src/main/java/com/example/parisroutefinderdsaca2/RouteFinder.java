@@ -25,6 +25,7 @@ import java.net.URL;
 import java.util.*;
 
 import static com.example.parisroutefinderdsaca2.DataStructure.Graph.*;
+import static com.example.parisroutefinderdsaca2.Main.mainStage;
 
 public class RouteFinder implements Initializable {
     public static RouteFinder routeFinder;
@@ -48,7 +49,16 @@ public class RouteFinder implements Initializable {
     public ToggleGroup algoSelection;
     public Label avoidingLabel = new Label();
     public ListView<CostedPath> dfsListView;
-
+    public AnchorPane dragStage;
+    public RadioButton dijkstraButton2;
+    public Accordion accordion;
+    public TitledPane firstPane;
+    public ComboBox<Integer> historicalVal;
+    public Label visitLabel;
+    public RadioButton histButton;
+    public ToggleGroup selection;
+    public ComboBox<GraphNode<String>> visitBox;
+    Color visit = Color.rgb(0, 191, 99);
     Color route = Color.rgb(13, 137, 232);
     Color landMark = Color.rgb(0, 74, 173);
     Circle circle; /*Circle for user to see where they've clicked*/
@@ -60,6 +70,7 @@ public class RouteFinder implements Initializable {
     private boolean isMapPopulated = false;
     public Map<String, GraphNode<String>> graphNodes = new HashMap<>();
     public Set<GraphNode<String>> avoidNodes = new HashSet<>();
+    public Set<GraphNode<String>> visitNodes = new HashSet<>();
 
     @FXML
     public void scene2() throws IOException {
@@ -107,6 +118,7 @@ public class RouteFinder implements Initializable {
     public void populateMap() {
         if (!isMapPopulated) {
             avoidBox.getItems().add(new GraphNode<>("AVOID NONE", false, 0, 0, 0));
+            visitBox.getItems().add(new GraphNode<>("MUST VISIT NONE", false, 0, 0, 0));
 
             for (GraphNode<String> node : graphNodes.values()) {
                 drawNode(node,landMark);
@@ -115,6 +127,7 @@ public class RouteFinder implements Initializable {
                     startPointBox.getItems().add(node);
                     endPointBox.getItems().add(node);
                     avoidBox.getItems().add(node);
+                    visitBox.getItems().add(node);
 
                 }
             }
@@ -171,6 +184,11 @@ public class RouteFinder implements Initializable {
 
 
     public void showSelectedNodes() {
+
+        if (startPointBox == null || endPointBox == null) {
+            return;
+        }
+
         clearAllCircles();
         String startPointName = startPointBox.getSelectionModel().getSelectedItem().getName();
         String endPointName = endPointBox.getSelectionModel().getSelectedItem().getName();
@@ -184,6 +202,8 @@ public class RouteFinder implements Initializable {
                 drawNode(node, route);
             } else {
                 drawNode(node, landMark);
+            }if (visitNodes != null && visitNodes.contains(node)) {
+                drawNode(node, visit);
             }
         }
     }
@@ -306,14 +326,10 @@ public class RouteFinder implements Initializable {
 
 
 
-
-
-
-
     public void addToAvoid() {
         GraphNode<String> selectedItem = avoidBox.getSelectionModel().getSelectedItem();
 
-        if (selectedItem != null && selectedItem.getName().equals("AVOID NONE")) {
+        if (selectedItem != null && selectedItem.getName().equals("AVOID NONE") && !visitNodes.contains(selectedItem)) {
             avoidNodes.clear();
             avoidingLabel.setText(null);
             printAvoidNodes();  // Print the updated avoidNodes
@@ -321,25 +337,55 @@ public class RouteFinder implements Initializable {
             return;
         }
 
-        if (selectedItem != null) {
+        if (selectedItem != null&& !visitNodes.contains(selectedItem) && !startPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName()) && !endPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName())) {
             avoidNodes.add(selectedItem);
             printAvoidNodes();  // Print the updated avoidNodes
             showSelectedNodes();  // Show the newly avoided node
         }
     }
 
+    public void addToVisit() {
+        GraphNode<String> selectedItem = visitBox.getSelectionModel().getSelectedItem();
 
+        if (selectedItem != null && selectedItem.getName().equals("MUST VISIT NONE") ) {
+            visitNodes.clear();
+            visitLabel.setText(null);
+            printVisitNodes();  // Print the updated avoidNodes
+            showSelectedNodes();
+            return;
+        }
+
+        if (selectedItem != null&& !avoidNodes.contains(selectedItem) && !startPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName()) && !endPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName())) {
+
+            visitNodes.add(selectedItem);
+            printVisitNodes();  // Print the updated avoidNodes
+            showSelectedNodes();  // Show the newly avoided node
+        }
+    }
 
     private void printAvoidNodes() {
-        String s = "Currently Avoiding: ";
+        String s = "LandMarks To Avoid:  ";
         // Check if the adjacent list is not empty
         if (!avoidNodes.isEmpty()) {
 
             for (GraphNode<String> a : avoidNodes) {
-                s += a.getName() + ", ";
+                s += a.getName() + ",  ";
 
             }
             avoidingLabel.setText(s);
+        }
+
+    }
+    private void printVisitNodes() {
+        String s = "LandMarks To Visit:  ";
+
+        if (!visitNodes.isEmpty()) {
+
+            for (GraphNode<String> a : visitNodes) {
+                s += a.getName() + ",  ";
+
+            }
+            visitLabel.setText(s);
         }
 
     }
@@ -617,9 +663,10 @@ public class RouteFinder implements Initializable {
         for (GraphNode<?> n : cpa.pathList)
             clearFeedback();
 
-        systemMessage.setText("Shortest Path from " + startPointBox.getSelectionModel().getSelectedItem().getName() + " to " + endPointBox.getSelectionModel().getSelectedItem().getName() + " using Dijkstra's Algorithm");
-        cpa.setIndex(1);
-        dfsListView.getItems().add(cpa);
+        systemMessage.setText("Shortest Path from " + startPointBox.getSelectionModel().getSelectedItem().getName() + " to " + endPointBox.getSelectionModel().getSelectedItem().getName() + " using Dijkstra's Algorithm"
+        +"\nRoute Cost: " + cpa.pathCost);
+
+
 
         for (int i = 0; i < cpa.pathList.size() - 1; i++) {
             GraphNode<?> firstNode = cpa.pathList.get(i);
@@ -646,7 +693,16 @@ public class RouteFinder implements Initializable {
         return avoidNodes;
     }
 
+    public Set<GraphNode<String>> getVisitNodes() {
+        if(visitBox.getSelectionModel().getSelectedItem() == null || visitBox.getSelectionModel().getSelectedItem().getName().equals("MUST VISIT NONE")) {
+            if(visitNodes != null) {
+                visitNodes.clear();
+            }
 
+        }
+
+        return visitNodes;
+    }
 
 
 
@@ -798,8 +854,10 @@ public class RouteFinder implements Initializable {
         nodeTip = new Tooltip("TEST");
         mapPane.setOnMouseMoved(this::toolTipHover);
         Image mapViewImage = new Image(Objects.requireNonNull(BWConverter.class.getResourceAsStream("ParisVectorMap.png")));
-
+        accordion.setExpandedPane(accordion.getPanes().getFirst());
         mapView.setImage(mapViewImage);
+
+
 
     }
 
@@ -809,4 +867,17 @@ public class RouteFinder implements Initializable {
         landmarkBox.setSelected(false);
          junctionBox.setSelected(false);
     }
+
+
+    public void closeApp(){
+        System.exit(0);
+    }
+
+    public void minimiseApp(){
+
+        mainStage.setIconified(true);
+    }
+
+
+
 }
