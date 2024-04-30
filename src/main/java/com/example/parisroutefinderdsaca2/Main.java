@@ -24,7 +24,7 @@ public class Main extends Application {
         mainStage = primaryStage; // Assign the primaryStage to the static mainStage variable
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("dashboard.fxml"));
-        mainPage = new Scene(fxmlLoader.load(), 1670, 970);
+        mainPage = new Scene(fxmlLoader.load(), 1550, 950);
 
 
         mainPage.getStylesheets().add(Objects.requireNonNull(getClass().getResource("stylesheet.css")).toExternalForm()); //TODO change when done

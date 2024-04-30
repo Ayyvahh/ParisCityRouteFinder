@@ -49,14 +49,10 @@ public class RouteFinder implements Initializable {
     public ToggleGroup algoSelection;
     public Label avoidingLabel = new Label();
     public ListView<CostedPath> dfsListView;
-    public AnchorPane dragStage;
-    public RadioButton dijkstraButton2;
-    public Accordion accordion;
-    public TitledPane firstPane;
-    public ComboBox<Integer> historicalVal;
-    public Label visitLabel;
-    public RadioButton histButton;
-    public ToggleGroup selection;
+
+
+    public Slider historicalVal;
+    public Label visitLabel = new Label();
     public ComboBox<GraphNode<String>> visitBox;
     Color visit = Color.rgb(0, 191, 99);
     Color route = Color.rgb(13, 137, 232);
@@ -347,7 +343,7 @@ public class RouteFinder implements Initializable {
     public void addToVisit() {
         GraphNode<String> selectedItem = visitBox.getSelectionModel().getSelectedItem();
 
-        if (selectedItem != null && selectedItem.getName().equals("MUST VISIT NONE") ) {
+        if (selectedItem != null && visitBox.getItems().getFirst().getName().equals(selectedItem.getName())) {
             visitNodes.clear();
             visitLabel.setText(null);
             printVisitNodes();  // Print the updated avoidNodes
@@ -364,7 +360,7 @@ public class RouteFinder implements Initializable {
     }
 
     private void printAvoidNodes() {
-        String s = "LandMarks To Avoid:  ";
+        String s = "AVOIDING :  ";
         // Check if the adjacent list is not empty
         if (!avoidNodes.isEmpty()) {
 
@@ -377,7 +373,7 @@ public class RouteFinder implements Initializable {
 
     }
     private void printVisitNodes() {
-        String s = "LandMarks To Visit:  ";
+        String s = "VISITING :  ";
 
         if (!visitNodes.isEmpty()) {
 
@@ -651,7 +647,7 @@ public class RouteFinder implements Initializable {
     public void shortestPathDijkstra() {
         mapPane.getChildren().removeIf(node -> node instanceof Line);
 
-        Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()), endPointBox.getSelectionModel().getSelectedItem().getName(), getAvoidNodes());
+        Graph.CostedPath cpa = findCheapestPathDijkstra(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()), endPointBox.getSelectionModel().getSelectedItem().getName(), getAvoidNodes( ));
 
         if (cpa == null || cpa.pathList.isEmpty()) {
             // Handle the case when no route is found
@@ -854,7 +850,6 @@ public class RouteFinder implements Initializable {
         nodeTip = new Tooltip("TEST");
         mapPane.setOnMouseMoved(this::toolTipHover);
         Image mapViewImage = new Image(Objects.requireNonNull(BWConverter.class.getResourceAsStream("ParisVectorMap.png")));
-        accordion.setExpandedPane(accordion.getPanes().getFirst());
         mapView.setImage(mapViewImage);
 
 

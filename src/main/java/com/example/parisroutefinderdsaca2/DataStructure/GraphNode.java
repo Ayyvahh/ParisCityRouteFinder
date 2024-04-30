@@ -10,6 +10,7 @@ public class GraphNode<String> {
     public int nodeValue = Integer.MAX_VALUE;
     public List<GraphLink> adjList = new ArrayList<>();
     private boolean isLandmark;
+    GraphNode<String> previousNode;
     public int culturalSignificance;
     private int graphX;
     private int graphY;
