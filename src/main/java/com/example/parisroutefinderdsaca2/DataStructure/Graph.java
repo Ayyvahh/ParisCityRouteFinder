@@ -37,62 +37,73 @@ public class Graph implements Initializable {
     }
 
     public static <T> CostedPath findCheapestPathDijkstra(GraphNode<T> startNode, T lookingFor, Set<GraphNode<T>> nodesToAvoid) {
-        CostedPath cp = new CostedPath();
-        LinkedList<GraphNode<T>> encountered = new LinkedList<>();
-        LinkedList<GraphNode<T>> notEncountered = new LinkedList<>();
-        startNode.nodeValue = 0;
-        notEncountered.add(startNode);
-        GraphNode<T> currentNode;
+    // Initialize the CostedPath object and set the starting node's nodeValue to 0
+    CostedPath cp = new CostedPath();
+    LinkedList<GraphNode<T>> encountered = new LinkedList<>();
+    LinkedList<GraphNode<T>> notEncountered = new LinkedList<>();
+    startNode.nodeValue = 0;
+    notEncountered.add(startNode);
+    GraphNode<T> currentNode;
 
-        // Check if nodesToAvoid is null, treat it as an empty set
-        if (nodesToAvoid == null) {
-            nodesToAvoid = new HashSet<>();
-        }
+    // Check if nodesToAvoid is null, treat it as an empty set
+    if (nodesToAvoid == null) {
+        nodesToAvoid = new HashSet<>();
+    }
 
-        do {
-            currentNode = notEncountered.removeFirst();
-            encountered.add(currentNode);
+    do {
+        // Get the current node and remove it from the notEncountered list
+        currentNode = notEncountered.removeFirst();
+        encountered.add(currentNode);
 
-            if (currentNode.name.equals(lookingFor)) {
-                cp.pathList.add(currentNode);
-                cp.pathCost = currentNode.nodeValue;
+        if (currentNode.name.equals(lookingFor)) {
+            // If the current node is the lookingFor node, add it to the path and return the CostedPath object
+            cp.pathList.add(currentNode);
+            cp.pathCost = currentNode.nodeValue;
 
-                while (currentNode != startNode) {
-                    boolean foundPrevPathNode = false;
-                    for (GraphNode<T> n : encountered) {
-                        for (GraphLink e : n.adjList) {
-                            if (e.destNode == currentNode && currentNode.nodeValue - e.cost == n.nodeValue && !nodesToAvoid.contains(n)) {
-                                cp.pathList.addFirst(n);
-                                currentNode = n;
-                                foundPrevPathNode = true;
-                                break;
-                            }
-                        }
-                        if (foundPrevPathNode) {
+            while (currentNode!= startNode) {
+                // Loop through the encountered nodes and check if the previous node is in the path
+                boolean foundPrevPathNode = false;
+                for (GraphNode<T> n : encountered) {
+                    for (GraphLink e : n.adjList) {
+                        // IF THE NEXT node is NOT the current node AND IT'S NOT A NODE TO AVOID
+                        if (e.destNode == currentNode && currentNode.nodeValue - e.cost == n.nodeValue &&!nodesToAvoid.contains(n)) {
+                            // Add the previous node to the path and set the current node to it
+                            cp.pathList.addFirst(n);
+                            currentNode = n;
+                            foundPrevPathNode = true;
                             break;
                         }
                     }
-                }
-                for (GraphNode<T> n : encountered) {
-                    n.nodeValue = Integer.MAX_VALUE;
-                }
-                for (GraphNode<T> n : notEncountered) {
-                    n.nodeValue = Integer.MAX_VALUE;
-                }
-                return cp;
-            }
-            for (GraphLink e : currentNode.adjList) {
-                if (!encountered.contains(e.destNode) && !nodesToAvoid.contains(e.destNode)) {
-                    e.destNode.nodeValue = Integer.min(e.destNode.nodeValue, currentNode.nodeValue + e.cost);
-                    if (!notEncountered.contains(e.destNode)) {
-                        notEncountered.add(e.destNode);
+                    if (foundPrevPathNode) {
+                        break;
                     }
                 }
             }
-            notEncountered.sort(Comparator.comparingInt(n -> n.nodeValue));
-        } while (!notEncountered.isEmpty());
-        return null;
-    }
+            // Set all the nodeValues to Integer.MAX_VALUE to indicate that they have been visited
+            for (GraphNode<T> n : encountered) {
+                n.nodeValue = Integer.MAX_VALUE;
+            }
+            for (GraphNode<T> n : notEncountered) {
+                n.nodeValue = Integer.MAX_VALUE;
+            }
+            return cp;
+        }
+
+        // Loop through the current node's adjacent nodes and update their nodeValues if they haven't been visited
+        for (GraphLink e : currentNode.adjList) {
+            if (!encountered.contains(e.destNode) &&!nodesToAvoid.contains(e.destNode)) {
+                e.destNode.nodeValue = Integer.min(e.destNode.nodeValue, currentNode.nodeValue + e.cost);
+                if (!notEncountered.contains(e.destNode)) {
+                    notEncountered.add(e.destNode);
+                }
+            }
+        }
+        // Sort the notEncountered list based on the nodeValues
+        notEncountered.sort(Comparator.comparingInt(n -> n.nodeValue));
+    } while (!notEncountered.isEmpty());
+    // If no path was found, return null
+    return null;
+}
 
 
 
