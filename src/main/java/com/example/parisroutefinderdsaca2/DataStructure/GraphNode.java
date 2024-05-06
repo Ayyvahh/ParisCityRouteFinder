@@ -10,7 +10,7 @@ public class GraphNode<String> {
     public int nodeValue = Integer.MAX_VALUE;
     public List<GraphLink> adjList = new ArrayList<>();
     private boolean isLandmark;
-    GraphNode<String> previousNode;
+    GraphNode<String> previous;
     public int culturalSignificance;
     private int graphX;
     private int graphY;
@@ -21,6 +21,14 @@ public class GraphNode<String> {
         this.culturalSignificance = culturalSignificance;
         this.graphX = graphX;
         this.graphY = graphY;
+    }
+
+    public GraphNode<String> getPrevious() {
+        return previous;
+    }
+
+    public void setPrevious(GraphNode<String> previous) {
+        this.previous = previous;
     }
 
     public boolean isLandmark() {

@@ -1,24 +1,24 @@
-.bg{
+.bg {
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
 }
 
-
-.bg2{
+.bg2 {
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-position: center;
 }
 
-.button{
+.button {
     -fx-background-color: #0B77CB;
     -fx-text-fill: white;
     -fx-font-family: "Arial Rounded MT Bold";
     -fx-font-size: 17px;
     -fx-padding: 5px 5px;
 }
-.button2{
+
+.button2 {
     -fx-background-color: #0B77CB;
     -fx-text-fill: white;
     -fx-font-family: "Arial Rounded MT Bold";
@@ -26,205 +26,173 @@
     -fx-padding: 3px 3px;
 }
 
-
 .button:hover {
     -fx-font-size: 16px;
-    -fx-rotate: 1px ;
-
-
+    -fx-rotate: 1px;
 }
 
 .blue-slider .track {
     -fx-background-color: #38B6FF;
     -fx-pref-height: 8px;
 }
-.blue-slider .thumb {
 
+.blue-slider .thumb {
     -fx-pref-height: 15px;
     -fx-pref-width: 15px;
     -fx-background-color: white;
 }
 
-    /* Combo Box */
-    .combo-box {
-
-        -fx-background-color:  #222121; /* Background color */
-        -fx-text-fill: #0D89E8; /* Text color */
-        -fx-font-family: "Arial "; /* Font family */
-        -fx-font-size: 14px; /* Font size */
-        -fx-padding: 4px; /* Padding */
-    }
-
-    /* Combo Box Arrow Button */
-    .combo-box .arrow-button {
-        -fx-background-color:   #222121; /* Background color */
-        -fx-padding: 4px; /* Padding */
-    }
-
-    /* Combo Box Arrow Icon */
-    .combo-box .arrow-button .arrow {
-        -fx-background-color:  #0D89E8; /* Background color */
-        -fx-pref-width: 10px;
-        -fx-pref-height: 10px;
-
-    }
-
-    /* Combo Box List Cell */
-    .combo-box .list-cell {
-        -fx-background-color: #222121; /* Background color */
-        -fx-text-fill: white; /* Text color */
-        -fx-font-size: 14px; /* Font size */
-        -fx-padding: 4px; /* Padding */
-        -fx-border-color: grey;
-        -fx-font-family: "Arial Rounded MT Bold";
-        -fx-border-width: 0 0 0.5 0; /* Top, Right, Bottom, Left */
-    }
-
-    /* Combo Box Selected List Cell */
-    .combo-box .list-cell:hover {
-        -fx-background-color: #222121; /* Background color */
-        -fx-text-fill: #0D89E8; /* Text color */
-        -fx-font-size: 16px;
-    }
-
-
-/* ListView */
-.list-view {
-    -fx-background-color: #1B1B1B; /* Background color */
-    -fx-text-fill: white; /* Text color */
-    -fx-font-family: "Arial"; /* Font family */
-    -fx-font-size: 14px; /* Font size */
-    -fx-padding: 6px; /* Padding */
+.combo-box {
+    -fx-background-color: #222121;
+    -fx-text-fill: #0D89E8;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-padding: 4px;
 }
 
-/* ListView Cell */
-.list-view .list-cell {
-    -fx-background-color: #1B1B1B; /* Background color */
-    -fx-text-fill: white; /* Text color */
-    -fx-font-family: "Arial Rounded MT Bold"; /* Font family */
-    -fx-font-size: 12px; /* Font size */
-    -fx-padding: 6px; /* Padding */
+.combo-box .arrow-button {
+    -fx-background-color: #222121;
+    -fx-padding: 4px;
+}
+
+.combo-box .arrow-button .arrow {
+    -fx-background-color: #0D89E8;
+    -fx-pref-width: 10px;
+    -fx-pref-height: 10px;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #222121;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 4px;
     -fx-border-color: grey;
-    -fx-border-width: 0 0 1 0; /* Top, Right, Bottom, Left */
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-border-width: 0 0 0.5 0;
 }
 
-/* Selected ListView Cell */
+.combo-box .list-cell:hover {
+    -fx-background-color: #222121;
+    -fx-text-fill: #0D89E8;
+    -fx-font-size: 16px;
+}
+
+.list-view {
+    -fx-background-color: #1B1B1B;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-padding: 6px;
+}
+
+.list-view .list-cell {
+    -fx-background-color: #1B1B1B;
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Rounded MT Bold";
+    -fx-font-size: 12px;
+    -fx-padding: 6px;
+    -fx-border-color: grey;
+    -fx-border-width: 0 0 1 0;
+}
+
 .list-view .list-cell:selected {
-    -fx-background-color: #1B1B1B; /* Background color */
-    -fx-text-fill: #0d89e8; /* Text color */
-    -fx-font-size: 14px; /* Font size */
+    -fx-background-color: #1B1B1B;
+    -fx-text-fill: #0d89e8;
+    -fx-font-size: 14px;
 }
+
 .list-view .list-cell:hover {
-    -fx-background-color: #1B1B1B; /* Background color */
-    -fx-text-fill: #24c8f5; /* Text color */
-    -fx-font-size: 14px; /* Font size */
+    -fx-background-color: #1B1B1B;
+    -fx-text-fill: #24c8f5;
+    -fx-font-size: 14px;
 }
-/* ScrollPane */
+
 .scroll-pane {
-    -fx-background-color: #1B1B1B; /* Background color */
-    -fx-font-family: "Arial Black"; /* Font family */
-    -fx-font-size: 12px; /* Font size */
+    -fx-background-color: #1B1B1B;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: 12px;
 }
 
-/* ScrollBar */
 .scroll-bar:vertical {
-    -fx-background-color: #1B1B1B; /* Background color */
-
-    -fx-min-width: 10px; /* Set minimum width */
+    -fx-background-color: #1B1B1B;
+    -fx-min-width: 10px;
     -fx-max-width: 10px;
-
 }
 
-/* ScrollBar Thumb */
 .scroll-bar:vertical .thumb {
-    -fx-background-color: #3D3D3D; /* Thumb color */
+    -fx-background-color: #3D3D3D;
 }
 
 .scroll-bar:horizontal {
-    -fx-background-color: #1B1B1B; /* Background color */
-
-    -fx-min-width: 10px; /* Set minimum width */
+    -fx-background-color: #1B1B1B;
+    -fx-min-width: 10px;
     -fx-max-width: 10px;
 }
 
-/* ScrollBar Thumb */
 .scroll-bar:horizontal .thumb {
-    -fx-background-color: #3D3D3D; /* Thumb color */
+    -fx-background-color: #3D3D3D;
 }
-
 
 .Stage-button {
     -fx-background-color: #222121;
     -fx-text-fill: white;
-
 }
 
 .Stage-button:hover {
     -fx-background-color: #555555;
 }
 
-/* Custom styles for accordion header */
 .accordion .titled-pane > .title {
-    -fx-background-color:  #1B1B1B; /* Background color */
-    -fx-text-fill: #0d89e8; /* Text color */
-    -fx-font-weight: bold; /* Font weight */
-    -fx-font-size: 14px; /* Title font size */
-    -fx-padding: 8px; /* Padding */
-    -fx-border-color:  black;
-    -fx-border-width: 0 0 2 0; /* Top, Right, Bottom, Left */
+    -fx-background-color: #1B1B1B;
+    -fx-text-fill: #0d89e8;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 2 0;
 }
 
-/* Hover effect */
 .accordion .titled-pane > .title:hover {
-    -fx-background-color: #555555; /* Background color on hover */
+    -fx-background-color: #555555;
 }
+
 .accordion .titled-pane > .title > .arrow-button {
     -fx-background-color: transparent;
-    -fx-padding: 0; /* Remove padding to prevent background color from showing */
-    -fx-fill: blue; /* Color of the arrow */
+    -fx-padding: 0;
 }
 
-
-
 .accordion .titled-pane > .title > .arrow-button .arrow {
-    -fx-background-color:  #0D89E8; /* Background color */
+    -fx-background-color: #0D89E8;
     -fx-pref-width: 10px;
     -fx-pref-height: 10px;
 }
 
 .accordion {
     -fx-border-color: transparent;
-    -fx-background-color:  #1B1A1A ;
+    -fx-background-color: #1B1A1A;
 }
 
 .titled-pane .content {
-    -fx-background-color: transparent; /* Set background color to transparent */
-    -fx-border-width: 0; /* Remove border */
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
     -fx-padding: 0;
-    -fx-margin:0;
+    -fx-margin: 0;
 }
 
 .radio-button .radio {
-    /* Your custom styles for the radio button */
-    -fx-background-color:  #151515 ; /* Example: Background color */
+    -fx-background-color: #151515;
     -fx-pref-width: 20px;
     -fx-pref-height: 20px;
-
 }
 
-
-/* Custom styles for the selected state of radio buttons */
 .radio-button:selected .dot {
     -fx-background-color: white;
 }
 
-/* Custom styles for the unselected state of radio buttons */
 .radio-button .dot {
-    -fx-background-color: #151515; /* Transparent color */
+    -fx-background-color: #151515;
 }
 
-
-/* Custom styles for the title pane */
 .accordion .titled-pane {
     -fx-border-color: transparent;
 }
