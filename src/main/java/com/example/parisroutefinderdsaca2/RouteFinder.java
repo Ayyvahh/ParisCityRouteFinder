@@ -144,7 +144,6 @@ public class RouteFinder implements Initializable {
         }
     }
 
-
     public void showSelectedNodes() {
 
         if (startPointBox == null || endPointBox == null) {
@@ -205,11 +204,6 @@ public class RouteFinder implements Initializable {
         mapPane.getChildren().addAll(nodeCircle, nodeRing);
     }
 
-
-
-
-
-
     public void toolTipHover(@NotNull MouseEvent e) {
         double mouseX = e.getX();
         double mouseY = e.getY();
@@ -250,9 +244,6 @@ public class RouteFinder implements Initializable {
 
 
 
-
-
-
     public void addToAvoid() {
         GraphNode<String> selectedItem = avoidBox.getSelectionModel().getSelectedItem();
 
@@ -274,7 +265,7 @@ public class RouteFinder implements Initializable {
     public void addToVisit() {
         GraphNode<String> selectedItem = visitBox.getSelectionModel().getSelectedItem();
 
-        if (selectedItem != null && visitBox.getItems().getFirst().getName().equals(selectedItem.getName())) {
+        if (selectedItem != null && visitBox.getItems().get(0).getName().equals(selectedItem.getName())) {
             visitNodes.clear();
             visitLabel.setText(null);
             printVisitNodes();  // Print the updated avoidNodes
@@ -303,6 +294,7 @@ public class RouteFinder implements Initializable {
         }
 
     }
+
     private void printVisitNodes() {
         String s = "VISITING :  ";
 
@@ -675,8 +667,6 @@ public class RouteFinder implements Initializable {
         }
     }
 
-
-
     public Set<GraphNode<String>> getAvoidNodes() {
         if(avoidBox.getSelectionModel().getSelectedItem() == null || avoidBox.getSelectionModel().getSelectedItem().getName().equals("AVOID NONE")) {
             if(avoidNodes != null) {
@@ -699,9 +689,6 @@ public class RouteFinder implements Initializable {
         return visitNodes;
     }
 
-
-
-
     public void clearFeedback() {
 
         if (!(dfsListView.getItems() == null)) {
@@ -711,7 +698,6 @@ public class RouteFinder implements Initializable {
             systemMessage.setText(null);
         }
     }
-
 
     public void shortestPathBFS() {
         clearAllCircles();
@@ -773,6 +759,7 @@ public class RouteFinder implements Initializable {
             }
         }
     }
+
     private static String calculateAndFormatTime(double distance, double speed) {
         double timeInHours = distance / speed;
         int hours = (int) timeInHours;
@@ -780,14 +767,12 @@ public class RouteFinder implements Initializable {
         return String.format("%d hr %d m", hours, minutes);
     }
 
-
     public double pixelToKilometers(double distanceInPixels, double pixelsPerKilometer) {
         // Convert pixels to kilometers
         double distanceInKilometers = distanceInPixels / pixelsPerKilometer;
 
         return Math.round(distanceInKilometers * 100.0) / 100.0;
     }
-
 
     public void shortestPathDFS() {
         mapPane.getChildren().removeIf(node -> node instanceof Line);
@@ -807,8 +792,6 @@ public class RouteFinder implements Initializable {
         }
 
     }
-
-
 
     public void dfsPathDisplay() {
         if (dfsListView.getSelectionModel().getSelectedItem() != null) {
@@ -836,9 +819,6 @@ public class RouteFinder implements Initializable {
         }
     }
 
-
-
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         routeFinder = this;
@@ -852,13 +832,11 @@ public class RouteFinder implements Initializable {
 
     }
 
-
     public void clearFields(){
         nameField.clear();
         landmarkBox.setSelected(false);
          junctionBox.setSelected(false);
     }
-
 
     public void closeApp(){
         System.exit(0);
@@ -868,7 +846,4 @@ public class RouteFinder implements Initializable {
 
         mainStage.setIconified(true);
     }
-
-
-
 }
