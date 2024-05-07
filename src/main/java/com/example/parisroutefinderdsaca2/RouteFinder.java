@@ -32,8 +32,6 @@ public class RouteFinder implements Initializable {
 
     /*-----------JAVAFX------------*/
     public AnchorPane mapPane = new AnchorPane();
-    public ListView<GraphNode<String>> currentWaypoints = new ListView<>();
-    public Slider culturalSlid = new Slider(0, 5, 2);
     public ComboBox<GraphNode<String>> startPointBox = new ComboBox<>();
     public ComboBox<GraphNode<String>> avoidBox = new ComboBox<>();
     public ComboBox<GraphNode<String>> endPointBox = new ComboBox<>();
@@ -134,41 +132,7 @@ public class RouteFinder implements Initializable {
     }
 
 
-    public void addLandmarkOrJunction() {
-        /*Validation checks on name and if its Duplicated*/
-        if (!nameField.getText().isEmpty() && !isDuplicateWayPoint()) {
-            int cult = (int) culturalSlid.getValue();
-            String name = nameField.getText();
-            boolean isJunction = junctionBox.isSelected();
-            boolean isLandmark = landmarkBox.isSelected();
 
-            /* Different behaviour for landmark and junction, so they display right on map */
-            if (isJunction || isLandmark) {
-                GraphNode<String> waypoint = new GraphNode<>(name, true, cult, (int) x, (int) y); // Using class-level x and y
-                if (isJunction) {
-                    /* clearing the location marker, adding to hashmap and setting the node on map */
-                    waypoint.setLandmark(false);
-                    graphNodes.put(name, waypoint);
-                    clearMarkers();
-                    clearFields();
-                    drawNode(waypoint,landMark);
-                    currentWaypoints.getItems().add(waypoint);
-                }
-                if (isLandmark) {
-                    clearMarkers();
-                    waypoint.setLandmark(true);
-                    graphNodes.put(name, waypoint);
-                    drawNode(waypoint,landMark);
-                    clearFields();
-                    currentWaypoints.getItems().add(waypoint);
-                }
-            } else {
-                Utils.showWarningAlert("ERROR", "PLEASE SPECIFY WHETHER YOU WANT TO ADD A JUNCTION OR A LANDMARK");
-            }
-        } else {
-            Utils.showWarningAlert("ERROR", "PLEASE ENTER A NAME FOR THE WAYPOINT");
-        }
-    }
 
     public void clearMarkers() {
         /*Method for clearing the circle every new click or addition of waypoint*/
@@ -207,37 +171,12 @@ public class RouteFinder implements Initializable {
 
 
 
-    public void removeLandmarkOrJunction() {
-        /*Validation Checks*/
-        if (currentWaypoints != null && currentWaypoints.getSelectionModel().getSelectedItem() != null) {
-            GraphNode<String> selectedNode = currentWaypoints.getSelectionModel().getSelectedItem();
 
-            if (graphNodes.containsKey(selectedNode.getName())) {
-                currentWaypoints.getItems().remove(selectedNode);
-
-                graphNodes.remove(selectedNode.getName());
-
-
-                clearAllCircles();
-                /*Removing all circles from the pane first, repopulating after with contents of graph nodes
-                 * so the removed waypoint also removes from the map*/
-
-                for (GraphNode<String> node : graphNodes.values()) {
-                    drawNode(node,landMark);
-                }
-            }
-        } else {
-            Utils.showWarningAlert("ERROR", "Please select a waypoint");
-        }
-    }
 
     private void clearAllCircles() {
         mapPane.getChildren().removeIf(node -> node instanceof Circle);
     }
 
-    public boolean isDuplicateWayPoint() {
-        return graphNodes.containsKey(nameField.getText());
-    }
 
     private void drawNode(GraphNode<String> node, Color color) {
         Circle nodeCircle = new Circle();
@@ -285,7 +224,8 @@ public class RouteFinder implements Initializable {
 
         if (onLandmark) {
             Main.mainPage.setCursor(Cursor.HAND);
-            nodeTip.setText(landmarkOn.getName() + ",\n X :  " + landmarkOn.getGraphX() +
+            nodeTip.setText(landmarkOn.getName() + ",\n Historic Significance: " + landmarkOn.getCulturalSignificance() +
+                    "\nX :  " + landmarkOn.getGraphX() +
                     "  |   Y :  " + landmarkOn.getGraphY());
             nodeTip.show(mapView, e.getScreenX() + 10, e.getScreenY() + 10);
         } else {
@@ -303,21 +243,7 @@ public class RouteFinder implements Initializable {
         return (int) Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
 
-    private void printAdjacentNodes(GraphNode<String> node) {
-        // Get the adjacent list of the given station
-        List<GraphLink> adjacentList = node.getAdjList();
 
-        // Check if the adjacent list is not empty
-        if (!adjacentList.isEmpty()) {
-            // Print out the header
-            System.out.println("Adjacent nodes to " + node.getName() + ":");
-
-            // Iterate over the adjacent stations and print out their names
-            for (GraphLink adj : adjacentList) {
-                System.out.println(adj.destNode.getName().toString() + "\n ---------------------------------- \n");
-            }
-        }
-    }
 
 
 
@@ -385,6 +311,74 @@ public class RouteFinder implements Initializable {
         }
 
     }
+
+
+
+    public void findHistoricRouteDijkstra() {
+        showSelectedNodes();
+        int val = (int) historicalVal.getValue();
+        mapPane.getChildren().removeIf(node -> node instanceof Line);
+
+        Set<GraphNode<String>> nonMatchNodes = new HashSet<>();
+
+
+        for (GraphNode<String> node : graphNodes.values()) {
+            // Exclude nodes with a historical value different from the specified value, except for 0, start, and destination nodes
+            if (node.getCulturalSignificance() > val &&
+                    node.getCulturalSignificance() != 0 &&
+                    !node.equals(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName())) &&
+                    !node.equals(graphNodes.get(endPointBox.getSelectionModel().getSelectedItem().getName()))) {
+                nonMatchNodes.add(node);
+
+                System.out.println("Added node to avoid list: " + node.getName());
+            }
+        }
+
+        for (GraphNode<String> node : nonMatchNodes) {
+            drawNode(node, Color.BLACK);
+        }
+        // Check if avoidNodes list is correctly populated
+        System.out.println("Nodes to avoid: " + nonMatchNodes);
+
+        // Finding the shortest path using Dijkstra's algorithm
+        Graph.CostedPath cpa = findCheapestPathDijkstra(
+                graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()),
+                endPointBox.getSelectionModel().getSelectedItem().getName(),
+                nonMatchNodes);
+
+        // Handling cases where no route is found
+        if (cpa == null || cpa.pathList.isEmpty()) {
+            systemMessage.setText("No route found while avoiding selected Landmarks");
+            return;
+        }
+
+        // Visualizing the shortest path
+        for (GraphNode<?> n : cpa.pathList) {
+            clearFeedback();
+        }
+
+        systemMessage.setText("Shortest Path From " + startPointBox.getSelectionModel().getSelectedItem().getName() +
+                " to " + endPointBox.getSelectionModel().getSelectedItem().getName() +
+                " with a Historical Significance of " + val +
+                "\nRoute Cost: " + cpa.pathCost);
+
+        for (int i = 0; i < cpa.pathList.size() - 1; i++) {
+            GraphNode<?> firstNode = cpa.pathList.get(i);
+            GraphNode<?> secondNode = cpa.pathList.get(i + 1);
+
+            Line line = new Line(firstNode.getGraphX(), firstNode.getGraphY(),
+                    secondNode.getGraphX(), secondNode.getGraphY());
+            line.setStroke(route);
+            line.setStrokeWidth(3);
+
+            mapPane.getChildren().add(line);
+        }
+    }
+
+
+
+
+
 
 
     public void populateDatabase() {
@@ -817,9 +811,6 @@ public class RouteFinder implements Initializable {
 
             CostedPath costedPath = dfsListView.getSelectionModel().getSelectedItem();
 
-            for (GraphNode<?> n : costedPath.pathList)
-                System.out.println(n.name);
-           // System.out.println("The total path cost is: " + costedPath.pathCost);
 
             Random random = new Random();
             int blue = random.nextInt(106) + 150; // Generates random shades of blue to match UI Theme :)
