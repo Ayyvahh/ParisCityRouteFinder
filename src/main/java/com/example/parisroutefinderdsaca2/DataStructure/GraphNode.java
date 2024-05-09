@@ -27,15 +27,8 @@ public class GraphNode<String> {
         return previous;
     }
 
-    public void setPrevious(GraphNode<String> previous) {
-        this.previous = previous;
-    }
-
     public boolean isLandmark() {
         return isLandmark;
-    }
-    public void setLandmark(boolean landmark) {
-        isLandmark = landmark;
     }
 
     public String getName() {
@@ -56,13 +49,6 @@ public class GraphNode<String> {
         return culturalSignificance;
     }
 
-    public int setCulturalSignificance(int culturalSignificance) {
-        if (Utils.intValidRange(culturalSignificance,0,5)) {
-            return culturalSignificance;
-        }
-        return -1;
-    }
-
     public List<GraphLink> getAdjList() {
         return adjList;
     }
@@ -81,10 +67,6 @@ public class GraphNode<String> {
     }
     public void setGraphY(int graphY) {
         this.graphY = graphY;
-    }
-
-    public void connectToNodeDirected(GraphNode<String> destNode, int cost) {
-        adjList.add(new GraphLink(destNode, cost));
     }
 
     public int connectToNodeUndirected(GraphNode<String> destNode, int cost) {

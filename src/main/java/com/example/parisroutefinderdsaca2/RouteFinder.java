@@ -32,8 +32,6 @@ public class RouteFinder implements Initializable {
 
     /*-----------JAVAFX------------*/
     public AnchorPane mapPane = new AnchorPane();
-    public ListView<GraphNode<String>> currentWaypoints = new ListView<>();
-    public Slider culturalSlid = new Slider(0, 5, 2);
     public ComboBox<GraphNode<String>> startPointBox = new ComboBox<>();
     public ComboBox<GraphNode<String>> avoidBox = new ComboBox<>();
     public ComboBox<GraphNode<String>> endPointBox = new ComboBox<>();
@@ -178,9 +176,6 @@ public class RouteFinder implements Initializable {
         mapPane.getChildren().removeIf(node -> node instanceof Circle);
     }
 
-    public boolean isDuplicateWayPoint() {
-        return graphNodes.containsKey(nameField.getText());
-    }
 
     private void drawNode(GraphNode<String> node, Color color) {
         Circle nodeCircle = new Circle();
@@ -321,7 +316,7 @@ public class RouteFinder implements Initializable {
 
         for (GraphNode<String> node : graphNodes.values()) {
             // Exclude nodes with a historical value different from the specified value, except for 0, start, and destination nodes
-            if (node.getCulturalSignificance() != val &&
+            if (node.getCulturalSignificance() > val &&
                     node.getCulturalSignificance() != 0 &&
                     !node.equals(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName())) &&
                     !node.equals(graphNodes.get(endPointBox.getSelectionModel().getSelectedItem().getName()))) {
