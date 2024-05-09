@@ -129,7 +129,7 @@
                <content>
                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #222121 #222121;">
                         <children>
-                           <ComboBox fx:id="visitBox" layoutX="187.0" layoutY="17.0" prefHeight="43.0" prefWidth="251.0" promptText="Select Landmarks to Visit" visibleRowCount="6" />
+                           <ComboBox fx:id="waypointsBox" layoutX="187.0" layoutY="17.0" prefHeight="43.0" prefWidth="251.0" promptText="Select Landmarks to Visit" visibleRowCount="6" />
                            <Button contentDisplay="GRAPHIC_ONLY" layoutX="446.0" layoutY="28.0" mnemonicParsing="false" onAction="#addToVisit" styleClass="Stage-button" text="Button">
                               <graphic>
                                  <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
