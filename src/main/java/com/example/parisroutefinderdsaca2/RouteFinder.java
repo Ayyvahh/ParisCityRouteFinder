@@ -13,6 +13,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
@@ -286,6 +287,10 @@ public class RouteFinder implements Initializable {
 
             }
             avoidingLabel.setText(s);
+
+
+        } else {
+            avoidingLabel.setText(null);
         }
 
     }
@@ -304,6 +309,17 @@ public class RouteFinder implements Initializable {
 
     }
 
+    public void removeAvoid(){
+       GraphNode<String> selected = avoidBox.getSelectionModel().getSelectedItem();
+        if(!avoidNodes.isEmpty() && avoidNodes.contains(selected)){
+            avoidNodes.remove(selected);
+
+        }
+        clearFeedback();
+        printAvoidNodes();
+        showSelectedNodes();
+
+    }
 
 
     public void findHistoricRouteDijkstra() {
