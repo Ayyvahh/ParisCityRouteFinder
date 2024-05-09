@@ -212,9 +212,9 @@
            </panes>
          </Accordion>
          <ComboBox fx:id="avoidBox" layoutX="182.0" layoutY="384.0" prefHeight="42.0" prefWidth="251.0" promptText="Select Landmarks to Avoid" visibleRowCount="6" />
-         <Button contentDisplay="GRAPHIC_ONLY" layoutX="439.0" layoutY="394.0" mnemonicParsing="false" onAction="#addToAvoid" styleClass="Stage-button" text="Button">
+         <Button contentDisplay="GRAPHIC_ONLY" layoutX="439.0" layoutY="394.0" mnemonicParsing="false" onAction="#addToAvoid" style="-fx-padding: 5px;" styleClass="Stage-button" text="Button">
             <graphic>
-               <ImageView fitHeight="21.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <ImageView fitHeight="16.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                   <image>
                      <Image url="@images/plus.png" />
                   </image>
@@ -246,6 +246,15 @@
             <graphic>
                <ImageView fitHeight="14.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                   <Image url="@images/waypoint2.png" />
+               </ImageView>
+            </graphic>
+         </Button>
+         <Button contentDisplay="GRAPHIC_ONLY" layoutX="468.0" layoutY="394.0" mnemonicParsing="false" onAction="#removeAvoid" style="-fx-padding: 5px;" styleClass="Stage-button" text="Button">
+            <graphic>
+               <ImageView fitHeight="13.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/MINI.png" />
+                  </image>
                </ImageView>
             </graphic>
          </Button>
