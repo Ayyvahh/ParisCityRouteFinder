@@ -53,6 +53,10 @@ public class GraphNode<String> {
         return adjList;
     }
 
+    public void setCulturalSignificance(int culturalSignificance) {
+        this.culturalSignificance = culturalSignificance;
+    }
+
     public void setAdjList(List<GraphLink> adjList) {
         this.adjList = adjList;
     }
