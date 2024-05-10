@@ -5,7 +5,6 @@ import com.example.parisroutefinderdsaca2.DataStructure.GraphLink;
 import com.example.parisroutefinderdsaca2.DataStructure.GraphNode;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Point2D;
@@ -36,9 +35,7 @@ public class RouteFinder implements Initializable {
     public ComboBox<GraphNode<String>> startPointBox = new ComboBox<>();
     public ComboBox<GraphNode<String>> avoidBox = new ComboBox<>();
     public ComboBox<GraphNode<String>> endPointBox = new ComboBox<>();
-    public RadioButton landmarkBox;
-    public RadioButton junctionBox;
-    public TextField nameField;
+
     public double x;
     public double y;
     public Label systemMessage = new Label();
@@ -91,13 +88,6 @@ public class RouteFinder implements Initializable {
         mapPane.getChildren().add(text);
     }
 
-    public void saveXML() throws Exception {
-        XStream xstream = new XStream(new DomDriver());
-        ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("graphNodes.xml"));
-        out.writeObject(graphNodes);
-        out.close();
-    }
-
     public void loadXML() throws Exception {
         Class<?>[] classes = new Class[]{GraphNode.class, GraphLink.class};
 
@@ -132,9 +122,6 @@ public class RouteFinder implements Initializable {
         }
     }
 
-
-
-
     public void clearMarkers() {
         /*Method for clearing the circle every new click or addition of waypoint*/
         if (circle != null && text != null) {
@@ -143,46 +130,30 @@ public class RouteFinder implements Initializable {
         }
     }
 
-
     public void showSelectedNodes() {
-
-        if (startPointBox == null || endPointBox == null) {
-            return;
-        }
+        if (startPointBox == null || endPointBox == null) return;
 
         clearAllCircles();
         String startPointName = startPointBox.getSelectionModel().getSelectedItem().getName();
         String endPointName = endPointBox.getSelectionModel().getSelectedItem().getName();
 
         for (GraphNode<String> node : graphNodes.values()) {
-            if (avoidNodes != null && avoidNodes.contains(node)) {
-                drawNode(node, Color.RED);
-            } else if (node.getName().equals(startPointName)) {
-                drawNode(node, route);
-            } else if (node.getName().equals(endPointName)) {
-                drawNode(node, route);
-            } else {
-                drawNode(node, landMark);
-            }if (waypointNodes != null && waypointNodes.contains(node)) {
-                drawNode(node, visit);
-            }
+            if (avoidNodes != null && avoidNodes.contains(node)) drawNode(node, Color.RED);
+            else if (node.getName().equals(startPointName)) drawNode(node, route);
+            else if (node.getName().equals(endPointName)) drawNode(node, route);
+            else drawNode(node, landMark);
+
+            if (waypointNodes != null && waypointNodes.contains(node)) drawNode(node, visit);
         }
     }
-
-
-
-
-
 
     private void clearAllCircles() {
         mapPane.getChildren().removeIf(node -> node instanceof Circle);
     }
 
-
     private void drawNode(GraphNode<String> node, Color color) {
         Circle nodeCircle = new Circle();
         Circle nodeRing = new Circle();
-
 
         if (node.isLandmark()) {
             nodeCircle.setCenterX(node.getGraphX());
@@ -200,11 +171,6 @@ public class RouteFinder implements Initializable {
 
         mapPane.getChildren().addAll(nodeCircle, nodeRing);
     }
-
-
-
-
-
 
     public void toolTipHover(@NotNull MouseEvent e) {
         double mouseX = e.getX();
@@ -244,11 +210,6 @@ public class RouteFinder implements Initializable {
         return (int) Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
     }
 
-
-
-
-
-
     public void addToAvoid() {
         GraphNode<String> selectedItem = avoidBox.getSelectionModel().getSelectedItem();
 
@@ -270,7 +231,7 @@ public class RouteFinder implements Initializable {
     public void addToVisit() {
         GraphNode<String> selectedItem = waypointsBox.getSelectionModel().getSelectedItem();
 
-        if (selectedItem != null && waypointsBox.getItems().getFirst().getName().equals(selectedItem.getName())) {
+        if (selectedItem != null && waypointsBox.getItems().get(0).getName().equals(selectedItem.getName())) {
             waypointNodes.clear();
             visitLabel.setText(null);
             printVisitNodes();  // Print the updated avoidNodes
@@ -287,56 +248,39 @@ public class RouteFinder implements Initializable {
     }
 
     private void printAvoidNodes() {
-        String s = "AVOIDING :  ";
+        StringBuilder s = new StringBuilder("AVOIDING :  ");
         // Check if the adjacent list is not empty
         if (!avoidNodes.isEmpty()) {
-
-            for (GraphNode<String> a : avoidNodes) {
-                s += a.getName() + ",  ";
-
-            }
-            avoidingLabel.setText(s);
-
-
-        } else {
-            avoidingLabel.setText(null);
-        }
-
+            for (GraphNode<String> a : avoidNodes) s.append(a.getName()).append(",  ");
+            avoidingLabel.setText(s.toString());
+        } else avoidingLabel.setText(null);
     }
+
     private void printVisitNodes() {
-        String s = "VISITING :  ";
+        StringBuilder s = new StringBuilder("VISITING :  ");
 
         if (!waypointNodes.isEmpty()) {
-
-            for (GraphNode<String> a : waypointNodes) {
-                s += a.getName() + ",  ";
-
-            }
-            visitLabel.setText(s);
+            for (GraphNode<String> a : waypointNodes) s.append(a.getName()).append(",  ");
+            visitLabel.setText(s.toString());
         }
-
     }
 
-    public void removeAvoid(){
+    public void removeAvoid() {
        GraphNode<String> selected = avoidBox.getSelectionModel().getSelectedItem();
-        if(!avoidNodes.isEmpty() && avoidNodes.contains(selected)){
-            avoidNodes.remove(selected);
 
-        }
+        if(!avoidNodes.isEmpty()) avoidNodes.remove(selected);
+
         clearFeedback();
         printAvoidNodes();
         showSelectedNodes();
-
     }
 
-
     public void findHistoricRouteDijkstra() {
-        showSelectedNodes();
         int val = (int) historicalVal.getValue();
-        mapPane.getChildren().removeIf(node -> node instanceof Line);
-
         Set<GraphNode<String>> nonMatchNodes = new HashSet<>();
 
+        showSelectedNodes();
+        mapPane.getChildren().removeIf(node -> node instanceof Line);
 
         for (GraphNode<String> node : graphNodes.values()) {
             // Exclude nodes with a historical value different from the specified value, except for 0, start, and destination nodes
@@ -350,9 +294,8 @@ public class RouteFinder implements Initializable {
             }
         }
 
-        for (GraphNode<String> node : nonMatchNodes) {
-            drawNode(node, Color.BLACK);
-        }
+        for (GraphNode<String> node : nonMatchNodes) drawNode(node, Color.BLACK);
+
         // Check if avoidNodes list is correctly populated
         System.out.println("Nodes to avoid: " + nonMatchNodes);
 
@@ -369,9 +312,7 @@ public class RouteFinder implements Initializable {
         }
 
         // Visualizing the shortest path
-        for (GraphNode<?> n : cpa.pathList) {
-            clearFeedback();
-        }
+        for (GraphNode<?> ignored : cpa.pathList) clearFeedback();
 
         systemMessage.setText("Shortest Path From " + startPointBox.getSelectionModel().getSelectedItem().getName() +
                 " to " + endPointBox.getSelectionModel().getSelectedItem().getName() +
@@ -391,45 +332,29 @@ public class RouteFinder implements Initializable {
         }
     }
 
-
-
-
-
-
-
     public void populateDatabase() {
-
-
         try {
             loadXML();
             System.out.println("Database loaded!");
-
             populateMap();
-//            for(GraphNode<String> n : graphNodes.values()){
-//                printAdjacentNodes(n);
-//            }
         } catch (Exception e) {
             System.err.println("Error writing from file: " + e);
         }
     }
 
     public void findRoute() {
-        if (algoSelection.getSelectedToggle() == null) {
-            Utils.showWarningAlert("SELECT AN ALGORITHM", "Please select a radio button of the algorithm you wish to use!");
-        } else {
+        if (algoSelection.getSelectedToggle() == null) Utils.showWarningAlert("SELECT AN ALGORITHM", "Please select a radio button of the algorithm you wish to use!");
+        else {
             if (startPointBox.getSelectionModel().getSelectedItem() == null || endPointBox.getSelectionModel().getSelectedItem() == null) {
                 Utils.showWarningAlert("ERROR", "SELECT START AND END POINT");
                 return;
             }
-                showSelectedNodes();
 
-            if (algoSelection.getSelectedToggle().equals(dijkstraButton)) {
-                shortestPathDijkstra();
-            } else if (algoSelection.getSelectedToggle().equals(dfsButton)) {
-                shortestPathDFS();
-            } else if (algoSelection.getSelectedToggle().equals(bfsButton)) {
-                shortestPathBFS();
-            }
+            showSelectedNodes();
+
+            if (algoSelection.getSelectedToggle().equals(dijkstraButton)) shortestPathDijkstra();
+            else if (algoSelection.getSelectedToggle().equals(dfsButton)) shortestPathDFS();
+            else if (algoSelection.getSelectedToggle().equals(bfsButton)) shortestPathBFS();
         }
     }
 
@@ -449,12 +374,9 @@ public class RouteFinder implements Initializable {
         // If waypoints are specified, find the path considering waypoints
         if (!waypoints.isEmpty()) {
             // Add start and end nodes as waypoints if not already included
-            if (!waypoints.contains(startNode)) {
-                waypoints.add(0, startNode);
-            }
-            if (!waypoints.contains(endNode)) {
-                waypoints.add(endNode);
-            }
+            if (!waypoints.contains(startNode)) waypoints.add(0, startNode);
+            if (!waypoints.contains(endNode)) waypoints.add(endNode);
+
             for (int i = 0; i < waypoints.size() - 1; i++) {
                 Graph.CostedPath cpa = findCheapestPathDijkstra(waypoints.get(i), waypoints.get(i + 1).getName(), avoidNodes);
                 if (cpa == null || cpa.pathList.isEmpty()) {
@@ -475,12 +397,9 @@ public class RouteFinder implements Initializable {
             }
             pathList = cpa.pathList;
         }
-
         // Visualize the path
         visualizePath(pathList);
     }
-
-
 
     private void visualizePath(List<GraphNode<?>> pathList) {
         for (int i = 0; i < pathList.size() - 1; i++) {
@@ -496,39 +415,15 @@ public class RouteFinder implements Initializable {
         systemMessage.setText("Shortest Path from " + startPointBox.getSelectionModel().getSelectedItem().getName() + " to " + endPointBox.getSelectionModel().getSelectedItem().getName() + " using Dijkstra's Algorithm");
     }
 
-
-
-
     public Set<GraphNode<String>> getAvoidNodes() {
-        if(avoidBox.getSelectionModel().getSelectedItem() == null || avoidBox.getSelectionModel().getSelectedItem().getName().equals("AVOID NONE")) {
-            if(avoidNodes != null) {
-                avoidNodes.clear();
-            }
-
-        }
-
+        if(avoidBox.getSelectionModel().getSelectedItem() == null || avoidBox.getSelectionModel().getSelectedItem().getName().equals("AVOID NONE")) if(avoidNodes != null) avoidNodes.clear();
         return avoidNodes;
     }
 
-
-
-
-
-
     public void clearFeedback() {
-
-        if (!(dfsListView.getItems() == null)) {
-            dfsListView.getItems().clear();
-        }
-        if (!(systemMessage.getText() == null)) {
-            systemMessage.setText(null);
-        }
+        if (!(dfsListView.getItems() == null)) dfsListView.getItems().clear();
+        if (!(systemMessage.getText() == null)) systemMessage.setText(null);
     }
-
-
-
-
-
 
     public void shortestPathBFS() {
         clearAllCircles();
@@ -560,15 +455,13 @@ public class RouteFinder implements Initializable {
             }
 
             // Round the total distance to two decimal places
-
             String walkingTime = calculateAndFormatTime(totalDistance, 5.0);
             String drivingTime = calculateAndFormatTime(totalDistance, 50.0);
             String cyclingTime = calculateAndFormatTime(totalDistance, 20.0);
+
             // Set the formatted distance in the systemMessage
             systemMessage.setText("Estimated Distance from " + startLandmark.getName() + " to " + destLandmark.getName() + " is " + String.format("%.2f", totalDistance) + " km" + "\n\n"
             +"Walking Time:  "+walkingTime + "    |    " + "Driving: " + drivingTime + "    |    " + "Cycling: " + cyclingTime + "\n");
-
-
 
             // Add lines between  points in the path to the mapPane
             for (int i = 0; i < path.size() - 1; i++) {
@@ -590,13 +483,13 @@ public class RouteFinder implements Initializable {
             }
         }
     }
+
     private static String calculateAndFormatTime(double distance, double speed) {
         double timeInHours = distance / speed;
         int hours = (int) timeInHours;
         int minutes = (int) ((timeInHours - hours) * 60);
         return String.format("%d hr %d m", hours, minutes);
     }
-
 
     public static double pixelToKilometers(double distanceInPixels, double pixelsPerKilometer) {
         // Convert pixels to kilometers
@@ -605,35 +498,27 @@ public class RouteFinder implements Initializable {
         return Math.round(distanceInKilometers * 100.0) / 100.0;
     }
 
-
     public void shortestPathDFS() {
-        mapPane.getChildren().removeIf(node -> node instanceof Line);
-
         List<Graph.CostedPath> cp = searchGraphDepthFirst(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()),null,0,endPointBox.getSelectionModel().getSelectedItem().getName(), getAvoidNodes());
+
+        mapPane.getChildren().removeIf(node -> node instanceof Line);
         clearFeedback();
 
         int pathCount = 0;// Reset pathCount before counting paths
         for (Graph.CostedPath costedPath : cp) {
-
             pathCount++;
-
 
             costedPath.setIndex(pathCount);
             systemMessage.setText("Routes From " + startPointBox.getSelectionModel().getSelectedItem().getName() + " TO " + endPointBox.getSelectionModel().getSelectedItem().getName() + " Using Depth First Search");
             dfsListView.getItems().add(costedPath);
         }
-
     }
-
-
 
     public void dfsPathDisplay() {
         if (dfsListView.getSelectionModel().getSelectedItem() != null) {
             mapPane.getChildren().removeIf(node -> node instanceof Line);
 
             CostedPath costedPath = dfsListView.getSelectionModel().getSelectedItem();
-
-
             Random random = new Random();
             int blue = random.nextInt(106) + 150; // Generates random shades of blue to match UI Theme :)
             Color randomColor = Color.rgb(0, 0, blue);
@@ -648,13 +533,8 @@ public class RouteFinder implements Initializable {
 
                 mapPane.getChildren().add(line);
             }
-        } else {
-            Utils.showWarningAlert("SELECT A ROUTE", "Please select a route from the routes provided to show on the map!");
-        }
+        } else Utils.showWarningAlert("SELECT A ROUTE", "Please select a route from the routes provided to show on the map!");
     }
-
-
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -664,35 +544,23 @@ public class RouteFinder implements Initializable {
         mapPane.setOnMouseMoved(this::toolTipHover);
         Image mapViewImage = new Image(Objects.requireNonNull(BWConverter.class.getResourceAsStream("ParisVectorMap.png")));
         mapView.setImage(mapViewImage);
-
-
-
     }
-
-
-
-
 
     public void closeApp(){
         System.exit(0);
     }
 
-    public void minimiseApp(){
-
+    public void minimiseApp() {
         mainStage.setIconified(true);
     }
 
-
-    public void removeWaypoint(ActionEvent actionEvent) {
-        visitLabel.setText("");
+    public void removeWaypoint() {
         GraphNode<String> selected = waypointsBox.getSelectionModel().getSelectedItem();
-        if(!waypointNodes.isEmpty()){
-            waypointNodes.remove(selected);
 
-        }
+        visitLabel.setText("");
+        if(!waypointNodes.isEmpty()) waypointNodes.remove(selected);
         clearFeedback();
         printAvoidNodes();
         showSelectedNodes();
-
     }
 }

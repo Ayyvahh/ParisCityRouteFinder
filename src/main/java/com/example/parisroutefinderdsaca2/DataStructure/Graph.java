@@ -10,7 +10,6 @@ import java.util.*;
 
 public class Graph implements Initializable {
     public static Graph graph;
-    List<CostedPath> allPaths;
 
     public static class CostedPath{
         public int pathCost=0;
@@ -19,13 +18,13 @@ public class Graph implements Initializable {
         @Override
         public String toString() {
 
-            String pathString = "[ ROUTE " + index + " ]  -   PATH COST : " + pathCost + "\n\n";
+            StringBuilder pathString = new StringBuilder("[ ROUTE " + index + " ]  -   PATH COST : " + pathCost + "\n\n");
             for (int i = 0; i < pathList.size(); i++) {
                 GraphNode<?> node = pathList.get(i);
-                pathString += node.getName();
+                pathString.append(node.getName());
 
                 if (i < pathList.size() - 1) {
-                    pathString += "  ->  ";
+                    pathString.append("  ->  ");
                 }
             }
             return pathString + "\n\n";
@@ -105,10 +104,10 @@ public class Graph implements Initializable {
     return null;
 }
 
-    public static <T> List<CostedPath> searchGraphDepthFirst(GraphNode<?> from, List<GraphNode<?>> encountered, int totalCost, T lookingfor, Set<GraphNode<T>>nodesToAvoid) {
+    public static <T> List<CostedPath> searchGraphDepthFirst(GraphNode<?> from, List<GraphNode<?>> encountered, int totalCost, T lookingFor, Set<GraphNode<T>>nodesToAvoid) {
         List<CostedPath> allPaths = new ArrayList<>();
 
-        if (from.name.equals(lookingfor)) {
+        if (from.name.equals(lookingFor)) {
             CostedPath cp = new CostedPath();
             cp.pathList.add(from);
             cp.pathCost = totalCost;
@@ -124,7 +123,7 @@ public class Graph implements Initializable {
 
         for (GraphLink adjLink : from.adjList) {
             if (!encountered.contains(adjLink.destNode) && !nodesToAvoid.contains(adjLink.destNode)) {
-                List<CostedPath> pathsFromAdj = searchGraphDepthFirst(adjLink.destNode, encountered, totalCost + adjLink.cost, lookingfor, nodesToAvoid);
+                List<CostedPath> pathsFromAdj = searchGraphDepthFirst(adjLink.destNode, encountered, totalCost + adjLink.cost, lookingFor, nodesToAvoid);
                 for (CostedPath path : pathsFromAdj) {
                     path.pathList.add(0, from);
                     allPaths.add(path);
