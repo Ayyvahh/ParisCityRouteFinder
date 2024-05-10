@@ -211,20 +211,33 @@ public class RouteFinder implements Initializable {
     }
 
     public void addToAvoid() {
-        GraphNode<String> selectedItem = avoidBox.getSelectionModel().getSelectedItem();
+        if (startPointBox.getSelectionModel().getSelectedItem() == null || endPointBox.getSelectionModel().getSelectedItem() == null) {
+            Utils.showWarningAlert("PLEASE SELECT A START AND END POINT","Please select a start and end point before adding locations to avoid!");
+        } else if (avoidBox.getSelectionModel().getSelectedItem() == null) {
+            Utils.showWarningAlert("PLEASE SELECT A LOCATION TO AVOID", "Please select a location to avoid!");
+        } else {
+            GraphNode<String> selectedItem = avoidBox.getSelectionModel().getSelectedItem();
 
-        if (selectedItem != null && selectedItem.getName().equals("AVOID NONE") && !waypointNodes.contains(selectedItem)) {
-            avoidNodes.clear();
-            avoidingLabel.setText(null);
-            printAvoidNodes();  // Print the updated avoidNodes
-            showSelectedNodes();
-            return;
-        }
+            if (selectedItem != null && !waypointNodes.contains(selectedItem) && !startPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName()) && !endPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName())) {
+                if (selectedItem.getName().equals("AVOID NONE")) {
+                    avoidNodes.clear();
+                    avoidingLabel.setText(null);
+                    printAvoidNodes();  // Print the updated avoidNodes
+                    showSelectedNodes();
+                    return;
+                }
 
-        if (selectedItem != null&& !waypointNodes.contains(selectedItem) && !startPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName()) && !endPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName())) {
-            avoidNodes.add(selectedItem);
-            printAvoidNodes();  // Print the updated avoidNodes
-            showSelectedNodes();  // Show the newly avoided node
+                for (GraphNode<String> g : avoidNodes) {
+                    if (g.equals(selectedItem)) {
+                        Utils.showWarningAlert("ALREADY AVOIDING LOCATION", "You are already avoiding " + g.getName() + "!");
+                        return;
+                    }
+                }
+
+                avoidNodes.add(selectedItem);
+                printAvoidNodes();  // Print the updated avoidNodes
+                showSelectedNodes();  // Show the newly avoided node
+            } else Utils.showWarningAlert("CANNOT AVOID LOCATION", "You have entered a location that is either: the start point, the end point or a waypoint!");
         }
     }
 

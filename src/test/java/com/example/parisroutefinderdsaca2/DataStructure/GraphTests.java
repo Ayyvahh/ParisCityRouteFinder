@@ -11,25 +11,24 @@ class GraphTests {
     @Test
     void testingConnectNodeUndirectedCreatesBidirectionalLink() {
         /*Creating two Nodes */
-            GraphNode<String> n1 = new GraphNode<>("Node1", false, 0, 0, 0);
-            GraphNode<String> n2 = new GraphNode<>("Node2", false, 0, 0, 0);
-            GraphNode<String> n3 = new GraphNode<>("Node3", false, 0, 0, 0);
+        GraphNode<String> n1 = new GraphNode<>("Node1", false, 0, 0, 0);
+        GraphNode<String> n2 = new GraphNode<>("Node2", false, 0, 0, 0);
+        GraphNode<String> n3 = new GraphNode<>("Node3", false, 0, 0, 0);
 
         /*Linking Node 1 to N2*/
         n1.connectToNodeUndirected(n2, 7);
 
-
         /*Node 1 and Node 2 should both have an entry in their adjacency list for the link to be bidirectional */
-            assertEquals(1, n1.getAdjList().size());
-            assertEquals(1, n2.getAdjList().size());
+        assertEquals(1, n1.getAdjList().size());
+        assertEquals(1, n2.getAdjList().size());
 
-            GraphLink l1 = n1.getAdjList().getFirst();
-            GraphLink l2 = n2.getAdjList().getFirst();
-            GraphLink l3 = n2.getAdjList().getFirst();
+        GraphLink l1 = n1.getAdjList().get(0);
+        GraphLink l2 = n2.getAdjList().get(0);
+        GraphLink l3 = n2.getAdjList().get(0);
 
         /* Checking both nodes are each others destNode*/
-            assertEquals(n2, l1.getDestNode());
-            assertEquals(n1, l2.getDestNode());
+        assertEquals(n2, l1.getDestNode());
+        assertEquals(n1, l2.getDestNode());
 
         /*Connecting Node 3 to Node 1*/
         n1.connectToNodeUndirected(n3, 7);
@@ -39,36 +38,22 @@ class GraphTests {
         assertEquals(1, n2.getAdjList().size());
         assertEquals(1, n3.getAdjList().size());
 
-
         /*Node 3 should not contain a link to node 1 since they are not connected */
         assertFalse(n3.getAdjList().contains(l1));
 
         /*Node 3 and Node 2 should both have links to Node 1*/
         assertEquals(l3.getDestNode(), l2.getDestNode());
-
     }
 
+    @Test
+    public void findCheapestPathDijkstra_shouldReturnTheCheapestPath_givenValidInput() {
+        /* NOT DONE */
+        Graph.graph = new Graph();
+        GraphNode<String> n1 = new GraphNode<>("Node1", false, 0, 100, 100);
+        GraphNode<String> n2 = new GraphNode<>("Node2", false, 0, 375, 250);
+        GraphNode<String> n3 = new GraphNode<>("Node3", false, 0, 700, 400);
 
-
-
-        @Test
-        public void findCheapestPathDijkstra_shouldReturnTheCheapestPath_givenValidInput() {
-
-            /* NOT DONE */
-            Graph.graph = new Graph();
-            GraphNode<String> n1 = new GraphNode<>("Node1", false, 0, 100, 100);
-            GraphNode<String> n2 = new GraphNode<>("Node2", false, 0, 375, 250);
-            GraphNode<String> n3 = new GraphNode<>("Node3", false, 0, 700, 400);
-
-            n1.connectToNodeUndirected(n2, routeFinder.calculateEuclideanDistance(n1, n2));
-            n2.connectToNodeUndirected(n3, routeFinder.calculateEuclideanDistance(n2, n3));
-
-
-
-        }
-
-
-        
-
-
+        n1.connectToNodeUndirected(n2, routeFinder.calculateEuclideanDistance(n1, n2));
+        n2.connectToNodeUndirected(n3, routeFinder.calculateEuclideanDistance(n2, n3));
+    }
 }

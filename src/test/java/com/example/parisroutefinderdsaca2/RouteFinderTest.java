@@ -24,13 +24,11 @@ class RouteFinderTest {
 
     @BeforeEach
     void setUp() {
-
         nodes.put("N1" , new GraphNode<>("N1", false, 0, 0, 0));
         nodes.put("N2" , new GraphNode<>("N2", false, 0, 1, 1));
         nodes.put("N3" , new GraphNode<>("N3", false, 0, 100, 100));
         nodes.put("N4" , new GraphNode<>("N4", false, 0, 450, 300));
         nodes.put("N5" , new GraphNode<>("N5", false, 0, 225, 500));
-
     }
 
     @AfterEach
@@ -41,20 +39,16 @@ class RouteFinderTest {
     @Test
     void testDistanceCalculation() {
         /*Running multiple different calculations and ensuring they match up with manually calculated values to test that method is accurate*/
+        int distance = nodes.get("N1").connectToNodeUndirected(nodes.get("N2"), calculateDistance(nodes.get("N1"),nodes.get("N2")));
+        assertEquals(1, distance);
 
-         int distance = nodes.get("N1").connectToNodeUndirected(nodes.get("N2"), calculateDistance(nodes.get("N1"),nodes.get("N2")));
-                assertEquals(1, distance);
+        distance = nodes.get("N1").connectToNodeUndirected(nodes.get("N3"), calculateDistance(nodes.get("N1"),nodes.get("N3")));
+        assertEquals(141, distance);
 
-                distance = nodes.get("N1").connectToNodeUndirected(nodes.get("N3"), calculateDistance(nodes.get("N1"),nodes.get("N3")));
-                assertEquals(141, distance);
+        distance = nodes.get("N4").connectToNodeUndirected(nodes.get("N3"), calculateDistance(nodes.get("N4"),nodes.get("N3")));
+        assertEquals(403, distance);
 
-                distance = nodes.get("N4").connectToNodeUndirected(nodes.get("N3"), calculateDistance(nodes.get("N4"),nodes.get("N3")));
-                assertEquals(403, distance);
-
-                distance = nodes.get("N5").connectToNodeUndirected(nodes.get("N4"), calculateDistance(nodes.get("N5"),nodes.get("N4")));
-                assertEquals(301, distance);
-            }
-
-
-
+        distance = nodes.get("N5").connectToNodeUndirected(nodes.get("N4"), calculateDistance(nodes.get("N5"),nodes.get("N4")));
+        assertEquals(301, distance);
+    }
 }
