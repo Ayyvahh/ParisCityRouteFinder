@@ -550,7 +550,7 @@ public class RouteFinder implements Initializable {
     }
 
     public void shortestPathDFS() {
-        List<Graph.CostedPath> cp = searchGraphDepthFirst(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()),null,0,endPointBox.getSelectionModel().getSelectedItem().getName(), getAvoidNodes(), getVisitNodes());
+        List<Graph.CostedPath> cp = searchGraphDepthFirst(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()),null,0,endPointBox.getSelectionModel().getSelectedItem().getName(), getAvoidNodes());
 
         mapPane.getChildren().removeIf(node -> node instanceof Line);
         clearFeedback();

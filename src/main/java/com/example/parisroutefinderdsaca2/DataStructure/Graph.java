@@ -104,7 +104,7 @@ public class Graph implements Initializable {
     return null;
 }
 
-    public static <T> List<CostedPath> searchGraphDepthFirst(GraphNode<?> from, List<GraphNode<?>> encountered, int totalCost, T lookingFor, Set<GraphNode<T>>nodesToAvoid, Set<GraphNode<T>>nodesToVisit) {
+    public static <T> List<CostedPath> searchGraphDepthFirst(GraphNode<?> from, List<GraphNode<?>> encountered, int totalCost, T lookingFor, Set<GraphNode<T>>nodesToAvoid) {
         List<CostedPath> allPaths = new ArrayList<>();
 
         if (from.name.equals(lookingFor)) {
@@ -114,18 +114,19 @@ public class Graph implements Initializable {
             allPaths.add(cp);
             return allPaths;
         }
-        if (nodesToAvoid == null) nodesToAvoid = new HashSet<>();
+
+        if (nodesToAvoid == null) {
+            nodesToAvoid = new HashSet<>();
+        }
 
         if (encountered == null) encountered = new ArrayList<>();
         encountered.add(from);
 
         for (GraphLink adjLink : from.adjList) {
             if (!encountered.contains(adjLink.destNode) && !nodesToAvoid.contains(adjLink.destNode)) {
-                List<CostedPath> pathsFromAdj = searchGraphDepthFirst(adjLink.destNode, encountered, totalCost + adjLink.cost, lookingFor, nodesToAvoid, nodesToVisit);
-
+                List<CostedPath> pathsFromAdj = searchGraphDepthFirst(adjLink.destNode, encountered, totalCost + adjLink.cost, lookingFor, nodesToAvoid);
                 for (CostedPath path : pathsFromAdj) {
                     path.pathList.add(0, from);
-                    path.pathList.addAll(nodesToVisit);
                     allPaths.add(path);
                 }
             }
