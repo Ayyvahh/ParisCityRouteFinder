@@ -227,6 +227,8 @@ public class RouteFinder implements Initializable {
                 }
 
                 avoidNodes.add(selectedItem);
+                mapPane.getChildren().removeIf(node -> node instanceof Line);
+                clearFeedback();
                 printAvoidNodes();  // Print the updated avoidNodes
                 showSelectedNodes();  // Show the newly avoided node
             } else Utils.showWarningAlert("CANNOT AVOID LOCATION", "You have entered a location that is either: the start point, the end point or a waypoint!");
@@ -250,6 +252,8 @@ public class RouteFinder implements Initializable {
                 }
 
                 waypointNodes.add(selectedItem);
+                mapPane.getChildren().removeIf(node -> node instanceof Line);
+                clearFeedback();
                 printVisitNodes();  // Print the updated visitNodes
                 showSelectedNodes();  // Show the newly visited node
             } else Utils.showWarningAlert("CANNOT ADD WAYPOINT", "You have entered a location that is either: the start point, the end point or a location you are avoiding!");
