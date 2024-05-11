@@ -312,56 +312,64 @@ public class RouteFinder implements Initializable {
         int val = (int) historicalVal.getValue();
         Set<GraphNode<String>> nonMatchNodes = new HashSet<>();
 
-        showSelectedNodes();
-        mapPane.getChildren().removeIf(node -> node instanceof Line);
+        if (startPointBox.getSelectionModel().getSelectedItem() == null || endPointBox.getSelectionModel().getSelectedItem() == null) {
+            Utils.showWarningAlert("PLEASE SELECT A START AND END POINT","Please select a start and end point before generating a historical route!");
+        } else {
+            showSelectedNodes();
+            mapPane.getChildren().removeIf(node -> node instanceof Line);
 
-        for (GraphNode<String> node : graphNodes.values()) {
-            // Exclude nodes with a historical value different from the specified value, except for 0, start, and destination nodes
-            if (node.getCulturalSignificance() > val &&
-                    node.getCulturalSignificance() != 0 &&
-                    !node.equals(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName())) &&
-                    !node.equals(graphNodes.get(endPointBox.getSelectionModel().getSelectedItem().getName()))) {
-                nonMatchNodes.add(node);
+            for (GraphNode<String> node : graphNodes.values()) {
+                // Exclude nodes with a historical value different from the specified value, except for 0, start, and destination nodes
+                if (node.getCulturalSignificance() > val &&
+                        node.getCulturalSignificance() != 0 &&
+                        !node.equals(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName())) &&
+                        !node.equals(graphNodes.get(endPointBox.getSelectionModel().getSelectedItem().getName()))) {
+                    nonMatchNodes.add(node);
 
-                System.out.println("Added node to avoid list: " + node.getName());
+                    System.out.println("Added node to avoid list: " + node.getName());
+                }
             }
-        }
 
-        for (GraphNode<String> node : nonMatchNodes) drawNode(node, Color.BLACK);
+            for (GraphNode<String> node : nonMatchNodes) {
+                if (!avoidNodes.contains(node) && !waypointNodes.contains(node)) {
+                    drawNode(node, Color.BLACK);
+                }
+            }
 
-        // Check if avoidNodes list is correctly populated
-        System.out.println("Nodes to avoid: " + nonMatchNodes);
+            // Check if avoidNodes list is correctly populated
+            System.out.println("Nodes to avoid: " + nonMatchNodes);
 
-        // Finding the shortest path using Dijkstra's algorithm
-        Graph.CostedPath cpa = findCheapestPathDijkstra(
-                graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()),
-                endPointBox.getSelectionModel().getSelectedItem().getName(),
-                nonMatchNodes);
+            // Finding the shortest path using Dijkstra's algorithm
+            Graph.CostedPath cpa = findCheapestPathDijkstra(
+                    graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()),
+                    endPointBox.getSelectionModel().getSelectedItem().getName(),
+                    nonMatchNodes);
 
-        // Handling cases where no route is found
-        if (cpa == null || cpa.pathList.isEmpty()) {
-            systemMessage.setText("No route found while avoiding selected Landmarks");
-            return;
-        }
+            // Handling cases where no route is found
+            if (cpa == null || cpa.pathList.isEmpty()) {
+                systemMessage.setText("No route found while avoiding selected Landmarks");
+                return;
+            }
 
-        // Visualizing the shortest path
-        for (GraphNode<?> ignored : cpa.pathList) clearFeedback();
+            // Visualizing the shortest path
+            for (GraphNode<?> ignored : cpa.pathList) clearFeedback();
 
-        systemMessage.setText("Shortest Path From " + startPointBox.getSelectionModel().getSelectedItem().getName() +
-                " to " + endPointBox.getSelectionModel().getSelectedItem().getName() +
-                " with a Historical Significance of " + val +
-                "\nRoute Cost: " + cpa.pathCost);
+            systemMessage.setText("Shortest Path From " + startPointBox.getSelectionModel().getSelectedItem().getName() +
+                    " to " + endPointBox.getSelectionModel().getSelectedItem().getName() +
+                    " with a Historical Significance of " + val +
+                    "\nRoute Cost: " + cpa.pathCost);
 
-        for (int i = 0; i < cpa.pathList.size() - 1; i++) {
-            GraphNode<?> firstNode = cpa.pathList.get(i);
-            GraphNode<?> secondNode = cpa.pathList.get(i + 1);
+            for (int i = 0; i < cpa.pathList.size() - 1; i++) {
+                GraphNode<?> firstNode = cpa.pathList.get(i);
+                GraphNode<?> secondNode = cpa.pathList.get(i + 1);
 
-            Line line = new Line(firstNode.getGraphX(), firstNode.getGraphY(),
-                    secondNode.getGraphX(), secondNode.getGraphY());
-            line.setStroke(route);
-            line.setStrokeWidth(3);
+                Line line = new Line(firstNode.getGraphX(), firstNode.getGraphY(),
+                        secondNode.getGraphX(), secondNode.getGraphY());
+                line.setStroke(route);
+                line.setStrokeWidth(3);
 
-            mapPane.getChildren().add(line);
+                mapPane.getChildren().add(line);
+            }
         }
     }
 
