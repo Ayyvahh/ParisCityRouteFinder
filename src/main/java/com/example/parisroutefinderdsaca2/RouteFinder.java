@@ -219,14 +219,6 @@ public class RouteFinder implements Initializable {
             GraphNode<String> selectedItem = avoidBox.getSelectionModel().getSelectedItem();
 
             if (selectedItem != null && !waypointNodes.contains(selectedItem) && !startPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName()) && !endPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName())) {
-                if (selectedItem.getName().equals("AVOID NONE")) {
-                    avoidNodes.clear();
-                    avoidingLabel.setText(null);
-                    printAvoidNodes();  // Print the updated avoidNodes
-                    showSelectedNodes();
-                    return;
-                }
-
                 for (GraphNode<String> g : avoidNodes) {
                     if (g.equals(selectedItem)) {
                         Utils.showWarningAlert("ALREADY AVOIDING LOCATION", "You are already avoiding " + g.getName() + "!");
@@ -242,21 +234,25 @@ public class RouteFinder implements Initializable {
     }
 
     public void addToVisit() {
-        GraphNode<String> selectedItem = waypointsBox.getSelectionModel().getSelectedItem();
+        if (startPointBox.getSelectionModel().getSelectedItem() == null || endPointBox.getSelectionModel().getSelectedItem() == null) {
+            Utils.showWarningAlert("PLEASE SELECT A START AND END POINT","Please select a start and end point before adding a waypoint!");
+        } else if (waypointsBox.getSelectionModel().getSelectedItem() == null) {
+            Utils.showWarningAlert("PLEASE SELECT A WAYPOINT", "Please select a waypoint!");
+        } else {
+            GraphNode<String> selectedItem = waypointsBox.getSelectionModel().getSelectedItem();
 
-        if (selectedItem != null && waypointsBox.getItems().get(0).getName().equals(selectedItem.getName())) {
-            waypointNodes.clear();
-            visitLabel.setText(null);
-            printVisitNodes();  // Print the updated avoidNodes
-            showSelectedNodes();
-            return;
-        }
+            if (selectedItem != null && !avoidNodes.contains(selectedItem) && !startPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName()) && !endPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName())) {
+                for (GraphNode<String> g : waypointNodes) {
+                    if (g.equals(selectedItem)) {
+                        Utils.showWarningAlert("ALREADY A WAYPOINT", g.getName() + " is already a waypoint!");
+                        return;
+                    }
+                }
 
-        if (selectedItem != null&& !avoidNodes.contains(selectedItem) && !startPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName()) && !endPointBox.getSelectionModel().getSelectedItem().getName().equals(selectedItem.getName())) {
-
-            waypointNodes.add(selectedItem);
-            printVisitNodes();  // Print the updated avoidNodes
-            showSelectedNodes();  // Show the newly avoided node
+                waypointNodes.add(selectedItem);
+                printVisitNodes();  // Print the updated visitNodes
+                showSelectedNodes();  // Show the newly visited node
+            } else Utils.showWarningAlert("CANNOT ADD WAYPOINT", "You have entered a location that is either: the start point, the end point or a location you are avoiding!");
         }
     }
 
@@ -275,7 +271,7 @@ public class RouteFinder implements Initializable {
         if (!waypointNodes.isEmpty()) {
             for (GraphNode<String> a : waypointNodes) s.append(a.getName()).append(",  ");
             visitLabel.setText(s.toString());
-        }
+        } else visitLabel.setText(null);
     }
 
     public void removeAvoid() {
