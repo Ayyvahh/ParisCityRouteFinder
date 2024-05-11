@@ -284,6 +284,23 @@ public class RouteFinder implements Initializable {
         showSelectedNodes();
     }
 
+    public void removeWaypoint() {
+        GraphNode<String> selected = waypointsBox.getSelectionModel().getSelectedItem();
+
+        if(!waypointNodes.isEmpty()) {
+            if (waypointNodes.contains(selected)) {
+                waypointNodes.remove(selected);
+                clearFeedback();
+                printVisitNodes();
+                showSelectedNodes();
+            } else {
+                Utils.showWarningAlert("CANNOT REMOVE WAYPOINT!", "Cannot remove a waypoint that does not exist!");
+            }
+        } else {
+            Utils.showWarningAlert("NO WAYPOINTS!", "There are currently no waypoints, so there is nothing to remove!");
+        }
+    }
+
     public void findHistoricRouteDijkstra() {
         int val = (int) historicalVal.getValue();
         Set<GraphNode<String>> nonMatchNodes = new HashSet<>();
@@ -561,15 +578,5 @@ public class RouteFinder implements Initializable {
 
     public void minimiseApp() {
         mainStage.setIconified(true);
-    }
-
-    public void removeWaypoint() {
-        GraphNode<String> selected = waypointsBox.getSelectionModel().getSelectedItem();
-
-        visitLabel.setText("");
-        if(!waypointNodes.isEmpty()) waypointNodes.remove(selected);
-        clearFeedback();
-        printAvoidNodes();
-        showSelectedNodes();
     }
 }
