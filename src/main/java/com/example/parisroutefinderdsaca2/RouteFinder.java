@@ -62,7 +62,7 @@ public class RouteFinder implements Initializable {
     private boolean isMapPopulated = false;
     public Map<String, GraphNode<String>> graphNodes = new HashMap<>();
     public Set<GraphNode<String>> avoidNodes = new HashSet<>();
-    public List<GraphNode<String>> waypointNodes = new ArrayList<>();
+    public Set<GraphNode<String>> waypointNodes = new HashSet<>();
 
     @FXML
     public void scene2() throws IOException {
@@ -405,6 +405,7 @@ public class RouteFinder implements Initializable {
 
     public void shortestPathDijkstra() {
         mapPane.getChildren().removeIf(node -> node instanceof Line);
+        clearFeedback();
 
         // Get start and end nodes
         GraphNode<String> startNode = graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName());
@@ -461,8 +462,13 @@ public class RouteFinder implements Initializable {
     }
 
     public Set<GraphNode<String>> getAvoidNodes() {
-        if(avoidBox.getSelectionModel().getSelectedItem() == null || avoidBox.getSelectionModel().getSelectedItem().getName().equals("AVOID NONE")) if(avoidNodes != null) avoidNodes.clear();
+        if(avoidBox.getSelectionModel().getSelectedItem() == null) if(avoidNodes != null) avoidNodes.clear();
         return avoidNodes;
+    }
+
+    public Set<GraphNode<String>> getVisitNodes() {
+        if(waypointsBox.getSelectionModel().getSelectedItem() == null) if(waypointNodes != null) waypointNodes.clear();
+        return waypointNodes;
     }
 
     public void clearFeedback() {
@@ -544,7 +550,7 @@ public class RouteFinder implements Initializable {
     }
 
     public void shortestPathDFS() {
-        List<Graph.CostedPath> cp = searchGraphDepthFirst(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()),null,0,endPointBox.getSelectionModel().getSelectedItem().getName(), getAvoidNodes());
+        List<Graph.CostedPath> cp = searchGraphDepthFirst(graphNodes.get(startPointBox.getSelectionModel().getSelectedItem().getName()),null,0,endPointBox.getSelectionModel().getSelectedItem().getName(), getAvoidNodes(), getVisitNodes());
 
         mapPane.getChildren().removeIf(node -> node instanceof Line);
         clearFeedback();
