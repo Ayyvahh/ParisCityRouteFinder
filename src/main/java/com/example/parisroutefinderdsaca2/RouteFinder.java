@@ -277,11 +277,18 @@ public class RouteFinder implements Initializable {
     public void removeAvoid() {
        GraphNode<String> selected = avoidBox.getSelectionModel().getSelectedItem();
 
-        if(!avoidNodes.isEmpty()) avoidNodes.remove(selected);
-
-        clearFeedback();
-        printAvoidNodes();
-        showSelectedNodes();
+        if(!avoidNodes.isEmpty()) {
+            if (avoidNodes.contains(selected)) {
+                avoidNodes.remove(selected);
+                clearFeedback();
+                printAvoidNodes();
+                showSelectedNodes();
+            } else {
+                Utils.showWarningAlert("CANNOT REMOVE LOCATION TO AVOID!", "Cannot remove a location to avoid that does not exist!");
+            }
+        } else {
+            Utils.showWarningAlert("NO LOCATIONS TO AVOID!", "There are currently no locations being avoided, so there is nothing to remove!");
+        }
     }
 
     public void removeWaypoint() {
