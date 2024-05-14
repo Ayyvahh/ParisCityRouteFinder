@@ -12,10 +12,10 @@ public class GraphLink<T> {
     public GraphNode<T> getDestNode() {
         return destNode;
     }
-
     public void setDestNode(GraphNode<T> destNode) {
         this.destNode = destNode;
     }
+
     public int getCost() {
         return cost;
     }

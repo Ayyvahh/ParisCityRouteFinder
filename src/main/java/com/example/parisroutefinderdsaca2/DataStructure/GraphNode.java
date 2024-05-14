@@ -1,7 +1,5 @@
 package com.example.parisroutefinderdsaca2.DataStructure;
 
-import com.example.parisroutefinderdsaca2.Utils;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +7,7 @@ public class GraphNode<String> {
     public String name;
     public int nodeValue = Integer.MAX_VALUE;
     public List<GraphLink> adjList = new ArrayList<>();
-    private boolean isLandmark;
-    GraphNode<String> previous;
+    private final boolean isLandmark;
     public int culturalSignificance;
     private int graphX;
     private int graphY;
@@ -21,10 +18,6 @@ public class GraphNode<String> {
         this.culturalSignificance = culturalSignificance;
         this.graphX = graphX;
         this.graphY = graphY;
-    }
-
-    public GraphNode<String> getPrevious() {
-        return previous;
     }
 
     public boolean isLandmark() {
@@ -48,22 +41,15 @@ public class GraphNode<String> {
     public int getCulturalSignificance() {
         return culturalSignificance;
     }
-
-    public List<GraphLink> getAdjList() {
-        return adjList;
-    }
-
     public void setCulturalSignificance(int culturalSignificance) {
         this.culturalSignificance = culturalSignificance;
     }
 
+    public List<GraphLink> getAdjList() {
+        return adjList;
+    }
     public void setAdjList(List<GraphLink> adjList) {
         this.adjList = adjList;
-    }
-
-    @Override
-    public java.lang.String toString() {
-        return name.toString();
     }
 
     public int getGraphY() {
@@ -79,8 +65,8 @@ public class GraphNode<String> {
         return cost;
     }
 
-
-
-
-
+    @Override
+    public java.lang.String toString() {
+        return name.toString();
+    }
 }
