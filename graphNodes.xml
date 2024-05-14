@@ -116,7 +116,7 @@
                                                                                                           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                         </adjList>
                                                                                                         <isLandmark>false</isLandmark>
-                                                                                                        <culturalSignificance>0</culturalSignificance>
+                                                                                                        <culturalSignificance>5</culturalSignificance>
                                                                                                         <graphX>320</graphX>
                                                                                                         <graphY>360</graphY>
                                                                                                       </destNode>
@@ -171,7 +171,7 @@
                                                                                                                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                     </adjList>
                                                                                                                     <isLandmark>false</isLandmark>
-                                                                                                                    <culturalSignificance>0</culturalSignificance>
+                                                                                                                    <culturalSignificance>4</culturalSignificance>
                                                                                                                     <graphX>360</graphX>
                                                                                                                     <graphY>475</graphY>
                                                                                                                   </destNode>
@@ -179,7 +179,7 @@
                                                                                                                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                               </adjList>
                                                                                                               <isLandmark>false</isLandmark>
-                                                                                                              <culturalSignificance>0</culturalSignificance>
+                                                                                                              <culturalSignificance>3</culturalSignificance>
                                                                                                               <graphX>233</graphX>
                                                                                                               <graphY>432</graphY>
                                                                                                             </destNode>
@@ -191,7 +191,7 @@
                                                                                                           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                         </adjList>
                                                                                                         <isLandmark>false</isLandmark>
-                                                                                                        <culturalSignificance>0</culturalSignificance>
+                                                                                                        <culturalSignificance>3</culturalSignificance>
                                                                                                         <graphX>268</graphX>
                                                                                                         <graphY>389</graphY>
                                                                                                       </destNode>
@@ -203,7 +203,7 @@
                                                                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                   </adjList>
                                                                                                   <isLandmark>false</isLandmark>
-                                                                                                  <culturalSignificance>0</culturalSignificance>
+                                                                                                  <culturalSignificance>5</culturalSignificance>
                                                                                                   <graphX>288</graphX>
                                                                                                   <graphY>309</graphY>
                                                                                                 </destNode>
@@ -219,7 +219,7 @@
                                                                                               </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                             </adjList>
                                                                                             <isLandmark>false</isLandmark>
-                                                                                            <culturalSignificance>0</culturalSignificance>
+                                                                                            <culturalSignificance>4</culturalSignificance>
                                                                                             <graphX>240</graphX>
                                                                                             <graphY>331</graphY>
                                                                                           </destNode>
@@ -235,7 +235,7 @@
                                                                                         </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                       </adjList>
                                                                                       <isLandmark>false</isLandmark>
-                                                                                      <culturalSignificance>0</culturalSignificance>
+                                                                                      <culturalSignificance>4</culturalSignificance>
                                                                                       <graphX>197</graphX>
                                                                                       <graphY>356</graphY>
                                                                                     </destNode>
@@ -251,7 +251,7 @@
                                                                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                 </adjList>
                                                                                 <isLandmark>false</isLandmark>
-                                                                                <culturalSignificance>0</culturalSignificance>
+                                                                                <culturalSignificance>5</culturalSignificance>
                                                                                 <graphX>151</graphX>
                                                                                 <graphY>395</graphY>
                                                                               </destNode>
@@ -275,7 +275,7 @@
                                                                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                     </adjList>
                                                                     <isLandmark>false</isLandmark>
-                                                                    <culturalSignificance>0</culturalSignificance>
+                                                                    <culturalSignificance>5</culturalSignificance>
                                                                     <graphX>108</graphX>
                                                                     <graphY>370</graphY>
                                                                   </destNode>
@@ -291,7 +291,7 @@
                                                                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                               </adjList>
                                                               <isLandmark>false</isLandmark>
-                                                              <culturalSignificance>0</culturalSignificance>
+                                                              <culturalSignificance>5</culturalSignificance>
                                                               <graphX>93</graphX>
                                                               <graphY>363</graphY>
                                                             </destNode>
@@ -411,7 +411,7 @@
                                                                                                                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                 </adjList>
                                                                                                                                 <isLandmark>false</isLandmark>
-                                                                                                                                <culturalSignificance>0</culturalSignificance>
+                                                                                                                                <culturalSignificance>4</culturalSignificance>
                                                                                                                                 <graphX>286</graphX>
                                                                                                                                 <graphY>216</graphY>
                                                                                                                               </destNode>
@@ -423,7 +423,7 @@
                                                                                                                             </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                           </adjList>
                                                                                                                           <isLandmark>false</isLandmark>
-                                                                                                                          <culturalSignificance>0</culturalSignificance>
+                                                                                                                          <culturalSignificance>4</culturalSignificance>
                                                                                                                           <graphX>249</graphX>
                                                                                                                           <graphY>212</graphY>
                                                                                                                         </destNode>
@@ -490,7 +490,7 @@
                                                                                                                                                                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                               </adjList>
                                                                                                                                                               <isLandmark>false</isLandmark>
-                                                                                                                                                              <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                              <culturalSignificance>4</culturalSignificance>
                                                                                                                                                               <graphX>508</graphX>
                                                                                                                                                               <graphY>300</graphY>
                                                                                                                                                             </destNode>
@@ -519,7 +519,7 @@
                                                                                                                                                                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                               </adjList>
                                                                                                                                                               <isLandmark>false</isLandmark>
-                                                                                                                                                              <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                              <culturalSignificance>3</culturalSignificance>
                                                                                                                                                               <graphX>422</graphX>
                                                                                                                                                               <graphY>337</graphY>
                                                                                                                                                             </destNode>
@@ -550,7 +550,7 @@
                                                                                                                                                                             </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                           </adjList>
                                                                                                                                                                           <isLandmark>false</isLandmark>
-                                                                                                                                                                          <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                          <culturalSignificance>4</culturalSignificance>
                                                                                                                                                                           <graphX>479</graphX>
                                                                                                                                                                           <graphY>454</graphY>
                                                                                                                                                                         </destNode>
@@ -566,7 +566,7 @@
                                                                                                                                                                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                     </adjList>
                                                                                                                                                                     <isLandmark>false</isLandmark>
-                                                                                                                                                                    <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                    <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                     <graphX>491</graphX>
                                                                                                                                                                     <graphY>421</graphY>
                                                                                                                                                                   </destNode>
@@ -628,7 +628,7 @@
                                                                                                                                                                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                   </adjList>
                                                                                                                                                                                                   <isLandmark>false</isLandmark>
-                                                                                                                                                                                                  <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                  <culturalSignificance>4</culturalSignificance>
                                                                                                                                                                                                   <graphX>563</graphX>
                                                                                                                                                                                                   <graphY>332</graphY>
                                                                                                                                                                                                 </destNode>
@@ -654,7 +654,7 @@
                                                                                                                                                                                                           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                         </adjList>
                                                                                                                                                                                                         <isLandmark>false</isLandmark>
-                                                                                                                                                                                                        <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                        <culturalSignificance>5</culturalSignificance>
                                                                                                                                                                                                         <graphX>493</graphX>
                                                                                                                                                                                                         <graphY>249</graphY>
                                                                                                                                                                                                       </destNode>
@@ -735,7 +735,7 @@
                                                                                                                                                                                                                                                           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                         </adjList>
                                                                                                                                                                                                                                                         <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                        <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                        <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                                                                                                         <graphX>306</graphX>
                                                                                                                                                                                                                                                         <graphY>30</graphY>
                                                                                                                                                                                                                                                       </destNode>
@@ -776,7 +776,7 @@
                                                                                                                                                                                                                                                                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                 </adjList>
                                                                                                                                                                                                                                                                                 <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                                                                                                                                 <graphX>323</graphX>
                                                                                                                                                                                                                                                                                 <graphY>141</graphY>
                                                                                                                                                                                                                                                                               </destNode>
@@ -792,7 +792,7 @@
                                                                                                                                                                                                                                                                             </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                           </adjList>
                                                                                                                                                                                                                                                                           <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                          <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                          <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                                                                                                                           <graphX>330</graphX>
                                                                                                                                                                                                                                                                           <graphY>126</graphY>
                                                                                                                                                                                                                                                                         </destNode>
@@ -808,7 +808,7 @@
                                                                                                                                                                                                                                                                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                     </adjList>
                                                                                                                                                                                                                                                                     <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                    <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                    <culturalSignificance>4</culturalSignificance>
                                                                                                                                                                                                                                                                     <graphX>334</graphX>
                                                                                                                                                                                                                                                                     <graphY>114</graphY>
                                                                                                                                                                                                                                                                   </destNode>
@@ -852,7 +852,7 @@
                                                                                                                                                                                                                                                                                         </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                       </adjList>
                                                                                                                                                                                                                                                                                       <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                      <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                      <culturalSignificance>4</culturalSignificance>
                                                                                                                                                                                                                                                                                       <graphX>387</graphX>
                                                                                                                                                                                                                                                                                       <graphY>155</graphY>
                                                                                                                                                                                                                                                                                     </destNode>
@@ -888,7 +888,7 @@
                                                                                                                                                                                                                                                                                                           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                                         </adjList>
                                                                                                                                                                                                                                                                                                         <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                                        <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                                        <culturalSignificance>2</culturalSignificance>
                                                                                                                                                                                                                                                                                                         <graphX>414</graphX>
                                                                                                                                                                                                                                                                                                         <graphY>253</graphY>
                                                                                                                                                                                                                                                                                                       </destNode>
@@ -900,7 +900,7 @@
                                                                                                                                                                                                                                                                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                                   </adjList>
                                                                                                                                                                                                                                                                                                   <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                                  <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                                  <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                                                                                                                                                   <graphX>455</graphX>
                                                                                                                                                                                                                                                                                                   <graphY>248</graphY>
                                                                                                                                                                                                                                                                                                 </destNode>
@@ -912,7 +912,7 @@
                                                                                                                                                                                                                                                                                               </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                             </adjList>
                                                                                                                                                                                                                                                                                             <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                            <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                            <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                                                                                                                                             <graphX>467</graphX>
                                                                                                                                                                                                                                                                                             <graphY>216</graphY>
                                                                                                                                                                                                                                                                                           </destNode>
@@ -928,7 +928,7 @@
                                                                                                                                                                                                                                                                                         </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                       </adjList>
                                                                                                                                                                                                                                                                                       <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                      <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                      <culturalSignificance>2</culturalSignificance>
                                                                                                                                                                                                                                                                                       <graphX>481</graphX>
                                                                                                                                                                                                                                                                                       <graphY>186</graphY>
                                                                                                                                                                                                                                                                                     </destNode>
@@ -940,7 +940,7 @@
                                                                                                                                                                                                                                                                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                 </adjList>
                                                                                                                                                                                                                                                                                 <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                                                                                                                                 <graphX>438</graphX>
                                                                                                                                                                                                                                                                                 <graphY>170</graphY>
                                                                                                                                                                                                                                                                               </destNode>
@@ -992,7 +992,7 @@
                                                                                                                                                                                                                                                                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                                   </adjList>
                                                                                                                                                                                                                                                                                                   <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                                  <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                                  <culturalSignificance>5</culturalSignificance>
                                                                                                                                                                                                                                                                                                   <graphX>460</graphX>
                                                                                                                                                                                                                                                                                                   <graphY>53</graphY>
                                                                                                                                                                                                                                                                                                 </destNode>
@@ -1000,7 +1000,7 @@
                                                                                                                                                                                                                                                                                               </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                             </adjList>
                                                                                                                                                                                                                                                                                             <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                            <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                            <culturalSignificance>4</culturalSignificance>
                                                                                                                                                                                                                                                                                             <graphX>460</graphX>
                                                                                                                                                                                                                                                                                             <graphY>77</graphY>
                                                                                                                                                                                                                                                                                           </destNode>
@@ -1008,7 +1008,7 @@
                                                                                                                                                                                                                                                                                         </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                       </adjList>
                                                                                                                                                                                                                                                                                       <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                      <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                      <culturalSignificance>2</culturalSignificance>
                                                                                                                                                                                                                                                                                       <graphX>476</graphX>
                                                                                                                                                                                                                                                                                       <graphY>134</graphY>
                                                                                                                                                                                                                                                                                     </destNode>
@@ -1016,7 +1016,7 @@
                                                                                                                                                                                                                                                                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                                 </adjList>
                                                                                                                                                                                                                                                                                 <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                                <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                                <culturalSignificance>2</culturalSignificance>
                                                                                                                                                                                                                                                                                 <graphX>454</graphX>
                                                                                                                                                                                                                                                                                 <graphY>134</graphY>
                                                                                                                                                                                                                                                                               </destNode>
@@ -1024,7 +1024,7 @@
                                                                                                                                                                                                                                                                             </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                           </adjList>
                                                                                                                                                                                                                                                                           <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                          <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                          <culturalSignificance>2</culturalSignificance>
                                                                                                                                                                                                                                                                           <graphX>445</graphX>
                                                                                                                                                                                                                                                                           <graphY>153</graphY>
                                                                                                                                                                                                                                                                         </destNode>
@@ -1036,7 +1036,7 @@
                                                                                                                                                                                                                                                                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                                     </adjList>
                                                                                                                                                                                                                                                                     <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                                    <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                                    <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                                                                                                                     <graphX>396</graphX>
                                                                                                                                                                                                                                                                     <graphY>131</graphY>
                                                                                                                                                                                                                                                                   </destNode>
@@ -1044,7 +1044,7 @@
                                                                                                                                                                                                                                                                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                               </adjList>
                                                                                                                                                                                                                                                               <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                              <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                              <culturalSignificance>5</culturalSignificance>
                                                                                                                                                                                                                                                               <graphX>339</graphX>
                                                                                                                                                                                                                                                               <graphY>104</graphY>
                                                                                                                                                                                                                                                             </destNode>
@@ -1068,7 +1068,7 @@
                                                                                                                                                                                                                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                   </adjList>
                                                                                                                                                                                                                                                   <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                  <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                  <culturalSignificance>5</culturalSignificance>
                                                                                                                                                                                                                                                   <graphX>367</graphX>
                                                                                                                                                                                                                                                   <graphY>45</graphY>
                                                                                                                                                                                                                                                 </destNode>
@@ -1093,7 +1093,7 @@
                                                                                                                                                                                                                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                                   </adjList>
                                                                                                                                                                                                                                                   <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                                  <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                                  <culturalSignificance>5</culturalSignificance>
                                                                                                                                                                                                                                                   <graphX>529</graphX>
                                                                                                                                                                                                                                                   <graphY>88</graphY>
                                                                                                                                                                                                                                                 </destNode>
@@ -1101,7 +1101,7 @@
                                                                                                                                                                                                                                               </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                             </adjList>
                                                                                                                                                                                                                                             <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                            <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                            <culturalSignificance>4</culturalSignificance>
                                                                                                                                                                                                                                             <graphX>401</graphX>
                                                                                                                                                                                                                                             <graphY>52</graphY>
                                                                                                                                                                                                                                           </destNode>
@@ -1129,7 +1129,7 @@
                                                                                                                                                                                                                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                                 </adjList>
                                                                                                                                                                                                                                 <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                                <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                                <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                                                                                 <graphX>523</graphX>
                                                                                                                                                                                                                                 <graphY>6</graphY>
                                                                                                                                                                                                                               </destNode>
@@ -1174,7 +1174,7 @@
                                                                                                                                                                                                                             </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                           </adjList>
                                                                                                                                                                                                                           <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                          <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                          <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                                                                           <graphX>605</graphX>
                                                                                                                                                                                                                           <graphY>222</graphY>
                                                                                                                                                                                                                         </destNode>
@@ -1182,7 +1182,7 @@
                                                                                                                                                                                                                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                                     </adjList>
                                                                                                                                                                                                                     <isLandmark>false</isLandmark>
-                                                                                                                                                                                                                    <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                                    <culturalSignificance>5</culturalSignificance>
                                                                                                                                                                                                                     <graphX>581</graphX>
                                                                                                                                                                                                                     <graphY>125</graphY>
                                                                                                                                                                                                                   </destNode>
@@ -1194,7 +1194,7 @@
                                                                                                                                                                                                                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                               </adjList>
                                                                                                                                                                                                               <isLandmark>false</isLandmark>
-                                                                                                                                                                                                              <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                              <culturalSignificance>4</culturalSignificance>
                                                                                                                                                                                                               <graphX>571</graphX>
                                                                                                                                                                                                               <graphY>209</graphY>
                                                                                                                                                                                                             </destNode>
@@ -1210,7 +1210,7 @@
                                                                                                                                                                                                           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                                         </adjList>
                                                                                                                                                                                                         <isLandmark>false</isLandmark>
-                                                                                                                                                                                                        <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                                        <culturalSignificance>5</culturalSignificance>
                                                                                                                                                                                                         <graphX>566</graphX>
                                                                                                                                                                                                         <graphY>237</graphY>
                                                                                                                                                                                                       </destNode>
@@ -1226,7 +1226,7 @@
                                                                                                                                                                                               </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                             </adjList>
                                                                                                                                                                                             <isLandmark>false</isLandmark>
-                                                                                                                                                                                            <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                            <culturalSignificance>4</culturalSignificance>
                                                                                                                                                                                             <graphX>580</graphX>
                                                                                                                                                                                             <graphY>298</graphY>
                                                                                                                                                                                           </destNode>
@@ -1238,7 +1238,7 @@
                                                                                                                                                                                         </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                       </adjList>
                                                                                                                                                                                       <isLandmark>false</isLandmark>
-                                                                                                                                                                                      <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                      <culturalSignificance>3</culturalSignificance>
                                                                                                                                                                                       <graphX>597</graphX>
                                                                                                                                                                                       <graphY>288</graphY>
                                                                                                                                                                                     </destNode>
@@ -1254,7 +1254,7 @@
                                                                                                                                                                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                                 </adjList>
                                                                                                                                                                                 <isLandmark>false</isLandmark>
-                                                                                                                                                                                <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                                <culturalSignificance>4</culturalSignificance>
                                                                                                                                                                                 <graphX>624</graphX>
                                                                                                                                                                                 <graphY>286</graphY>
                                                                                                                                                                               </destNode>
@@ -1270,7 +1270,7 @@
                                                                                                                                                                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                                     </adjList>
                                                                                                                                                                     <isLandmark>false</isLandmark>
-                                                                                                                                                                    <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                                    <culturalSignificance>5</culturalSignificance>
                                                                                                                                                                     <graphX>645</graphX>
                                                                                                                                                                     <graphY>345</graphY>
                                                                                                                                                                   </destNode>
@@ -1282,7 +1282,7 @@
                                                                                                                                                                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                               </adjList>
                                                                                                                                                               <isLandmark>false</isLandmark>
-                                                                                                                                                              <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                              <culturalSignificance>3</culturalSignificance>
                                                                                                                                                               <graphX>531</graphX>
                                                                                                                                                               <graphY>408</graphY>
                                                                                                                                                             </destNode>
@@ -1314,7 +1314,7 @@
                                                                                                                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                                   </adjList>
                                                                                                                                                   <isLandmark>false</isLandmark>
-                                                                                                                                                  <culturalSignificance>0</culturalSignificance>
+                                                                                                                                                  <culturalSignificance>4</culturalSignificance>
                                                                                                                                                   <graphX>398</graphX>
                                                                                                                                                   <graphY>383</graphY>
                                                                                                                                                 </destNode>
@@ -1334,7 +1334,7 @@
                                                                                                                                               </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                             </adjList>
                                                                                                                                             <isLandmark>false</isLandmark>
-                                                                                                                                            <culturalSignificance>0</culturalSignificance>
+                                                                                                                                            <culturalSignificance>4</culturalSignificance>
                                                                                                                                             <graphX>383</graphX>
                                                                                                                                             <graphY>318</graphY>
                                                                                                                                           </destNode>
@@ -1346,7 +1346,7 @@
                                                                                                                                         </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                       </adjList>
                                                                                                                                       <isLandmark>false</isLandmark>
-                                                                                                                                      <culturalSignificance>0</culturalSignificance>
+                                                                                                                                      <culturalSignificance>4</culturalSignificance>
                                                                                                                                       <graphX>367</graphX>
                                                                                                                                       <graphY>235</graphY>
                                                                                                                                     </destNode>
@@ -1370,7 +1370,7 @@
                                                                                                                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                                 </adjList>
                                                                                                                                 <isLandmark>true</isLandmark>
-                                                                                                                                <culturalSignificance>5</culturalSignificance>
+                                                                                                                                <culturalSignificance>3</culturalSignificance>
                                                                                                                                 <graphX>358</graphX>
                                                                                                                                 <graphY>192</graphY>
                                                                                                                               </destNode>
@@ -1378,7 +1378,7 @@
                                                                                                                             </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                           </adjList>
                                                                                                                           <isLandmark>false</isLandmark>
-                                                                                                                          <culturalSignificance>0</culturalSignificance>
+                                                                                                                          <culturalSignificance>4</culturalSignificance>
                                                                                                                           <graphX>318</graphX>
                                                                                                                           <graphY>163</graphY>
                                                                                                                         </destNode>
@@ -1403,7 +1403,7 @@
                                                                                                                             </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                           </adjList>
                                                                                                                           <isLandmark>false</isLandmark>
-                                                                                                                          <culturalSignificance>0</culturalSignificance>
+                                                                                                                          <culturalSignificance>3</culturalSignificance>
                                                                                                                           <graphX>172</graphX>
                                                                                                                           <graphY>240</graphY>
                                                                                                                         </destNode>
@@ -1411,7 +1411,7 @@
                                                                                                                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                                     </adjList>
                                                                                                                     <isLandmark>false</isLandmark>
-                                                                                                                    <culturalSignificance>0</culturalSignificance>
+                                                                                                                    <culturalSignificance>1</culturalSignificance>
                                                                                                                     <graphX>236</graphX>
                                                                                                                     <graphY>171</graphY>
                                                                                                                   </destNode>
@@ -1431,7 +1431,7 @@
                                                                                                                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                               </adjList>
                                                                                                               <isLandmark>false</isLandmark>
-                                                                                                              <culturalSignificance>0</culturalSignificance>
+                                                                                                              <culturalSignificance>2</culturalSignificance>
                                                                                                               <graphX>225</graphX>
                                                                                                               <graphY>124</graphY>
                                                                                                             </destNode>
@@ -1443,7 +1443,7 @@
                                                                                                           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                         </adjList>
                                                                                                         <isLandmark>false</isLandmark>
-                                                                                                        <culturalSignificance>0</culturalSignificance>
+                                                                                                        <culturalSignificance>2</culturalSignificance>
                                                                                                         <graphX>221</graphX>
                                                                                                         <graphY>62</graphY>
                                                                                                       </destNode>
@@ -1455,7 +1455,7 @@
                                                                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                   </adjList>
                                                                                                   <isLandmark>false</isLandmark>
-                                                                                                  <culturalSignificance>0</culturalSignificance>
+                                                                                                  <culturalSignificance>3</culturalSignificance>
                                                                                                   <graphX>188</graphX>
                                                                                                   <graphY>45</graphY>
                                                                                                 </destNode>
@@ -1476,7 +1476,7 @@
                                                                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                                   </adjList>
                                                                                                   <isLandmark>false</isLandmark>
-                                                                                                  <culturalSignificance>0</culturalSignificance>
+                                                                                                  <culturalSignificance>5</culturalSignificance>
                                                                                                   <graphX>111</graphX>
                                                                                                   <graphY>97</graphY>
                                                                                                 </destNode>
@@ -1496,7 +1496,7 @@
                                                                                         </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                       </adjList>
                                                                                       <isLandmark>false</isLandmark>
-                                                                                      <culturalSignificance>0</culturalSignificance>
+                                                                                      <culturalSignificance>4</culturalSignificance>
                                                                                       <graphX>145</graphX>
                                                                                       <graphY>139</graphY>
                                                                                     </destNode>
@@ -1508,7 +1508,7 @@
                                                                                   </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                                 </adjList>
                                                                                 <isLandmark>false</isLandmark>
-                                                                                <culturalSignificance>0</culturalSignificance>
+                                                                                <culturalSignificance>4</culturalSignificance>
                                                                                 <graphX>89</graphX>
                                                                                 <graphY>130</graphY>
                                                                               </destNode>
@@ -1528,7 +1528,7 @@
                                                                       </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                                     </adjList>
                                                                     <isLandmark>false</isLandmark>
-                                                                    <culturalSignificance>0</culturalSignificance>
+                                                                    <culturalSignificance>5</culturalSignificance>
                                                                     <graphX>96</graphX>
                                                                     <graphY>236</graphY>
                                                                   </destNode>
@@ -1536,7 +1536,7 @@
                                                                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                               </adjList>
                                                               <isLandmark>false</isLandmark>
-                                                              <culturalSignificance>0</culturalSignificance>
+                                                              <culturalSignificance>4</culturalSignificance>
                                                               <graphX>73</graphX>
                                                               <graphY>270</graphY>
                                                             </destNode>
@@ -1552,7 +1552,7 @@
                                                           </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                         </adjList>
                                                         <isLandmark>false</isLandmark>
-                                                        <culturalSignificance>0</culturalSignificance>
+                                                        <culturalSignificance>4</culturalSignificance>
                                                         <graphX>85</graphX>
                                                         <graphY>278</graphY>
                                                       </destNode>
@@ -1572,7 +1572,7 @@
                                                     </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                                   </adjList>
                                                   <isLandmark>false</isLandmark>
-                                                  <culturalSignificance>0</culturalSignificance>
+                                                  <culturalSignificance>3</culturalSignificance>
                                                   <graphX>133</graphX>
                                                   <graphY>274</graphY>
                                                 </destNode>
@@ -1596,7 +1596,7 @@
                                               </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                             </adjList>
                                             <isLandmark>false</isLandmark>
-                                            <culturalSignificance>0</culturalSignificance>
+                                            <culturalSignificance>4</culturalSignificance>
                                             <graphX>224</graphX>
                                             <graphY>262</graphY>
                                           </destNode>
@@ -1624,7 +1624,7 @@
                                         </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                                       </adjList>
                                       <isLandmark>true</isLandmark>
-                                      <culturalSignificance>4</culturalSignificance>
+                                      <culturalSignificance>3</culturalSignificance>
                                       <graphX>275</graphX>
                                       <graphY>285</graphY>
                                     </destNode>
@@ -1668,7 +1668,7 @@
                             </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
                           </adjList>
                           <isLandmark>false</isLandmark>
-                          <culturalSignificance>0</culturalSignificance>
+                          <culturalSignificance>5</culturalSignificance>
                           <graphX>331</graphX>
                           <graphY>288</graphY>
                         </destNode>
@@ -1712,7 +1712,7 @@
                 </com.example.parisroutefinderdsaca2.DataStructure.GraphLink>
               </adjList>
               <isLandmark>false</isLandmark>
-              <culturalSignificance>0</culturalSignificance>
+              <culturalSignificance>4</culturalSignificance>
               <graphX>366</graphX>
               <graphY>436</graphY>
             </destNode>
@@ -1770,18 +1770,6 @@
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
     </entry>
     <entry>
-      <string>N23</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">N23</name>
-        <nodeValue>2147483647</nodeValue>
-        <adjList/>
-        <isLandmark>false</isLandmark>
-        <culturalSignificance>0</culturalSignificance>
-        <graphX>366</graphX>
-        <graphY>436</graphY>
-      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-    </entry>
-    <entry>
       <string>N67</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
     </entry>
@@ -1812,18 +1800,6 @@
     <entry>
       <string>N27</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>N26</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">N26</name>
-        <nodeValue>2147483647</nodeValue>
-        <adjList/>
-        <isLandmark>false</isLandmark>
-        <culturalSignificance>0</culturalSignificance>
-        <graphX>334</graphX>
-        <graphY>114</graphY>
-      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
     <entry>
       <string>N29</string>
@@ -1958,18 +1934,6 @@
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[3]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[4]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
     </entry>
     <entry>
-      <string>N44</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">N44</name>
-        <nodeValue>2147483647</nodeValue>
-        <adjList/>
-        <isLandmark>false</isLandmark>
-        <culturalSignificance>0</culturalSignificance>
-        <graphX>530</graphX>
-        <graphY>409</graphY>
-      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-    </entry>
-    <entry>
       <string>N47</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink[2]/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
     </entry>
@@ -2100,18 +2064,6 @@
     <entry>
       <string>Opera Garnier</string>
       <com.example.parisroutefinderdsaca2.DataStructure.GraphNode reference="../../entry/com.example.parisroutefinderdsaca2.DataStructure.GraphNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode/adjList/com.example.parisroutefinderdsaca2.DataStructure.GraphLink/destNode"/>
-    </entry>
-    <entry>
-      <string>N19</string>
-      <com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
-        <name class="string">N19</name>
-        <nodeValue>2147483647</nodeValue>
-        <adjList/>
-        <isLandmark>false</isLandmark>
-        <culturalSignificance>0</culturalSignificance>
-        <graphX>366</graphX>
-        <graphY>436</graphY>
-      </com.example.parisroutefinderdsaca2.DataStructure.GraphNode>
     </entry>
   </map>
 </object-stream>
