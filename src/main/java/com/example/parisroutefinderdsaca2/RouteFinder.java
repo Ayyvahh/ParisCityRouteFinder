@@ -180,13 +180,13 @@ public class RouteFinder implements Initializable {
         GraphNode<String> landmarkOn = null;
 
         for (GraphNode<String> g : graphNodes.values()) {
-            //if (g.isLandmark()) {
+            if (g.isLandmark()) {
                 if (Math.abs(mouseX - g.getGraphX()) <= 3 && Math.abs(mouseY - g.getGraphY()) <= 3) {
                     onLandmark = true;
                     landmarkOn = g;
                     break;
                 }
-            //}
+            }
         }
 
         if (onLandmark) {
@@ -381,10 +381,11 @@ public class RouteFinder implements Initializable {
         try {
             loadXML();
             System.out.println("Database loaded!");
-            populateMap();
         } catch (Exception e) {
-            System.err.println("Error writing from file: " + e);
+            System.err.println("Error reading from file: " + e);
         }
+
+        populateMap();
     }
 
     public void saveXML() throws Exception {
@@ -401,7 +402,6 @@ public class RouteFinder implements Initializable {
         int y2 = n2.getGraphY();
 
         return (int) Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
-
     }
 
     public void findRoute() {
