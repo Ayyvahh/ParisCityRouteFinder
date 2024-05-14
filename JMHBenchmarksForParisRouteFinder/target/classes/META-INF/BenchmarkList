@@ -1,0 +1,4 @@
+JMH S 23 org.example.MyBenchmark S 53 org.example.jmh_generated.MyBenchmark_testDFS_jmhTest S 7 testDFS S 11 AverageTime E A 1 1 1 E I 1 5 E E I 2 10 E E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 23 org.example.MyBenchmark S 58 org.example.jmh_generated.MyBenchmark_testDijkstra_jmhTest S 12 testDijkstra S 11 AverageTime E A 1 1 1 E I 1 5 E E I 2 10 E E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 23 org.example.MyBenchmark S 66 org.example.jmh_generated.MyBenchmark_testGraphNodeGetters_jmhTest S 20 testGraphNodeGetters S 11 AverageTime E A 1 1 1 E I 1 5 E E I 2 10 E E I 1 1 E E E E E E U 11 NANOSECONDS E E 
+JMH S 23 org.example.MyBenchmark S 66 org.example.jmh_generated.MyBenchmark_testGraphNodeSetters_jmhTest S 20 testGraphNodeSetters S 11 AverageTime E A 1 1 1 E I 1 5 E E I 2 10 E E I 1 1 E E E E E E U 11 NANOSECONDS E E 
