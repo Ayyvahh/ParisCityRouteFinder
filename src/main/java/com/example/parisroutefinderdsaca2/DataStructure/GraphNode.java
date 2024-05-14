@@ -69,7 +69,4 @@ public class GraphNode<String> {
     public java.lang.String toString() {
         return name.toString();
     }
-
-
-
 }

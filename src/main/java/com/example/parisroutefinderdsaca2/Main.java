@@ -26,7 +26,6 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("dashboard.fxml"));
         mainPage = new Scene(fxmlLoader.load(), 1550, 950);
 
-
         mainPage.getStylesheets().add(Objects.requireNonNull(getClass().getResource("stylesheet.css")).toExternalForm()); //TODO change when done
         mainStage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("icon1.png"))));
         mainStage.setTitle("PARIS CITY ROUTE FINDER");
