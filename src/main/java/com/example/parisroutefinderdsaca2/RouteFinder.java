@@ -201,15 +201,6 @@ public class RouteFinder implements Initializable {
         }
     }
 
-    public int calculateEuclideanDistance(GraphNode<String> n1, GraphNode<String> n2) {
-        int x1 = n1.getGraphX();
-        int x2 = n2.getGraphX();
-        int y1 = n1.getGraphY();
-        int y2 = n2.getGraphY();
-
-        return (int) Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
-    }
-
     public void addToAvoid() {
         if (startPointBox.getSelectionModel().getSelectedItem() == null || endPointBox.getSelectionModel().getSelectedItem() == null) {
             Utils.showWarningAlert("PLEASE SELECT A START AND END POINT","Please select a start and end point before adding locations to avoid!");
@@ -405,6 +396,8 @@ public class RouteFinder implements Initializable {
     }
 
     public void findRoute() {
+        mapPane.getChildren().removeIf(node -> node instanceof Text);
+
         if (algoSelection.getSelectedToggle() == null) Utils.showWarningAlert("SELECT AN ALGORITHM", "Please select a radio button of the algorithm you wish to use!");
         else {
             if (startPointBox.getSelectionModel().getSelectedItem() == null || endPointBox.getSelectionModel().getSelectedItem() == null) {
