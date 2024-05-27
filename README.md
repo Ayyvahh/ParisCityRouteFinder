@@ -43,5 +43,5 @@
 
 ## Developers 👥:
 
-- [Ava Neary](https://github.com/Ayyvah)
+- [Ava Neary](https://github.com/Ayyvahh)
 - [Fionn Reilly](https://github.com/ReiFionn)
