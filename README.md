@@ -4,23 +4,13 @@
 
 ## User Interface
 
-![Dashboard](/src/main/resources/com/example/parisroutefinderdsaca2/images/ss1.png)
+![Dashboard](src/main/resources/ss3.png)
 
-<br>
-
-## Features
-
-- Search for routes between points/landmarks in Paris.
-- Generate multiple route permutations using depth-first search (DFS).
-- Find the shortest route using Dijkstra’s algorithm or breadth-first search (BFS).
-- Discover the most cultural/historic route using Dijkstra’s algorithm.
-- Customize routes by avoiding specific landmarks or adding waypoints.
-- Use a user-friendly JavaFX graphical user interface with graphical feedback on the map
-  
+<br>  
 
   <br>
   
-![Dashboard](/src/main/resources/com/example/parisroutefinderdsaca2/images/ss2.png)
+![Dashboard](src/main/resources/ss3.png)
 
 <br>
 
