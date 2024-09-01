@@ -4,13 +4,15 @@
 
 ## User Interface
 
-![Dashboard](src/main/resources/ss3.png)
+
+![Dashboard](/src/main/resources/com/example/parisroutefinderdsaca2/images/ss1.png)
 
 <br>  
 
   <br>
   
-![Dashboard](src/main/resources/ss3.png)
+
+![Dashboard](/src/main/resources/com/example/parisroutefinderdsaca2/images/ss2.png)
 
 <br>
 
